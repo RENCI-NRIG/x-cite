@@ -46,16 +46,9 @@ Theme 4: X-Ray Science S&E Software
 Theme 5: Data Curation and FAIR
 -------------------------------
 
-+-------+--------------------------------------------------------------+
-| CF    | Intro to domain metadata standards, formats and repositories |
-| 100   |                                                              |
-+-------+--------------------------------------------------------------+
-| CF    | Best practices for developing DMP                            |
-| 101   |                                                              |
-+-------+--------------------------------------------------------------+
-| CF    | Metadata annotation and DOI                                  |
-| 102   |                                                              |
-+-------+--------------------------------------------------------------+
-| CF    | Curating data, code, workflows, and publishing               |
-| 200   |                                                              |
-+-------+--------------------------------------------------------------+
+====== ============================================================
+CF 100 Intro to domain metadata standards, formats and repositories
+CF 101 Best practices for developing DMP
+CF 102 Metadata annotation and DOI
+CF 200 Curating data, code, workflows, and publishing
+====== ============================================================
