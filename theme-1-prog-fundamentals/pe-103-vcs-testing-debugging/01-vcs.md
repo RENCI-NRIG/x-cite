@@ -1,13 +1,13 @@
 # Version control
 
-# What is it?
+## What is it?
 
-# Why do we need it?
+## Why do we need it?
 
-# Version control in practice
+## Version control in practice
 
-# Git
+## Git
 
-# GitHub
+## GitHub
 
-# Alternatives to GitHub
+## Alternatives to GitHub
