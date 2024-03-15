@@ -22,7 +22,7 @@ Theme 1: Programming Fundamentals
 Theme 2: Systems Fundamentals
 -----------------------------
 
-* SF 100: Intro to Linux/ commandline/ scripting
+* SF 100: Intro to Linux, commandline, and scripting
 * SF 101: Containers and virtualization
 * SF 200: Parallel computing concepts
 * SF 201: Batch Systems and compute farms with CHESS example
