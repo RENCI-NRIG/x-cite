@@ -72,6 +72,11 @@ $ git push
 
 ## GitHub
 
+[GitHub.com](https://github.com/) is what is known as a software
+"forge": it is a Git hosting service that can host your source code,
+and provide additional services (such as bug tracking, code reviews,
+continuous integration, etc) that helps you collaborate with other
+people.
 
 
 ## Alternatives to GitHub
