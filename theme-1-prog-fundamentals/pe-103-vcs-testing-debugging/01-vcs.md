@@ -58,13 +58,18 @@ $ git --help
 
 ## Git concepts
 
+<!-- TODO: elaborate -->
+
 ## Git subcommands
+
+<!-- TODO: elaborate -->
 
 ```
 $ git init
 $ git add
 $ git commit
 $ git status
+$ git branch
 $ git fetch
 $ git pull
 $ git push
