@@ -81,6 +81,18 @@ people.
 
 ## Alternatives to GitHub
 
+While GitHub happens to be the most popular software forge, many
+others exist too:
+
+ - [Gitlab.com](https://gitlab.com)
+ - [BitBucket.com](https://bitbucket.org/)
+ - [Codeberg.org](https://codeberg.org/)
+
+Some people prefer to self-host a forge, and some people prefer no
+forge at all. Since Git is a /distributed/ version control system, and
+you should be able to collaborate with no forge at all: you can share
+your changes as email attachments, if you want.
+
 
 ## Exercises
 
