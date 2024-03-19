@@ -44,8 +44,15 @@ messy schemes based on filenames.
 
 ## Version control in practice
 
+As stated above, Git is the most popular version control system in use
+today.  Git is a command-line program that runs on all popular
+operating systems.  If you use macOS or Linux, you probably have Git
+installed already.
+
 ## Git
 
 ## GitHub
 
 ## Alternatives to GitHub
+
+
