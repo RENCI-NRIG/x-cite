@@ -96,16 +96,16 @@ your changes as email attachments, if you want.
 
 ## Exercises
 
-- Create an account on GitHub.com, if you do not have an account there
-  already.
+1. Create an account on GitHub.com, if you do not have an account
+  there already.
 
-- Create a new repository on GitHub.com.  Push some code that you are
+2. Create a new repository on GitHub.com.  Push some code that you are
   working on to that repository.  If your project is not under version
   control, you will want to do that now.
   
-- Add some changes to the code. Commit the code. Push those commits
+3. Add some changes to the code. Commit the code. Push those commits
   also to the Git repository.
 
-- Create a "tag" (based on today's date, or a version number), and
+4. Create a "tag" (based on today's date, or a version number), and
   push the tag to your repository.
   
