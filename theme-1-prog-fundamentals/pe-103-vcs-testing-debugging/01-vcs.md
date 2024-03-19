@@ -70,6 +70,7 @@ $ git add
 $ git commit
 $ git status
 $ git branch
+$ git clone
 $ git fetch
 $ git pull
 $ git push
