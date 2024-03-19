@@ -4,8 +4,8 @@ This repository is for CyberInfrastructure Training and Education for
 Synchrotron X-Ray Science (X-CITE) course materials.
 
 X-CITE is geared toward the community of scientists and researchers
-using the [CHESS](https://www.chess.cornell.edu/) synchrotron X-ray
-facility and similar light sources.
+using the [CHESS] synchrotron X-ray facility and similar light
+sources.
 
 The top-level course design is as follows:
 
@@ -14,7 +14,7 @@ The top-level course design is as follows:
 -   PE 100: Python Programming and Jupyter notebooks
 -   PE 101: Using Python packages & libraries, Conda
 -   PE 102: Numerical data analysis with Python
--   PE 103: Software version control, testing and de-bugging
+-   PE 103: Software [version control], [testing] and [debugging]
 
 ## Theme 2: Systems Fundamentals
 
@@ -38,3 +38,11 @@ The top-level course design is as follows:
 -   CF 101: Best practices for developing DMP
 -   CF 102: Metadata annotation and DOI
 -   CF 200: Curating data, code, workflows, and publishing
+
+<!-- References -->
+
+[CHESS]: https://www.chess.cornell.edu/
+
+[version control]: ./theme-1-prog-fundamentals/pe-103-vcs-testing-debugging/01-vcs.md
+[testing]: ./theme-1-prog-fundamentals/pe-103-vcs-testing-debugging/02-testing.md
+[debugging]: ./theme-1-prog-fundamentals/pe-103-vcs-testing-debugging/03-debugging.md
