@@ -42,16 +42,37 @@ properly.  You want to avoid the cognitive overload of dealing with
 messy schemes based on filenames.
 
 
-## Version control in practice
+## Version control in practice: Git
 
 As stated above, Git is the most popular version control system in use
 today.  Git is a command-line program that runs on all popular
 operating systems.  If you use macOS or Linux, you probably have Git
 installed already.
 
-## Git
+Here we assume that you are using the shell account that you have with
+CLASSE.
+
+```console
+$ git --help
+```
+
+## Git concepts
+
+## Git subcommands
+
+```
+$ git init
+$ git add
+$ git commit
+$ git status
+$ git fetch
+$ git pull
+$ git push
+```
 
 ## GitHub
+
+
 
 ## Alternatives to GitHub
 
