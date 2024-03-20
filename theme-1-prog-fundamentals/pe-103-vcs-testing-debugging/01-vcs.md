@@ -60,6 +60,11 @@ $ git --help
 
 <!-- TODO: elaborate -->
 
+- commits
+- staging area
+- remotes
+- branches
+
 ## Getting started with Git
 
 <!-- TODO: elaborate -->
@@ -73,6 +78,8 @@ $ ssh-keygen -t rsa -b 4096 -C "you@example.com"
 <!-- TODO: elaborate ssh public and private keys -->
 
 ### Initial configuration
+
+<!-- TODO: elaborate -->
 
 ```
 $ git config --global user.name "Your Name"
