@@ -68,6 +68,8 @@ $ git --help
 $ git init
 $ git add
 $ git commit
+$ git log
+$ git diff
 $ git status
 $ git branch
 $ git clone
