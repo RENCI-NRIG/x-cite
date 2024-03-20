@@ -96,6 +96,7 @@ $ git add
 $ git commit
 $ git log
 $ git diff
+$ git merge
 $ git status
 $ git branch
 $ git clone
