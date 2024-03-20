@@ -60,6 +60,25 @@ $ git --help
 
 <!-- TODO: elaborate -->
 
+## Getting started with Git
+
+<!-- TODO: elaborate -->
+
+### Generating ssh keys
+
+```
+$ ssh-keygen -t rsa -b 4096 -C "you@example.com"
+```
+
+<!-- TODO: elaborate ssh public and private keys -->
+
+### Initial configuration
+
+```
+$ git config --global user.name "Your Name"
+$ git config --global user.email "you@example.com
+```
+
 ## Git subcommands
 
 <!-- TODO: elaborate -->
