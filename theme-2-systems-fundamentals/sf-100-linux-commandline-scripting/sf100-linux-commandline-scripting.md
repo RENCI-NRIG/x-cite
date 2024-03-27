@@ -10,27 +10,27 @@
 
 ## The shell
 
-The shell is an interactive program that accepts keyboard commands and
-passes those commands to the operating systems to execute.
+A shell is an interactive program that accepts commands and passes
+those commands to the operating systems to execute.
 
-You type a command, hit enter, and the command gets executed.  Shell
-is the program that is responsible for accepting your commands,
-executing them, and printing the results on a console.
+In the shell, you type a command, hit enter, and the command gets
+executed.  Shell is the program that is responsible for accepting your
+commands, executing them, and printing the results on a console.
 
-The screenshot below shows a shell "session": from a macOS terminal,
-I'm using `ssh` command to access the host
-`lnx201.classe.cornell.edu`, and then I'm running some commands on
-that `lnx201.classe.cornell.edu`.
+The screenshot below shows a how this works in practice: using a
+terminal program, I'm using `ssh` command to access the host
+`lnx201.classe.cornell.edu` (just `lnx201` henceforth), and then I'm
+running some commands on `lnx201`.
 
-![a shell session](./lnx201.png)
+![shell screenshot](./lnx201.png)
 
-Nearly all Linux distributions ship a shell named `bash`.  Although
-`bash` is likely the most popular shell, many other shells exist too:
-`csh`, `ksh`, `dash`, `zsh`, and so on.  But let us not get distracted
-and just commit to `bash` for now.
+Nearly all Linux distributions ship a shell named `bash`.  In the
+`lnx201` environment that you access, `bash` is the default shell. You
+will be staring at a bash prompt when you ssh to `lnx201`.
 
-In the lnx201 environment that you access, `bash` is the default
-shell. You will be staring at a bash prompt when you ssh to lnx201.
+Although `bash` is the most popular shell, many other shells exist
+too: `csh`, `ksh`, `dash`, `zsh`, and so on.  But let us not get
+distracted and just commit to `bash` for now.
 
 
 ## Useful shell builtins
