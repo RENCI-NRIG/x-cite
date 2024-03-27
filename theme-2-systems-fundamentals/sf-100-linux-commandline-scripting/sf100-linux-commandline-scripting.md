@@ -36,11 +36,48 @@ TODO: probably don't have to talk about this now?
 
 ## Directory navigation
 
+Linux organizes directories and files in a /hierarchical directory
+structure/, meaning, they are organized in a tree-like pattern of
+directories.
+
+The first, or top-level directory of this tree is called the "root
+directory", or "/".
+
+
 - files, directories
-- directory navigation: ls, cd, mkdir, rm, ln
-- permissions, ownership
+
+## The current working directory
+
+At any time in the shell, we are "inside" a single directory, known as
+the current working directory.  When you list files with `ls`, a list
+of files and directories of the current working directory will be
+printed on the output.
+
+When you log in to `lnx201`, initially you will be in a directory
+named `/home/${USER}`, where `${USER}` is your username on `lnx201`.
+This is what is known as your /home directory/.  When you log in
+first, your home directory will be your current working directory. 
+
+To find where you are, use the command `pwd`.
+
+The below commands are useful:
+
+- `mkdir test` will create a directory named `test`
+- `cd test` will change the working directory to `test`.
+- `cd -` is useful: it will switch you to the directory that you were
+  previously in.
+
+
+- `.` and `..`
+- directory navigation: ls, cd, mkdir, rm, ln, pwd, touch
+
+## Directory structure
+
+ (/bin, /sbin, /tmp, /var, /etc, /home, /dev)
+
+## Permissions and ownership
+
 - chmod, chown
-- directory structure (/bin, /sbin, /tmp, /var, /etc, /home, /dev)
 
 
 ## Pipes, job control
@@ -48,9 +85,9 @@ TODO: probably don't have to talk about this now?
 - pipes
 - redirection (> and <)
 - background and foreground processes
-- listing processes
+- listing processes (ps, top, htop)
 - signals
-- terminating processes
+- terminating processes (kill)
 
 
 ## Environment variables
