@@ -90,6 +90,10 @@ The below commands are useful:
 - `cd test` will change the working directory to `test`.
 - `ls` will list files and directories in the current working
   directory.
+- `rm` will remove a file.
+- `rm <name of directory>` will _not_ remove a directory; you have to
+  remove it _recursively_, like so: `rm -r <name of directory>`.
+  
 
 `cd -` is useful: it will switch you to the directory that you were
   previously in.
@@ -98,12 +102,21 @@ The below commands are useful:
 directory, and `..` means its parent directory, or the directory above
 it in the directory hierarchy.
  
-- directory navigation: ls, cd, mkdir, rm, ln, pwd, touch
+`touch` command is used to change file timestamps.  You can also use
+`touch` to create an empty file, like so: `touch test.txt`.
+
+- TODO: directory navigation: ls, cd, mkdir, rm, ln, pwd, touch
+
+
+## Users and groups
 
 
 ## Permissions and ownership
 
 - chmod, chown
+
+
+## Symbolic links
 
 
 ## Pipes, job control
