@@ -40,12 +40,11 @@ TODO: probably don't have to talk about this now?
 
 # Directory navigation
 
-Linux organizes directories and files in a /hierarchical directory
-structure/, meaning, they are organized in a tree-like pattern of
-directories.
+Linux organizes directories and files in a _hierarchical directory
+structure_, meaning, they are organized in a tree-like pattern.
 
 
-- files, directories
+- TODO: files, directories
 
 ## Directory structure
 
