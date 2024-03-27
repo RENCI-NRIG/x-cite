@@ -38,21 +38,37 @@ distracted and just commit to `bash` for now.
 TODO: probably don't have to talk about this now?
 
 
-## Directory navigation
+# Directory navigation
 
 Linux organizes directories and files in a /hierarchical directory
 structure/, meaning, they are organized in a tree-like pattern of
 directories.
-
-The first, or top-level directory of this tree is called the "root
-directory", or "/".
 
 
 - files, directories
 
 ## Directory structure
 
-- /bin, /sbin, /tmp, /var, /etc, /home, /dev etc.
+The first, or top-level directory of this tree is a special directory,
+called the "root directory", or `/`.  All other directories are under
+the root directory.  You can list things under `/` with the command
+`ls /`:
+
+```console
+[user@lnx201 ~]$ ls /
+bin   cdat  cvmfs  etc   lib    media  mnt  nfs   opt   root  sbin  sys  usr
+boot  cifs  dev    home  lib64  misc   net  null  proc  run   srv   tmp  var
+```
+
+It is useful to know about some of these directories:
+
+- `home` is where user home directories are.
+  - `root` is the home directory for `root` user, aka superuser.
+- `bin` and `sbib` are for programs.
+- `lib` and `lib64` are for libraries.
+- `etc` is for configuration files.
+- `tmp` is for temporary files
+- `proc` provides an interface with processes.
 
 
 ## The current working directory
