@@ -11,12 +11,16 @@
 ## The shell
 
 The shell is an interactive program that accepts keyboard commands and
-passes those commands to the operating systems to execute.  
+passes those commands to the operating systems to execute.
 
 You type a command, hit enter, and the command gets executed.  Shell
 is the program that is responsible for accepting your commands,
-executing them, and printing the results on a console, as you see in
-the screenshot below:
+executing them, and printing the results on a console.
+
+The screenshot below shows a shell "session": from a macOS terminal,
+I'm using `ssh` command to access the host
+`lnx201.classe.cornell.edu`, and then I'm running some commands on
+that `lnx201.classe.cornell.edu`.
 
 ![a shell session](./lnx201.png)
 
