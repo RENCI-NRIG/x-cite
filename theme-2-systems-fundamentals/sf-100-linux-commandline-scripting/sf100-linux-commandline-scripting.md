@@ -50,6 +50,11 @@ directory", or "/".
 
 - files, directories
 
+## Directory structure
+
+- /bin, /sbin, /tmp, /var, /etc, /home, /dev etc.
+
+
 ## The current working directory
 
 At any time in the shell, we are "inside" a single directory, known as
