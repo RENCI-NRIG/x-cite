@@ -68,16 +68,18 @@ The below commands are useful:
 
 - `mkdir test` will create a directory named `test`
 - `cd test` will change the working directory to `test`.
-- `cd -` is useful: it will switch you to the directory that you were
+- `ls` will list files and directories in the current working
+  directory.
+
+`cd -` is useful: it will switch you to the directory that you were
   previously in.
-
-
-- `.` and `..`
+  
+`.` and `..` are special directory names: `.` means the current
+directory, and `..` means its parent directory, or the directory above
+it in the directory hierarchy.
+ 
 - directory navigation: ls, cd, mkdir, rm, ln, pwd, touch
 
-## Directory structure
-
- (/bin, /sbin, /tmp, /var, /etc, /home, /dev)
 
 ## Permissions and ownership
 
