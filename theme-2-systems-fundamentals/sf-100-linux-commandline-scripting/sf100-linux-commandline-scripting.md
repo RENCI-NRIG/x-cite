@@ -309,6 +309,9 @@ TODO
 
 TODO
 
+## Standard input, output, and error
+
+
 ## Pipes, job control
 
 - pipes
