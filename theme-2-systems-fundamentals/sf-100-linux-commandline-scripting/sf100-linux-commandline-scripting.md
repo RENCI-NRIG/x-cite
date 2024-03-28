@@ -33,11 +33,6 @@ too: `csh`, `ksh`, `dash`, `zsh`, and so on.  But let us not get
 distracted and just commit to `bash` for now.
 
 
-## Useful shell builtins
-
-TODO: probably don't have to talk about this now?
-
-
 # Directory navigation
 
 Linux organizes directories and files in a _hierarchical directory
@@ -185,6 +180,11 @@ TODO
 - curl
 
 - ?
+
+## Useful shell builtins
+
+TODO: probably don't have to talk about this now?
+
 
 ## Aliases
 
