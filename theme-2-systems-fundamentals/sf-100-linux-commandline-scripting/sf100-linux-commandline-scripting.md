@@ -219,7 +219,30 @@ You can remove the `x` bit like so:
 -rw-r--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
 ```
 
-- chmod, chown, chgrp
+You can also grant permission to just the **o**wner, or **g**roup, or others:
+
+```console
+[ssasidharan@lnx201 ~]$ chmod u+x test.sh 
+[ssasidharan@lnx201 ~]$ ls -l test.sh 
+-rwxr--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
+[ssasidharan@lnx201 ~]$ chmod g+x test.sh 
+[ssasidharan@lnx201 ~]$ ls -l test.sh 
+-rwxr-xr-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
+[ssasidharan@lnx201 ~]$ chmod o+x test.sh 
+[ssasidharan@lnx201 ~]$ ls -l test.sh 
+-rwxr-xr-x 1 ssasidharan chess 0 Mar 28 13:39 test.sh
+```
+
+You can also combine `u`, `g`, `o` bits and `r`, `w`, `x` bits with
+`+` or `-`:
+
+```
+[ssasidharan@lnx201 ~]$ chmod ugo-r test.sh 
+[ssasidharan@lnx201 ~]$ ls -l test.sh 
+--wx--x--x 1 ssasidharan chess 0 Mar 28 13:39 test.sh
+```
+
+I just made the file unreadable by everyone!
 
 
 ## Symbolic links
