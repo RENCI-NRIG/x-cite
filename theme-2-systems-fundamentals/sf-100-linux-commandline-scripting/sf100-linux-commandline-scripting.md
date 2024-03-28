@@ -118,6 +118,11 @@ it in the directory hierarchy.
 
 ## Symbolic links
 
+TODO
+
+## Hidden files
+
+TODO
 
 ## Pipes, job control
 
