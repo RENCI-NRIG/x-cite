@@ -29,11 +29,16 @@ Plenty of software with friendly user interfaces exist, and they are
 often easier to use.  In order to use the command line, you will have
 to be familiar with often arcane tools and memorize stuff.
 
-Why on earth would you want to use the command line then?
+Why would you want to use the command line then?
 
-Because, for certain tasks, it is often quick and efficient to use the
-command line.  Learning to use the command line well will leave more
-power on your hands.
+Because, for certain types of tasks, it is often quick and efficient
+to use the command line.  You can "chain" or compose separate programs
+that do different things together.  You can also save fairly
+complicated tasks in the form of scripts for later use, and share them
+with your colleagues.
+
+Learning to use the command line well will leave more power on your
+hands.
 
 
 ## The shell
