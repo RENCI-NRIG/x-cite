@@ -238,13 +238,32 @@ You can also grant permission to just the **o**wner, or **g**roup, or others:
 You can also combine `u`, `g`, `o` bits and `r`, `w`, `x` bits with
 `+` or `-`:
 
-```
+```console
 [ssasidharan@lnx201 ~]$ chmod ugo-r test.sh 
 [ssasidharan@lnx201 ~]$ ls -l test.sh 
 --wx--x--x 1 ssasidharan chess 0 Mar 28 13:39 test.sh
 ```
 
-I just made the file unreadable by everyone!
+I just made the file unreadable by everyone, even me!
+
+```console
+[ssasidharan@lnx201 ~]$ cat test.sh 
+cat: test.sh: Permission denied
+```
+
+Of course you can restore the permission with `chmod ugo+r test.sh` 
+
+Note that when invoking `chmod`, `a` (or **a**ll) is equivalent of
+`ugo` (user + group + others).  You can also omit `a` or `ugo` if you
+want everyone to have the same permissions.  So the below all are
+equivalent:
+
+```console
+[ssasidharan@lnx201 ~]$ chmod ugo+r test.sh
+[ssasidharan@lnx201 ~]$ chmod a+r test.sh
+[ssasidharan@lnx201 ~]$ chmod +r test.sh
+```
+
 
 ### Changing owner/group with `chown` and `chgrp`
 
