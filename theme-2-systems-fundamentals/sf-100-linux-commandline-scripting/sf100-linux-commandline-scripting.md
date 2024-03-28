@@ -160,7 +160,8 @@ drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Videos
 
 Let us see what the above means:
 
-- The first column lists permissions on the file/folder.
+- The first column lists permissions on the file/folder.  (We will see
+  what this means in the next section.)
 - The second column shows number of links to it.
 - The third one shows the user who owns it.
 - The fourth one shows the group that owns the file.
@@ -168,9 +169,12 @@ Let us see what the above means:
 directories are a little special here -- what you see here is not the
 total size of all the files and folders under the directory, but the
 space the directory itself uses on disk.
-- The next column shows a timestamp when the file/folder was last
-  modified.
-- Finally, the name of the file/folder.
+- The next column (the whole `Mar 26 15:21` segment) shows a timestamp
+  when the file/folder was last modified.
+- Finally, the name of the file/folder.  Note that `Downloads ->
+  /cdat/tem/ssasidharan/Downloads` is a bit special: it means that
+  `Downloads` folder is in fact a link to
+  `/cdat/tem/ssasidharan/Downloads`.
 
 
 ## Permissions and ownership
