@@ -15,7 +15,25 @@ effective user of the systems.
 
 ## Some words about command line
 
+Suppose you want to find all the text files in a directory that
+contain a certain pattern, like "hello".  How would you do that?
 
+Now suppose you want to replace all instances of "hello" with
+"bonjour". How would you do that?
+
+You can do these things using the Linux command line.  You would be
+invoking commands like `find` and `grep` and `sed` and `awk`, instead
+of using programs with a graphical user interfaces.
+
+Plenty of software with friendly user interfaces exist, and they are
+often easier to use.  In order to use the command line, you will have
+to be familiar with often arcane tools and memorize stuff.
+
+Why on earth would you want to use the command line then?
+
+Because, for certain tasks, it is often quick and efficient to use the
+command line.  Learning to use the command line well will leave more
+power on your hands.
 
 
 ## The shell
