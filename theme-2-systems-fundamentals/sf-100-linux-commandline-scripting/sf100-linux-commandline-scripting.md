@@ -179,6 +179,8 @@ TODO
 - wget
 - curl
 
+- find
+
 - ?
 
 ## Useful shell builtins
