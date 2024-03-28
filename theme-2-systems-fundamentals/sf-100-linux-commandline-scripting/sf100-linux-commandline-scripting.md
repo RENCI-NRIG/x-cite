@@ -105,6 +105,73 @@ it in the directory hierarchy.
 
 ## Users and groups
 
+Linux is a multi-user operating system.  Since many people can be
+using the system, there needs to be mechanisms in place to ensure
+separation between them, while ensuring that they can access shared
+resources when necessary.
+
+The basic mechanism is the concept of users and groups.
+
+The root user is a special user that has all the permissions. They can
+change most things about the system.  The root user can change system
+configuration, add and remove users and groups, etc.
+
+Most of the time, we do not need neither the power nor the
+responsibilities of the root user.  So we have a non-root, _regular_
+user account in `lnx201`.
+
+Your account also belongs to certain _groups_. Groups are the way to
+grant permission to a group of accounts.  You can find the groups you
+belong to using `groups` command:
+
+```console
+[ssasidharan@lnx201 ~]$ groups 
+chess classeuser
+[ssasidharan@lnx201 ~]$ 
+```
+
+Users and groups have distinct numerical identifiers too.  You can
+find them with `id` command:
+
+```console
+[ssasidharan@lnx201 ~]$ id
+uid=63499(ssasidharan) gid=262(chess) groups=262(chess),750(classeuser)
+```
+
+If you run `ls -l` (`-l` is for long listing format) command to list
+files and folders in your home directory, the result will be something
+like this:
+
+```console
+[ssasidharan@lnx201 ~]$ ls -l
+total 4
+drwxr-xr-x 2 ssasidharan chess   28 Mar 28 09:36 bin
+drwxr-xr-x 2 ssasidharan chess  144 Mar 12 00:27 CLASSE_shortcuts
+drwxr-xr-x 2 ssasidharan chess   30 Mar 26 15:22 Desktop
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Documents
+lrwxrwxrwx 1 ssasidharan chess   31 Mar 26 15:21 Downloads -> /cdat/tem/ssasidharan/Downloads
+-rw-r--r-- 1 ssasidharan chess 3254 Mar  7 15:55 helloworld.ipynb
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Music
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Pictures
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Public
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Templates
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Videos
+```
+
+Let us see what the above means:
+
+- The first column lists permissions on the file/folder.
+- The second column shows number of links to it.
+- The third one shows the user who owns it.
+- The fourth one shows the group that owns the file.
+- The fifth one is the size of the file in bytes.  Note that
+directories are a little special here -- what you see here is not the
+total size of all the files and folders under the directory, but the
+space the directory itself uses on disk.
+- The next column shows a timestamp when the file/folder was last
+  modified.
+- Finally, the name of the file/folder.
+
 
 ## Permissions and ownership
 
