@@ -158,7 +158,7 @@ drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Templates
 drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Videos
 ```
 
-Let us see what the above means:
+Let us see what the above columns means:
 
 - The first column lists permissions on the file/folder.  (We will see
   what this means in the next section.)
@@ -179,7 +179,47 @@ space the directory itself uses on disk.
 
 ## Permissions and ownership
 
-- chmod, chown
+Let us see what a string like `drwxr-xr-x` from the above example
+means.  This string, sometimes called "permission bits" or "file mode
+bits", is ten characters long.  Each of the characters are shorthand
+signifying something.
+
+- The first `d` stands for `directory`.  (For files, this will be a `-`.)
+- The next three `rwx` are for user's permissions.
+- The next three `r-x` are for group permissions.
+- The final three `r-x` are for permissions for the rest of the users.
+
+Now, what do those `r` and `w` and `x` mean?
+
+- `r` means permission to **r**ead.
+- `w` means permission to **w**rite.
+- `x` means permission to e**x**ecute, in the case of files.  In the
+  case of directories, `x` means that you can `cd` into them.
+
+You can use `chmod` command to change permissions.  If you create a
+shell script named `test.sh`, for example, it won't be executable by
+default.  You will have to change the file mode bits using `chmod`:
+
+```console
+[ssasidharan@lnx201 ~]$ ls -l test.sh 
+-rw-r--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
+[ssasidharan@lnx201 ~]$ ./test.sh
+-bash: ./test.sh: Permission denied
+[ssasidharan@lnx201 ~]$ chmod +x test.sh 
+[ssasidharan@lnx201 ~]$ ls -l test.sh 
+-rwxr-xr-x 1 ssasidharan chess 0 Mar 28 13:39 test.sh
+[ssasidharan@lnx201 ~]$ ./test.sh
+```
+
+You can remove the `x` bit like so:
+
+```
+[ssasidharan@lnx201 ~]$ chmod -x test.sh
+[ssasidharan@lnx201 ~]$ ls -l test.sh 
+-rw-r--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
+```
+
+- chmod, chown, chgrp
 
 
 ## Symbolic links
