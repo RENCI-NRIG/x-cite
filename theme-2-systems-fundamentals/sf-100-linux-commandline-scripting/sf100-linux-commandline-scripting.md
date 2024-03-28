@@ -196,6 +196,8 @@ Now, what do those `r` and `w` and `x` mean?
 - `x` means permission to e**x**ecute, in the case of files.  In the
   case of directories, `x` means that you can `cd` into them.
 
+### Changing permissions with `chmod`
+
 You can use `chmod` command to change permissions.  If you create a
 shell script named `test.sh`, for example, it won't be executable by
 default.  You will have to change the file mode bits using `chmod`:
@@ -243,6 +245,8 @@ You can also combine `u`, `g`, `o` bits and `r`, `w`, `x` bits with
 ```
 
 I just made the file unreadable by everyone!
+
+### Changing owner/group with `chown` and `chgrp`
 
 
 ## Symbolic links
