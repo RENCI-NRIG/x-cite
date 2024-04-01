@@ -325,7 +325,15 @@ TODO
   replace spaces with `_` (the underscore character).
 
 
-## Standard input, output, and error
+# Standard input, output, and error
+
+Nearly all programs produce output of some kind, and quite often they
+also accept input.
+
+Following the Unix tradition of "everything is a file", programs send
+their output to special files called _standard output_ or _standard
+error_`, and they read input from _standard input_.  They are also
+known as _stdout_, _stderr_, and _stdin_, respectively.
 
 
 ## Pipes, job control
