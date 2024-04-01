@@ -333,7 +333,51 @@ also accept input.
 Following the Unix tradition of "everything is a file", programs send
 their output to special files called _standard output_ or _standard
 error_`, and they read input from _standard input_.  They are also
-known as _stdout_, _stderr_, and _stdin_, respectively.
+known as `stdout`, `stderr`, and `stdin`, respectively.
+
+
+## I/O redirection
+
+I/O redirection lets us to change where standard output gets printed.
+To redirect standard output, we use the `>` operator.
+
+```console
+[ssasidharan@lnx201 ~]$ ls -l > ls-output.txt
+```
+
+As a result of redirection, a new file named `ls-output.txt` will be
+created.  You can view its contents using `cat` command.
+
+```
+[ssasidharan@lnx201 ~]$ ls -l ls-output.txt 
+-rw-r--r-- 1 ssasidharan chess 807 Apr  1 17:32 ls-output.txt
+[ssasidharan@lnx201 ~]$ cat ls-output.txt 
+total 4
+drwxr-xr-x 2 ssasidharan chess   28 Mar 28 09:36 bin
+drwxr-xr-x 2 ssasidharan chess  144 Mar 12 00:27 CLASSE_shortcuts
+drwxr-xr-x 2 ssasidharan chess   30 Mar 26 15:22 Desktop
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Documents
+lrwxrwxrwx 1 ssasidharan chess   31 Mar 26 15:21 Downloads -> /cdat/tem/ssasidharan/Downloads
+-rw-r--r-- 1 ssasidharan chess 3254 Mar  7 15:55 helloworld.ipynb
+-rw-r--r-- 1 ssasidharan chess    0 Apr  1 17:32 ls-output.txt
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Music
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Pictures
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Public
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Templates
+-rwxr-xr-x 1 ssasidharan chess    0 Mar 28 13:39 test.sh
+drwxr-xr-x 2 ssasidharan chess    6 Mar 26 15:21 Videos
+```
+
+Note that if there already was a file named `ls-output.txt`, the
+redirection above would have overwritten its contents.  You want to be
+careful about this.
+
+If you want to append `stdout` to a file instead of overwriting it,
+you can use `>>` operator:
+
+```console
+[ssasidharan@lnx201 ~]$ ls -l >> ls-output.txt
+```
 
 
 ## Pipes, job control
