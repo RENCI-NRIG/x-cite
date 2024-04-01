@@ -297,17 +297,33 @@ equivalent:
 [ssasidharan@lnx201 ~]$ chmod +r test.sh
 ```
 
-
-### Changing owner/group with `chown` and `chgrp`
+(If you want to change owner or group of a file/folder, you can do
+that with `chown` and `chgrp`.  This probably is not immediately
+useful; it is enough to know that these commands exist.)
 
 
 ## Symbolic links
 
 TODO
 
-## Hidden files
+## Noteworthy facts about file names
 
-TODO
+- File/folder names that begin with a `.` (period character) are
+  "hidden": meaning that they will not be listed in the output of `ls`
+  command by default.  You can list them with `ls -a`. 
+  
+  Configuration files for the programs you use (such as `.bashrc` for
+  bash configuration) are often saved in hidden files.  This way they
+  usually stay out of your way without creating a clutter.
+  
+- File/folder names and commands are case sensitive in Linux.  Thus
+  `Notes.txt` and `notes.txt` and `NOTES.TXT` are all distinct files.
+
+- As a matter of convenience, it is better to avoid spaces and special
+  characters in file/folder names, as it will make tasks a little more
+  difficult. If you need to represent spaces between words, you can
+  replace spaces with `_` (the underscore character).
+
 
 ## Standard input, output, and error
 
