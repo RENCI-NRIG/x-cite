@@ -372,6 +372,13 @@ Note that if there already was a file named `ls-output.txt`, the
 redirection above would have overwritten its contents.  You want to be
 careful about this.
 
+What if you want to discard `stdout` completely?  You can redirect it
+to the special file `/dev/null`:
+
+```console
+[ssasidharan@lnx201 ~]$ ls -l >> ls-output.txt
+```
+
 If you want to append `stdout` to a file instead of overwriting it,
 you can use `>>` operator:
 
