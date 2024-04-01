@@ -386,6 +386,18 @@ you can use `>>` operator:
 [ssasidharan@lnx201 ~]$ ls -l >> ls-output.txt
 ```
 
+The  `<` operator is a sort of inverse of the `>` operator:
+
+```console
+[ssasidharan@lnx201 ~]$ echo "Shall I compare thee to a summer’s day?" > sonnet18.txt
+[ssasidharan@lnx201 ~]$ cat sonnet18.txt 
+Shall I compare thee to a summer’s day?
+[ssasidharan@lnx201 ~]$ cat < sonnet18.txt 
+Shall I compare thee to a summer’s day?
+```
+
+(TODO: explain the above: `echo` and the different usage of `cat`.)
+
 
 ## Pipes, job control
 
