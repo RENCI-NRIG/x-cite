@@ -640,6 +640,7 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 | `grep`     |             |
 | `sleep`    |             |
 |            |             |
+| `tree`     |             |
 | `find`     |             |
 |            |             |
 | `ps`       |             |
@@ -730,6 +731,7 @@ Bash provides some useful constructs such as loops and functions.
 
 - loops
 - functions
+- seq
 - ~/.local/bin or $HOME/bin maybe?
 
 
