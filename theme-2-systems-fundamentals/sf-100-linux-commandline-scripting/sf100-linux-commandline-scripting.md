@@ -432,12 +432,59 @@ You can form longer pipes like this:
   bytes present in its input.
 
 
-## Pipes, job control
+## Controlling processes
 
-- pipes
-- redirection (> and <)
+When you run a command, it results in what is called a _process_.
+Processes are running instances of programs which use CPU, memory, and
+possibly other resources.
+
+### Listing processes
+
+You can list running processes using `ps` command:
+
+```console
+[ssasidharan@lnx201 ~]$ ps
+    PID TTY          TIME CMD
+ 694411 pts/81   00:00:00 ps
+3479688 pts/81   00:00:00 bash
+```
+
+By default, `ps` prints processes of the current user and terminal in
+four columns:
+
+- `PID` is process id.
+- `TTY` is the terminal associated with the process.
+- `TIME` is the elapsed CPU time for the process.
+- `CMD` is the command that created the process.
+
+Usually there are many more processes running in the system, and
+sometimes they were started by other users.  You can list them, with
+more detail, by passing some options to `ps`:
+
+```console
+[ssasidharan@lnx201 ~]$ ps -ef | head
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 Jan10 ?        03:14:05 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
+root           2       0  0 Jan10 ?        00:01:12 [kthreadd]
+root           6       2  0 Jan10 ?        00:12:16 [ksoftirqd/0]
+root           7       2  0 Jan10 ?        00:01:10 [migration/0]
+root           8       2  0 Jan10 ?        00:00:00 [rcu_bh]
+root           9       2  0 Jan10 ?        11:14:26 [rcu_sched]
+root          10       2  0 Jan10 ?        00:00:00 [lru-add-drain]
+root          11       2  0 Jan10 ?        00:05:22 [watchdog/0]
+root          12       2  0 Jan10 ?        00:00:24 [watchdog/1]
+```
+
+Run `man ps` for details.
+
+Programs like `top` and `htop` will list processes in friendlier,
+fancier format.
+
+
+### Background and foreground processs
+
 - background and foreground processes
-- listing processes (ps, top, htop)
+
 - signals
 - terminating processes (kill)
 
