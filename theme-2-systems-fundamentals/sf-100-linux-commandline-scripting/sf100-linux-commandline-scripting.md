@@ -580,7 +580,42 @@ other users are, but you are not allowed to terminate them.
 
 ### Signals
 
+As mentioned above, `kill` command sends _signals_ to running
+processes, and we've already seen `SIGTERM` and `SIGKILL`.  Signals
+are a process control mechanism. They are used to stop, resume, or
+terminate processes, and more.
 
+When we use `Control + C` or `Control + Z`, we are sending signals to
+process -- `SIGINT` (or "keyboard interrupt") and `SIGTSTP` (or
+"terminal stop"), respectively.
+
+Signals have numbers: `SIGKILL` is 9, so you can use `kill -9 <pid>`
+instead of `kill -SIGKILL <pid>`.  You can also omit the `SIG` prefix,
+and use `kill -KILL <pid>`.
+
+Here are some common signals:
+
+<!-- TODO: edit below; copy-pasted from `man 7 signal` -->
+
+```
+       Signal     Value     Action   Comment
+       ──────────────────────────────────────────────────────────────────────
+       SIGHUP        1       Term    Hangup detected on controlling terminal
+                                     or death of controlling process
+       SIGINT        2       Term    Interrupt from keyboard
+       SIGQUIT       3       Core    Quit from keyboard
+       SIGILL        4       Core    Illegal Instruction
+       SIGABRT       6       Core    Abort signal from abort(3)
+       SIGFPE        8       Core    Floating point exception
+       SIGKILL       9       Term    Kill signal
+       SIGSEGV      11       Core    Invalid memory reference
+       SIGPIPE      13       Term    Broken pipe: write to pipe with no
+                                     readers
+       SIGALRM      14       Term    Timer signal from alarm(2)
+       SIGTERM      15       Term    Termination signal
+```
+
+Run the command `man 7 signal` to read `signal` command's manual page.
 
 
 ## Environment variables
