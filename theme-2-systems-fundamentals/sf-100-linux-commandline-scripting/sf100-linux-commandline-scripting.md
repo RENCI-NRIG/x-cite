@@ -98,6 +98,11 @@ It is useful to know about some of these directories:
 - `proc` provides an interface with processes.
 
 
+## Absolute and relative paths
+
+<!-- TODO -->
+
+
 ## The current working directory
 
 At any time in the shell, we are "inside" a single directory, known as
