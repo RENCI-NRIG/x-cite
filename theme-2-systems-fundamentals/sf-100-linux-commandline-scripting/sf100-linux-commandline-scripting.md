@@ -625,53 +625,53 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 - How to use them?
 
 
-## Basic UNIX tools
-
-- echo
-
-- cat
-- tail
-
-- head
-- tail
-
-- sed
-- awk
-- grep
-- sleep
-
-- ping
-- netstat
-
-- ifconfig
-- ip
-
-- ps
-- top
-- htop
-- kill
-- killall
-
-- hostname
-- uname
+## A cheat sheat of commands
 
 
-- date
-- cal
+| Command  | Description |
+|----------|-------------|
+| echo     |             |
+| cat      |             |
+| head     |             |
+| tail     |             |
+|          |             |
+| sed      |             |
+| awk      |             |
+| grep     |             |
+| sleep    |             |
+|          |             |
+| find     |             |
+|          |             |
+| ps       |             |
+| top      |             |
+| htop     |             |
+| kill     |             |
+| killall  |             |
+|          |             |
+| ping     |             |
+| netstat  |             |
+|          |             |
+| ifconfig |             |
+| ip       |             |
+|          |             |
+| hostname |             |
+| uname    |             |
+|          |             |
+| date     |             |
+| cal      |             |
+|          |             |
+| clear    |             |
+| history  |             |
+|          |             |
+| ssh      |             |
+| scp      |             |
+| sftp     |             |
+| ftp      |             |
+| wget     |             |
+| curl     |             |
 
-- clear
-- history
 
-- ssh
-- scp
-- sftp
-- ftp
-- wget
-- curl
 
-- find
-
-- ?
 
 ## Useful shell builtins
 
