@@ -1,13 +1,17 @@
 # Linux, Commandline, and Scripting
 
 The following notes assume that you are all set up to use your
-accounts on the CLASSE Linux systems.  You know how to use `ssh` to
-access those machines, and you might know enough commands to find your
-way around, depending on your level of familiarity with these systems.
+accounts on the CLASSE Linux systems.
+
+- You know how to use `ssh` to access `lnx201`; or
+- You know how to launch a terminal from CLASSE JupyterLab instance.
+  
+Depending on your level of familiarity with the system, you might know
+enough commands to find your way around.
 
 But it probably is not a good idea to assume that you know your way
-around, so let us see what you might need to know to be a fairly
-effective user of the systems.
+around, so let us see what you might need to know to in order to
+become a proficient user of the systems.
 
 
 ## Some words about Linux
