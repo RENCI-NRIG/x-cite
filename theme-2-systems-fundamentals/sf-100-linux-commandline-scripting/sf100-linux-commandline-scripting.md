@@ -670,7 +670,7 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 | `head`     |             |
 | `tail`     |             |
 | `more`     |             |
-| `less      |             |
+| `less`     |             |
 |            |             |
 | `ls`       |             |
 | `mkdir`    |             |
