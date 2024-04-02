@@ -82,6 +82,12 @@ distracted and just commit to `bash` for now.
 - Using the tab key
 
 
+## Exiting a shell
+
+- `exit`
+- `Control + D`
+
+
 # Directory navigation
 
 Linux organizes directories and files in a _hierarchical directory
