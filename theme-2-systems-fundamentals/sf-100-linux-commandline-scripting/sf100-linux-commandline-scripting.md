@@ -481,12 +481,71 @@ Programs like `top` and `htop` will list processes in friendlier,
 fancier format.
 
 
-### Background and foreground processs
+### Background and foreground processes
 
-- background and foreground processes
+By default, commands run in the _foreground_: they do their thing, use
+the terminal (to read input, print output), and finally exit.  You
+need to wait for a foreground process to end before you start the next
+one, or use another terminal.
 
-- signals
-- terminating processes (kill)
+When have a long-running process, you have the option of sending it to
+the _background_, using the `&` operator:
+
+```console
+[ssasidharan@lnx201 ~]$ sleep 100 &
+[1] 949751
+```
+
+You can use `Control + Z` to stop a foreground process and send it to
+the background:
+
+```
+[ssasidharan@lnx201 ~]$ sleep 100
+^Z
+[1]+  Stopped                 sleep 100
+```
+
+You can list background processes using `jobs` command:
+
+```console
+[ssasidharan@lnx201 ~]$ jobs
+[1]-  Running                 sleep 100 &
+[2]+  Stopped                 sleep 100
+```
+
+You can bring a background process to foreground using `fg` command,
+and you can terminate it using `Control + C`:
+
+```console
+[ssasidharan@lnx201 ~]$ fg 2
+sleep 100
+^C
+[ssasidharan@lnx201 ~]$ 
+```
+
+You can use `bg` command to resume a stopped background process:
+
+```console
+[ssasidharan@lnx201 ~]$ sleep 100 &
+[1] 1746205
+[ssasidharan@lnx201 ~]$ sleep 100 
+^Z
+[2]+  Stopped                 sleep 100
+[ssasidharan@lnx201 ~]$ jobs
+[1]-  Running                 sleep 100 &
+[2]+  Stopped                 sleep 100
+[ssasidharan@lnx201 ~]$ bg %2
+[2]+ sleep 100 &
+```
+
+
+### Signals
+
+
+### Terminating processes
+
+- kill
+- killall
 
 
 ## Environment variables
