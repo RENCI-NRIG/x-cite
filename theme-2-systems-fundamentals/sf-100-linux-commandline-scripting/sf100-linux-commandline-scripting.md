@@ -310,7 +310,8 @@ TODO
 
 - File/folder names that begin with a `.` (period character) are
   "hidden": meaning that they will not be listed in the output of `ls`
-  command by default.  You can list them with `ls -a`. 
+  command by default.  You can list them with `ls -a`. They are also
+  called _dotfiles_.
   
   Configuration files for the programs you use (such as `.bashrc` for
   bash configuration) are often saved in hidden files.  This way they
@@ -678,9 +679,6 @@ TODO: probably don't have to talk about this now?
 
 
 ## Aliases
-
-
-## Dotfiles
 
 
 ## Editors
