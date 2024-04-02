@@ -348,7 +348,7 @@ To redirect standard output, we use the `>` operator.
 As a result of redirection, a new file named `ls-output.txt` will be
 created.  You can view its contents using `cat` command.
 
-```
+```console
 [ssasidharan@lnx201 ~]$ ls -l ls-output.txt 
 -rw-r--r-- 1 ssasidharan chess 807 Apr  1 17:32 ls-output.txt
 [ssasidharan@lnx201 ~]$ cat ls-output.txt 
