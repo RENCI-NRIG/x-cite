@@ -672,9 +672,10 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 
 
 
-## Useful shell builtins
+## Shell builtins
 
-TODO: probably don't have to talk about this now?
+- `type`
+- `which`
 
 
 ## Aliases
@@ -682,16 +683,53 @@ TODO: probably don't have to talk about this now?
 
 ## Editors
 
+- `nano`
+- `vim`
+- `emacs`
+
 
 ## Writing shell scripts
 
-- shebangs
+The shell also provides a little programming language.  You can write
+commands in a file called a _shell script_, and make it executable.
+Shell scripts usually have a `.sh` filename extension.
+
+Shell scripts are useful when you need to run some complex sequence of
+commands often.
+
+Here is a simple shell script:
+
+```sh
+#! /usr/bin/env bash
+
+# A simple script.
+
+echo "Hello world!"
+```
+
+<!-- TODO: describe shebang, comments, commands -->
+
+Assuming we name the script `hello.sh`, we can make it executable with
+`chmod`, and run `hello.sh`:
+
+
+```console
+[ssasidharan@lnx201 ~]$ chmod +x hello.sh 
+[ssasidharan@lnx201 ~]$ ./hello.sh 
+Hello world!
+```
+
+Bash provides some useful constructs such as loops and functions.
+
+- loops
 - functions
-- making files executable
-- ~/.local/bin maybe?
+- ~/.local/bin or $HOME/bin maybe?
 
 
 ## Nifty: terminal multiplexers
+
+- `tmux`
+- `screen`
 
 
 ## Finding help and documentation
