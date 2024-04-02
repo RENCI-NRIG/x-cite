@@ -634,6 +634,15 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 | `cat`      |             |
 | `head`     |             |
 | `tail`     |             |
+| `more`     |             |
+| `less      |             |
+|            |             |
+| `ls`       |             |
+| `mkdir`    |             |
+| `cd`       |             |
+| `cp`       |             |
+| `rm`       |             |
+|            |             |
 |            |             |
 | `sed`      |             |
 | `awk`      |             |
@@ -642,6 +651,11 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 |            |             |
 | `tree`     |             |
 | `find`     |             |
+|            |             |
+| `du`       |             |
+|            |             |
+| `gzip`     |             |
+| `tar`      |             |
 |            |             |
 | `ps`       |             |
 | `top`      |             |
