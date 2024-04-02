@@ -678,6 +678,13 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 - `which`
 
 
+## Regular expressions
+
+- grep
+- awk
+- sed
+
+
 ## Aliases
 
 
