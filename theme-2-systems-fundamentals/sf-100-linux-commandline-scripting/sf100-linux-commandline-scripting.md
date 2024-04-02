@@ -66,6 +66,22 @@ too: `csh`, `ksh`, `dash`, `zsh`, and so on.  But let us not get
 distracted and just commit to `bash` for now.
 
 
+## Shell history
+
+- up/down keys
+- `history`
+- `Control + R`
+
+
+<!-- TODO -->
+
+## Command completion
+
+<!-- TODO -->
+
+- Using the tab key
+
+
 # Directory navigation
 
 Linux organizes directories and files in a _hierarchical directory
@@ -101,6 +117,14 @@ It is useful to know about some of these directories:
 ## Absolute and relative paths
 
 <!-- TODO -->
+
+
+## Wildcard operator
+
+<!-- TODO -->
+
+- `*`
+- use `*` carefully with `rm`
 
 
 ## The current working directory
