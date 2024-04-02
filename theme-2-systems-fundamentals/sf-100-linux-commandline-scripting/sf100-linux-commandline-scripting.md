@@ -628,48 +628,47 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 ## A cheat sheat of commands
 
 
-| Command  | Description |
-|----------|-------------|
-| echo     |             |
-| cat      |             |
-| head     |             |
-| tail     |             |
-|          |             |
-| sed      |             |
-| awk      |             |
-| grep     |             |
-| sleep    |             |
-|          |             |
-| find     |             |
-|          |             |
-| ps       |             |
-| top      |             |
-| htop     |             |
-| kill     |             |
-| killall  |             |
-|          |             |
-| ping     |             |
-| netstat  |             |
-|          |             |
-| ifconfig |             |
-| ip       |             |
-|          |             |
-| hostname |             |
-| uname    |             |
-|          |             |
-| date     |             |
-| cal      |             |
-|          |             |
-| clear    |             |
-| history  |             |
-|          |             |
-| ssh      |             |
-| scp      |             |
-| sftp     |             |
-| ftp      |             |
-| wget     |             |
-| curl     |             |
-
+| Command    | Description |
+|------------|-------------|
+| `echo`     |             |
+| `cat`      |             |
+| `head`     |             |
+| `tail`     |             |
+|            |             |
+| `sed`      |             |
+| `awk`      |             |
+| `grep`     |             |
+| `sleep`    |             |
+|            |             |
+| `find`     |             |
+|            |             |
+| `ps`       |             |
+| `top`      |             |
+| `htop`     |             |
+| `kill`     |             |
+| `killall`  |             |
+|            |             |
+| `ping`     |             |
+| `netstat`  |             |
+|            |             |
+| `ifconfig` |             |
+| `ip`       |             |
+|            |             |
+| `hostname` |             |
+| `uname`    |             |
+|            |             |
+| `date`     |             |
+| `cal`      |             |
+|            |             |
+| `clear`    |             |
+| `history`  |             |
+|            |             |
+| `ssh`      |             |
+| `scp`      |             |
+| `sftp`     |             |
+| `ftp`      |             |
+| `wget`     |             |
+| `curl`     |             |
 
 
 
