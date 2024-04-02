@@ -15,5 +15,6 @@ format:
     css: styles.css
     toc: true
 
-
-
+# https://quarto.org/docs/projects/code-execution.html#freeze
+execute:
+  freeze: auto
