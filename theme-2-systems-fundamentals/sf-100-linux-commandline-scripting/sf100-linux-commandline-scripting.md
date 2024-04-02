@@ -399,6 +399,39 @@ Shall I compare thee to a summer’s day?
 (TODO: explain the above: `echo` and the different usage of `cat`.)
 
 
+## Pipes
+
+Programs can write to standard output.  Programs can also read from
+standard input. This means we can "chain" them together, such that one
+programs standard output is "piped" into another program's standard
+input.
+
+The operator to do this is `|` (vertical bar), also known as a pipe,
+and it is used in this manner: `command1 | command2`.
+
+
+```console
+[ssasidharan@lnx201 ~]$ ls -l /bin/ | less
+```
+
+The output of `ls -l /bin` is fairly large, so we pipe it into `less`,
+which allows you to scroll the output backward and forward, using _up_
+and _down_ keyboard keys.
+
+You can form longer pipes like this:
+
+``` console
+[ssasidharan@lnx201 ~]$ ls /bin /usr/bin /sbin /usr/sbin | sort | uniq | wc
+   4289    4288   46820
+```
+
+- `sort` will sort lines of text files.
+- `uniq` is used to filter adjacent matching lines the output of
+  `sort`.
+- `wc` is a **w**ord **c**ount program.  It counts lines, words, and
+  bytes present in its input.
+
+
 ## Pipes, job control
 
 - pipes
