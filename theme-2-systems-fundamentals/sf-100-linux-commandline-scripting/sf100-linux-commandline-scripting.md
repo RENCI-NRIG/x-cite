@@ -538,14 +538,49 @@ You can use `bg` command to resume a stopped background process:
 [2]+ sleep 100 &
 ```
 
+### Terminating processes
+
+Sometimes you might want to terminate a program, perhaps because it is
+using too much CPU or memory. You can find out the offending program's
+ID using `ps` or `top` or `htop`, and then you can use `kill` command
+to end the process.
+
+By default, `kill` sends a signal called `SIGTERM` (more on signals
+later).  If `SIGTERM` is unable to terminate the process (such as when
+the program is ignoring `SIGTERM`), you can try `SIGKILL`:
+
+```console
+[ssasidharan@lnx201 ~]$ ps
+    PID TTY          TIME CMD
+ 796679 pts/116  00:00:00 bash
+1185454 pts/116  00:00:00 ps
+1748299 pts/116  00:00:00 sleep
+[ssasidharan@lnx201 ~]$ kill 1748299
+[ssasidharan@lnx201 ~]$ ps
+    PID TTY          TIME CMD
+ 796679 pts/116  00:00:00 bash
+1203470 pts/116  00:00:00 ps
+1748299 pts/116  00:00:00 sleep
+[ssasidharan@lnx201 ~]$ kill -SIGKILL 1748299
+[2]+  Killed                  sleep 100
+```
+
+You can use `killall` command to kill processes by name:
+
+```console
+[ssasidharan@lnx201 ~]$ killall sleep
+sleep(1469283): Operation not permitted
+sleep(1509215): Operation not permitted
+sleep: no process found
+```
+
+In the above example, you are not running a `sleep` process, but some
+other users are, but you are not allowed to terminate them.
+
 
 ### Signals
 
 
-### Terminating processes
-
-- kill
-- killall
 
 
 ## Environment variables
