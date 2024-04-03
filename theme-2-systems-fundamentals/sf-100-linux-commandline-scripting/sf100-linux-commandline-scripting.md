@@ -5,7 +5,7 @@ accounts on the CLASSE Linux systems.
 
 - You know how to use `ssh` to access `lnx201`; or
 - You know how to launch a terminal from CLASSE JupyterLab instance.
-  
+
 Depending on your level of familiarity with the system, you might know
 enough commands to find your way around.
 
@@ -92,6 +92,58 @@ distracted and just commit to `bash` for now.
 - `Control + D`
 
 
+# Environment variables
+
+During a session, the shell maintains some information in what is
+known as _environment variables_.  They are pairs of key and value:
+programs can look up values by keys, and change their behavior
+accordingly.
+
+To list the environment variables present in your session, use
+`printenv` command:
+
+```console
+[ssasidharan@lnx201 ~]$ printenv
+HOSTNAME=lnx201.classe.cornell.edu
+TERM=xterm-256color
+SHELL=/bin/bash
+HISTSIZE=1000
+SSH_CLIENT=152.54.3.220 50338 22
+SSH_TTY=/dev/pts/6
+USER=ssasidharan
+MAIL=/var/spool/mail/ssasidharan
+PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/home/ssasidharan/bin
+PWD=/home/ssasidharan
+LANG=en_US.UTF-8
+HOME=/home/ssasidharan
+```
+
+I'm omitting a whole bunch of stuff here for the sake of brevity, but
+you get the idea.
+
+Some of these environment variables are worth knowing:
+
+- `USER` is your username on `lnx201`.
+- `HOME` is your "home" directory on `lnx201`.  This is where you keep your files and folders.
+- `SHELL` is the shell you use currently.
+- `PATH` is a list of directory names, separated by `:` (colon)
+  character.  When you enter a command on the shell prompt, the shell
+  will use `PATH` to locate the program that it needs to run.
+
+
+## How bash sets up the environment
+
+- login shells, non-login shells
+- /etc/profile, ~/.bash_profile
+- /etc/bashrc, ~/.bashrc
+
+
+## Changing environment variables
+
+- `export` command
+- `echo $HOME` command
+
+
 # Directory navigation
 
 Linux organizes directories and files in a _hierarchical directory
@@ -147,7 +199,7 @@ printed on the output.
 When you log in to `lnx201`, initially you will be in a directory
 named `/home/${USER}`, where `${USER}` is your username on `lnx201`.
 This is what is known as your /home directory/.  When you log in
-first, your home directory will be your current working directory. 
+first, your home directory will be your current working directory.
 
 To find where you are, use the command `pwd`.
 
@@ -160,15 +212,15 @@ The below commands are useful:
 - `rm` will remove a file.
 - `rm <name of directory>` will _not_ remove a directory; you have to
   remove it _recursively_, like so: `rm -r <name of directory>`.
-  
+
 
 `cd -` is useful: it will switch you to the directory that you were
   previously in.
-  
+
 `.` and `..` are special directory names: `.` means the current
 directory, and `..` means its parent directory, or the directory above
 it in the directory hierarchy.
- 
+
 `touch` command is used to change file timestamps.  You can also use
 `touch` to create an empty file, like so: `touch test.txt`.
 
@@ -197,9 +249,9 @@ grant permission to a group of accounts.  You can find the groups you
 belong to using `groups` command:
 
 ```console
-[ssasidharan@lnx201 ~]$ groups 
+[ssasidharan@lnx201 ~]$ groups
 chess classeuser
-[ssasidharan@lnx201 ~]$ 
+[ssasidharan@lnx201 ~]$
 ```
 
 Users and groups have distinct numerical identifiers too.  You can
@@ -275,12 +327,12 @@ shell script named `test.sh`, for example, it won't be executable by
 default.  You will have to change the file mode bits using `chmod`:
 
 ```console
-[ssasidharan@lnx201 ~]$ ls -l test.sh 
+[ssasidharan@lnx201 ~]$ ls -l test.sh
 -rw-r--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
 [ssasidharan@lnx201 ~]$ ./test.sh
 -bash: ./test.sh: Permission denied
-[ssasidharan@lnx201 ~]$ chmod +x test.sh 
-[ssasidharan@lnx201 ~]$ ls -l test.sh 
+[ssasidharan@lnx201 ~]$ chmod +x test.sh
+[ssasidharan@lnx201 ~]$ ls -l test.sh
 -rwxr-xr-x 1 ssasidharan chess 0 Mar 28 13:39 test.sh
 [ssasidharan@lnx201 ~]$ ./test.sh
 ```
@@ -289,21 +341,21 @@ You can remove the `x` bit like so:
 
 ```
 [ssasidharan@lnx201 ~]$ chmod -x test.sh
-[ssasidharan@lnx201 ~]$ ls -l test.sh 
+[ssasidharan@lnx201 ~]$ ls -l test.sh
 -rw-r--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
 ```
 
 You can also grant permission to just the **o**wner, or **g**roup, or others:
 
 ```console
-[ssasidharan@lnx201 ~]$ chmod u+x test.sh 
-[ssasidharan@lnx201 ~]$ ls -l test.sh 
+[ssasidharan@lnx201 ~]$ chmod u+x test.sh
+[ssasidharan@lnx201 ~]$ ls -l test.sh
 -rwxr--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
-[ssasidharan@lnx201 ~]$ chmod g+x test.sh 
-[ssasidharan@lnx201 ~]$ ls -l test.sh 
+[ssasidharan@lnx201 ~]$ chmod g+x test.sh
+[ssasidharan@lnx201 ~]$ ls -l test.sh
 -rwxr-xr-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
-[ssasidharan@lnx201 ~]$ chmod o+x test.sh 
-[ssasidharan@lnx201 ~]$ ls -l test.sh 
+[ssasidharan@lnx201 ~]$ chmod o+x test.sh
+[ssasidharan@lnx201 ~]$ ls -l test.sh
 -rwxr-xr-x 1 ssasidharan chess 0 Mar 28 13:39 test.sh
 ```
 
@@ -311,19 +363,19 @@ You can also combine `u`, `g`, `o` bits and `r`, `w`, `x` bits with
 `+` or `-`:
 
 ```console
-[ssasidharan@lnx201 ~]$ chmod ugo-r test.sh 
-[ssasidharan@lnx201 ~]$ ls -l test.sh 
+[ssasidharan@lnx201 ~]$ chmod ugo-r test.sh
+[ssasidharan@lnx201 ~]$ ls -l test.sh
 --wx--x--x 1 ssasidharan chess 0 Mar 28 13:39 test.sh
 ```
 
 I just made the file unreadable by everyone, even me!
 
 ```console
-[ssasidharan@lnx201 ~]$ cat test.sh 
+[ssasidharan@lnx201 ~]$ cat test.sh
 cat: test.sh: Permission denied
 ```
 
-Of course you can restore the permission with `chmod ugo+r test.sh` 
+Of course you can restore the permission with `chmod ugo+r test.sh`
 
 Note that when invoking `chmod`, `a` (or **a**ll) is equivalent of
 `ugo` (user + group + others).  You can also omit `a` or `ugo` if you
@@ -351,11 +403,11 @@ TODO
   "hidden": meaning that they will not be listed in the output of `ls`
   command by default.  You can list them with `ls -a`. They are also
   called _dotfiles_.
-  
+
   Configuration files for the programs you use (such as `.bashrc` for
   bash configuration) are often saved in hidden files.  This way they
   usually stay out of your way without creating a clutter.
-  
+
 - File/folder names and commands are case sensitive in Linux.  Thus
   `Notes.txt` and `notes.txt` and `NOTES.TXT` are all distinct files.
 
@@ -389,9 +441,9 @@ As a result of redirection, a new file named `ls-output.txt` will be
 created.  You can view its contents using `cat` command.
 
 ```console
-[ssasidharan@lnx201 ~]$ ls -l ls-output.txt 
+[ssasidharan@lnx201 ~]$ ls -l ls-output.txt
 -rw-r--r-- 1 ssasidharan chess 807 Apr  1 17:32 ls-output.txt
-[ssasidharan@lnx201 ~]$ cat ls-output.txt 
+[ssasidharan@lnx201 ~]$ cat ls-output.txt
 total 4
 drwxr-xr-x 2 ssasidharan chess   28 Mar 28 09:36 bin
 drwxr-xr-x 2 ssasidharan chess  144 Mar 12 00:27 CLASSE_shortcuts
@@ -430,9 +482,9 @@ The  `<` operator is a sort of inverse of the `>` operator:
 
 ```console
 [ssasidharan@lnx201 ~]$ echo "Shall I compare thee to a summer’s day?" > sonnet18.txt
-[ssasidharan@lnx201 ~]$ cat sonnet18.txt 
+[ssasidharan@lnx201 ~]$ cat sonnet18.txt
 Shall I compare thee to a summer’s day?
-[ssasidharan@lnx201 ~]$ cat < sonnet18.txt 
+[ssasidharan@lnx201 ~]$ cat < sonnet18.txt
 Shall I compare thee to a summer’s day?
 ```
 
@@ -560,7 +612,7 @@ and you can terminate it using `Control + C`:
 [ssasidharan@lnx201 ~]$ fg 2
 sleep 100
 ^C
-[ssasidharan@lnx201 ~]$ 
+[ssasidharan@lnx201 ~]$
 ```
 
 You can use `bg` command to resume a stopped background process:
@@ -568,7 +620,7 @@ You can use `bg` command to resume a stopped background process:
 ```console
 [ssasidharan@lnx201 ~]$ sleep 100 &
 [1] 1746205
-[ssasidharan@lnx201 ~]$ sleep 100 
+[ssasidharan@lnx201 ~]$ sleep 100
 ^Z
 [2]+  Stopped                 sleep 100
 [ssasidharan@lnx201 ~]$ jobs
@@ -656,12 +708,6 @@ Here are some common signals:
 ```
 
 Run the command `man 7 signal` to read `signal` command's manual page.
-
-
-## Environment variables
-
-- What are they?
-- How to use them?
 
 
 # Useful commands
@@ -778,8 +824,8 @@ Assuming we name the script `hello.sh`, we can make it executable with
 
 
 ```console
-[ssasidharan@lnx201 ~]$ chmod +x hello.sh 
-[ssasidharan@lnx201 ~]$ ./hello.sh 
+[ssasidharan@lnx201 ~]$ chmod +x hello.sh
+[ssasidharan@lnx201 ~]$ ./hello.sh
 Hello world!
 ```
 
