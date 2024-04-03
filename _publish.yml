@@ -2,3 +2,6 @@
   quarto-pub:
     - id: 130300ec-50f9-498e-90f6-4d4eb038b001
       url: 'https://x-cite.quarto.pub/x-cite'
+  netlify:
+    - id: 4a8aeb09-4d78-415a-8834-55ea251e898c
+      url: 'https://beamish-fenglisu-24fe58.netlify.app'
