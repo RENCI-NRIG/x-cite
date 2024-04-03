@@ -45,7 +45,7 @@ Learning to use the command line well will leave more power on your
 hands.
 
 
-## The shell
+# The shell
 
 A shell is an interactive program that accepts commands and passes
 those commands to the operating systems to execute.
@@ -472,13 +472,13 @@ You can form longer pipes like this:
   bytes present in its input.
 
 
-## Controlling processes
+# Controlling processes
 
 When you run a command, it results in what is called a _process_.
 Processes are running instances of programs which use CPU, memory, and
 possibly other resources.
 
-### Listing processes
+## Listing processes
 
 You can list running processes using `ps` command:
 
@@ -521,7 +521,7 @@ Programs like `top` and `htop` will list processes in friendlier,
 fancier format.
 
 
-### Background and foreground processes
+## Background and foreground processes
 
 By default, commands run in the _foreground_: they do their thing, use
 the terminal (to read input, print output), and finally exit.  You
@@ -578,7 +578,7 @@ You can use `bg` command to resume a stopped background process:
 [2]+ sleep 100 &
 ```
 
-### Terminating processes
+## Terminating processes
 
 Sometimes you might want to terminate a program, perhaps because it is
 using too much CPU or memory. You can find out the offending program's
@@ -618,7 +618,7 @@ In the above example, you are not running a `sleep` process, but some
 other users are, but you are not allowed to terminate them.
 
 
-### Signals
+## Signals
 
 As mentioned above, `kill` command sends _signals_ to running
 processes, and we've already seen `SIGTERM` and `SIGKILL`.  Signals
@@ -664,7 +664,9 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 - How to use them?
 
 
-## A cheat sheat of commands
+# Useful commands
+
+## A cheat sheet
 
 
 | Command    | Description |
@@ -732,24 +734,25 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 - `which`
 
 
-## Regular expressions
+## Aliases
+
+
+# Regular expressions
 
 - grep
 - awk
 - sed
 
 
-## Aliases
 
-
-## Editors
+# Editors
 
 - `nano`
 - `vim`
 - `emacs`
 
 
-## Writing shell scripts
+# Writing shell scripts
 
 The shell also provides a little programming language.  You can write
 commands in a file called a _shell script_, and make it executable.
@@ -788,17 +791,17 @@ Bash provides some useful constructs such as loops and functions.
 - ~/.local/bin or $HOME/bin maybe?
 
 
-## Nifty: terminal multiplexers
+# Nifty: terminal multiplexers
 
 - `tmux`
 - `screen`
 
 
-## Finding help and documentation
+# Finding help and documentation
 
 - finding help: man, info, the web
 
 
-## Further reading
+# Further reading
 
 - https://missing.csail.mit.edu/2020/shell-tools/
