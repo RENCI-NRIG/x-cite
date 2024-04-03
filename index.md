@@ -31,6 +31,12 @@ This is the course outline:
 
 ## Theme 4: X-Ray Science S&E Software
 
+- XS 100: Data collection, preparing input parameters, SPEC and CLI
+- XS 101: Basic / on-the-fly data analysis, viewing detector images
+- XS 102: Large-scale data analysis: from images to science parameters
+  to interpretation
+- XS 200: Metadata for data fidelity and systematic checks
+
 ## Theme 5: Data Curation and FAIR
 
 -   CF 100: Intro to domain metadata standards, formats and repositories
