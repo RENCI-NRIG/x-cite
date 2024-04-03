@@ -70,11 +70,11 @@ too: `csh`, `ksh`, `dash`, `zsh`, and so on.  But let us not get
 distracted and just commit to `bash` for now.
 
 
-## Shell history
+## Using the shell prompt
 
 - up/down keys
 - `history`
-- `Control + R`
+- {{<kbd Ctrl-R>}}
 
 
 <!-- TODO -->
@@ -83,7 +83,7 @@ distracted and just commit to `bash` for now.
 
 <!-- TODO -->
 
-- Using the tab key
+- Using the {{<kbd tab>}} key
 
 
 ## Exiting a shell
@@ -102,7 +102,7 @@ accordingly.
 To list the environment variables present in your session, use
 `printenv` command:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ printenv
 HOSTNAME=lnx201.classe.cornell.edu
 TERM=xterm-256color
@@ -159,7 +159,7 @@ called the "root directory", or `/`.  All other directories are under
 the root directory.  You can list things under `/` with the command
 `ls /`:
 
-```console
+```{.bash}
 [user@lnx201 ~]$ ls /
 bin   cdat  cvmfs  etc   lib    media  mnt  nfs   opt   root  sbin  sys  usr
 boot  cifs  dev    home  lib64  misc   net  null  proc  run   srv   tmp  var
@@ -248,7 +248,7 @@ Your account also belongs to certain _groups_. Groups are the way to
 grant permission to a group of accounts.  You can find the groups you
 belong to using `groups` command:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ groups
 chess classeuser
 [ssasidharan@lnx201 ~]$
@@ -257,7 +257,7 @@ chess classeuser
 Users and groups have distinct numerical identifiers too.  You can
 find them with `id` command:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ id
 uid=63499(ssasidharan) gid=262(chess) groups=262(chess),750(classeuser)
 ```
@@ -266,7 +266,7 @@ If you run `ls -l` (`-l` is for long listing format) command to list
 files and folders in your home directory, the result will be something
 like this:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ls -l
 total 4
 drwxr-xr-x 2 ssasidharan chess   28 Mar 28 09:36 bin
@@ -326,7 +326,7 @@ You can use `chmod` command to change permissions.  If you create a
 shell script named `test.sh`, for example, it won't be executable by
 default.  You will have to change the file mode bits using `chmod`:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ls -l test.sh
 -rw-r--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
 [ssasidharan@lnx201 ~]$ ./test.sh
@@ -339,7 +339,7 @@ default.  You will have to change the file mode bits using `chmod`:
 
 You can remove the `x` bit like so:
 
-```
+```{.bash}
 [ssasidharan@lnx201 ~]$ chmod -x test.sh
 [ssasidharan@lnx201 ~]$ ls -l test.sh
 -rw-r--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
@@ -347,7 +347,7 @@ You can remove the `x` bit like so:
 
 You can also grant permission to just the **o**wner, or **g**roup, or others:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ chmod u+x test.sh
 [ssasidharan@lnx201 ~]$ ls -l test.sh
 -rwxr--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
@@ -362,7 +362,7 @@ You can also grant permission to just the **o**wner, or **g**roup, or others:
 You can also combine `u`, `g`, `o` bits and `r`, `w`, `x` bits with
 `+` or `-`:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ chmod ugo-r test.sh
 [ssasidharan@lnx201 ~]$ ls -l test.sh
 --wx--x--x 1 ssasidharan chess 0 Mar 28 13:39 test.sh
@@ -370,7 +370,7 @@ You can also combine `u`, `g`, `o` bits and `r`, `w`, `x` bits with
 
 I just made the file unreadable by everyone, even me!
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ cat test.sh
 cat: test.sh: Permission denied
 ```
@@ -382,7 +382,7 @@ Note that when invoking `chmod`, `a` (or **a**ll) is equivalent of
 want everyone to have the same permissions.  So the below all are
 equivalent:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ chmod ugo+r test.sh
 [ssasidharan@lnx201 ~]$ chmod a+r test.sh
 [ssasidharan@lnx201 ~]$ chmod +r test.sh
@@ -433,14 +433,14 @@ known as `stdout`, `stderr`, and `stdin`, respectively.
 I/O redirection lets us to change where standard output gets printed.
 To redirect standard output, we use the `>` operator.
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ls -l > ls-output.txt
 ```
 
 As a result of redirection, a new file named `ls-output.txt` will be
 created.  You can view its contents using `cat` command.
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ls -l ls-output.txt
 -rw-r--r-- 1 ssasidharan chess 807 Apr  1 17:32 ls-output.txt
 [ssasidharan@lnx201 ~]$ cat ls-output.txt
@@ -467,20 +467,20 @@ careful about this.
 What if you want to discard `stdout` completely?  You can redirect it
 to the special file `/dev/null`:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ls -l >> ls-output.txt
 ```
 
 If you want to append `stdout` to a file instead of overwriting it,
 you can use `>>` operator:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ls -l >> ls-output.txt
 ```
 
 The  `<` operator is a sort of inverse of the `>` operator:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ echo "Shall I compare thee to a summer’s day?" > sonnet18.txt
 [ssasidharan@lnx201 ~]$ cat sonnet18.txt
 Shall I compare thee to a summer’s day?
@@ -502,7 +502,7 @@ The operator to do this is `|` (vertical bar), also known as a pipe,
 and it is used in this manner: `command1 | command2`.
 
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ls -l /bin/ | less
 ```
 
@@ -512,7 +512,7 @@ and _down_ keyboard keys.
 
 You can form longer pipes like this:
 
-``` console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ls /bin /usr/bin /sbin /usr/sbin | sort | uniq | wc
    4289    4288   46820
 ```
@@ -534,7 +534,7 @@ possibly other resources.
 
 You can list running processes using `ps` command:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ps
     PID TTY          TIME CMD
  694411 pts/81   00:00:00 ps
@@ -553,7 +553,7 @@ Usually there are many more processes running in the system, and
 sometimes they were started by other users.  You can list them, with
 more detail, by passing some options to `ps`:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ps -ef | head
 UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 Jan10 ?        03:14:05 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
@@ -583,15 +583,15 @@ one, or use another terminal.
 When have a long-running process, you have the option of sending it to
 the _background_, using the `&` operator:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ sleep 100 &
 [1] 949751
 ```
 
-You can use `Control + Z` to stop a foreground process and send it to
-the background:
+You can use {{<kbd Ctrl-Z>}} to stop a foreground process and send it
+to the background:
 
-```
+```{.bash}
 [ssasidharan@lnx201 ~]$ sleep 100
 ^Z
 [1]+  Stopped                 sleep 100
@@ -599,16 +599,16 @@ the background:
 
 You can list background processes using `jobs` command:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ jobs
 [1]-  Running                 sleep 100 &
 [2]+  Stopped                 sleep 100
 ```
 
 You can bring a background process to foreground using `fg` command,
-and you can terminate it using `Control + C`:
+and you can terminate it using {{<kbd Ctrl-C>}}:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ fg 2
 sleep 100
 ^C
@@ -617,7 +617,7 @@ sleep 100
 
 You can use `bg` command to resume a stopped background process:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ sleep 100 &
 [1] 1746205
 [ssasidharan@lnx201 ~]$ sleep 100
@@ -641,7 +641,7 @@ By default, `kill` sends a signal called `SIGTERM` (more on signals
 later).  If `SIGTERM` is unable to terminate the process (such as when
 the program is ignoring `SIGTERM`), you can try `SIGKILL`:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ ps
     PID TTY          TIME CMD
  796679 pts/116  00:00:00 bash
@@ -659,7 +659,7 @@ the program is ignoring `SIGTERM`), you can try `SIGKILL`:
 
 You can use `killall` command to kill processes by name:
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ killall sleep
 sleep(1469283): Operation not permitted
 sleep(1509215): Operation not permitted
@@ -677,9 +677,9 @@ processes, and we've already seen `SIGTERM` and `SIGKILL`.  Signals
 are a process control mechanism. They are used to stop, resume, or
 terminate processes, and more.
 
-When we use `Control + C` or `Control + Z`, we are sending signals to
-process -- `SIGINT` (or "keyboard interrupt") and `SIGTSTP` (or
-"terminal stop"), respectively.
+When we use {{<kbd Ctrl-C>}} or {{<kbd Ctrl-Z>}}, we are sending
+signals to process -- `SIGINT` (or "keyboard interrupt") and `SIGTSTP`
+(or "terminal stop"), respectively.
 
 Signals have numbers: `SIGKILL` is 9, so you can use `kill -9 <pid>`
 instead of `kill -SIGKILL <pid>`.  You can also omit the `SIG` prefix,
@@ -809,7 +809,7 @@ commands often.
 
 Here is a simple shell script:
 
-```sh
+```{.bash filename=hello.sh}
 #! /usr/bin/env bash
 
 # A simple script.
@@ -823,7 +823,7 @@ Assuming we name the script `hello.sh`, we can make it executable with
 `chmod`, and run `hello.sh`:
 
 
-```console
+```{.bash}
 [ssasidharan@lnx201 ~]$ chmod +x hello.sh
 [ssasidharan@lnx201 ~]$ ./hello.sh
 Hello world!
