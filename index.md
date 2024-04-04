@@ -55,7 +55,7 @@ This is the course outline:
 [testing]: ./theme1/PE103/02-testing.md
 [debugging]: ./theme1/PE103/03-debugging.md
 
-[sf100]: ./theme2/SF100/sf100-linux-commandline-scripting.md
+[sf100]: ./theme2/SF100/linux-commandline-scripting.md
 [sf101]: ./theme2/SF101/containers-and-virtualization.md
 [sf200]: ./theme2/SF200/parallel-computing.md
 [sf201]: ./theme2/SF201/batch-systems-and-compute-farms.md
