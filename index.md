@@ -13,7 +13,7 @@ This is the course outline:
 - PE 100: [Python Programming and Jupyter notebooks][pe100]
 - PE 101: [Using Python packages & libraries, Conda][pe101]
 - PE 102: [Numerical data analysis with Python][pe102]
-- PE 103: Software [version control], [testing] and [debugging]
+- PE 103: [Software version control, testing and debugging][pe103]
 
 ## Theme 2: Systems Fundamentals
 
@@ -51,9 +51,7 @@ This is the course outline:
 [pe100]: ./theme1/PE100/python-and-jupyter.ipynb
 [pe101]: ./theme1/PE101/python-packages-conda.ipynb
 [pe102]: ./theme1/PE102/numerical-data-analysis.ipynb
-[version control]: ./theme1/PE103/01-vcs.md
-[testing]: ./theme1/PE103/02-testing.md
-[debugging]: ./theme1/PE103/03-debugging.md
+[pe103]: ./theme1/PE103/vcs-testing-debugging.md
 
 [sf100]: ./theme2/SF100/linux-commandline-scripting.md
 [sf101]: ./theme2/SF101/containers-and-virtualization.md
