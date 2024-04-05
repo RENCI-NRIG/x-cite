@@ -8,6 +8,11 @@ website:
       - href: index.md
         text: Home
       - about.md
+  page-footer:
+    border: true
+    left:
+      - icon: github
+        href: https://github.com/RENCI-NRIG/X-CITE
 
 format:
   html:
