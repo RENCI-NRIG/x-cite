@@ -11,9 +11,12 @@ website:
 
 format:
   html:
-    theme: simplex
     css: styles.css
     toc: true
+
+theme:
+  light: simplex
+  dark: [simplex, theme-dark.scss]
 
 # https://quarto.org/docs/projects/code-execution.html#freeze
 execute:
