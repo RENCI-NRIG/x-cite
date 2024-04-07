@@ -24,12 +24,14 @@ To add content, do this:
 - Once you are satisfied with your changes, commit them, and push them
   to this repository, or submit a pull request.
 
-Once content  publish workflow will then take care of 
+When content is in the `main` branch of this GitHub repository, the
+[publish] workflow will then take care of the rest.
 
 <!-- References -->
 
 [CHESS]: https://www.chess.cornell.edu/
 [index]: ./index.md
+[publish]: .github/workflows/publish.yml
 
 [Quarto]: https://quarto.org
 [x-cite]: https://xcitecourse.org/
