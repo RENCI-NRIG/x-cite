@@ -11,16 +11,17 @@ See [index] for an outline of the course material.
 
 ## Authoring content
 
-The content in this repository is processed using [Quarto] in order to
+The content in this repository is written in the form of markdown
+files or Jupyter notebooks, and processed using [Quarto] in order to
 generate the website seen at https://xcitecourse.org/.
 
-To add content, do this:
+To add/update content, do this:
 
 - Download and install Quarto from [quarto.org][Quarto].
-- Clone this repository.
+- Clone/fork this repository.
 - Add/edit content in the form of `.md`, `.qmd`, or `.ipynb` files.
-- Open a terminal, and run `quarto preview`, which will start a local
-  webserver with a live preview.
+- Run `quarto preview` in a terminal, which will start a local web
+  server with a live preview that opens in your web browser.
 - Once you are satisfied with your changes, commit them, and push them
   to this repository, or submit a pull request.
 
