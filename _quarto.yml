@@ -17,6 +17,8 @@ website:
   repo-url: https://github.com/RENCI-NRIG/X-CITE
   repo-actions: [edit, issue]
 
+  reader-mode: true
+
 format:
   html:
     css: styles.css
