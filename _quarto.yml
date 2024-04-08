@@ -14,6 +14,9 @@ website:
       - icon: github
         href: https://github.com/RENCI-NRIG/X-CITE
 
+  repo-url: https://github.com/RENCI-NRIG/X-CITE
+  repo-actions: [edit, issue]
+
 format:
   html:
     css: styles.css
