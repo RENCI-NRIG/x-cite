@@ -1,16 +1,17 @@
-# Version control
+# Version Control
 
-## What is it?
+Version control systems (or VCS) are software tools that are used to
+track changes to source code or other collections of files.
 
-Version control systems are software tools that are used to track
-changes to source code or other collections of files.
+Wikipedia has a [fairly long list][vcs-list] of version control
+systems, each of them varying in practical usage and in implementation
+details.
 
-Some well-known version control systems include: Git, Mercurial,
-Subversion, Darcs, Fossil, CVS, and several proprietary systems.  Each
-of them vary in practical usage and in implementation details.
+Today Git is the most popular version control system in use. Git
+appears to have "won", so Git is what we will be discussing here.
 
-Today Git is the most popular one, and seem to have "won", so Git is
-what we will be discussing here.
+[vcs-list]: https://en.wikipedia.org/wiki/List_of_version-control_software
+
 
 ## Why do we need it?
 
