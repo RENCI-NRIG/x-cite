@@ -1,6 +1,5 @@
-# Workflow for rendering and deploying quarto site to various places
-# (GitHub Pages, quarto.pub, and Netlify).  Still figuring out the
-# right place, hence the multiple targets.
+# Workflow for rendering and deploying quarto site to Netlify and
+# quarto.pub.
 #
 # Via https://quarto.org/docs/publishing/github-pages.html
 
@@ -27,14 +26,17 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render and Publish on quarto.pub
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: quarto-pub
-          QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
-
+      # Publish on Netlify (https://xcitecourse.org/ and
+      # x-cite-course.netlify.app).
       - name: Render and Publish on netlify
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+      # Publish on Quarto.pub (https://x-cite.quarto.pub/).
+      - name: Render and Publish on quarto.pub
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: quarto-pub
+          QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
