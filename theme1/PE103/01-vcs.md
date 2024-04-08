@@ -52,7 +52,7 @@ installed already.
 Here we assume that you are using the shell account that you have with
 CLASSE.
 
-```console
+```{.bash}
 $ git --help
 ```
 
@@ -71,7 +71,7 @@ $ git --help
 
 ### Generating ssh keys
 
-```
+```{.bash}
 $ ssh-keygen -t rsa -b 4096 -C "you@example.com"
 ```
 
@@ -81,7 +81,7 @@ $ ssh-keygen -t rsa -b 4096 -C "you@example.com"
 
 <!-- TODO: elaborate -->
 
-```
+```{.bash}
 $ git config --global user.name "Your Name"
 $ git config --global user.email "you@example.com
 ```
@@ -90,7 +90,7 @@ $ git config --global user.email "you@example.com
 
 <!-- TODO: elaborate -->
 
-```
+```{.bash}
 $ git init
 $ git add
 $ git commit
