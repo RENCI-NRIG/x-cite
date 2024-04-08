@@ -22,7 +22,9 @@ team, you will also want to know who wrote some part of the code,
 when, and why.
 
 Whether you work alone or in a team, using a version control system
-will help you achieve the above goals.
+will help you achieve the above goals.  Sometimes your team member is
+the past you (who should help you), or the future you (whom you should
+help).
 
 In the absence of a version control system, you will often will end up
 with a chaotic mess which achieves the above goals in a poorer manner.
@@ -31,8 +33,10 @@ variously named like so:
 
 - `notebook.ipynb`
 - `notebook-2024-05-01.ipynb`
+- `notebook-2024-05-01-final.ipynb`
 - `notebook-working.ipynb`
 - `notebook-test.ipynb`
+- `notebook-final.ipynb`
 
 This scheme is basically a messy reinvention of a version control
 system.  That might work in the simple cases, but it will soon break
