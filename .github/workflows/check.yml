@@ -1,0 +1,21 @@
+# Run `quarto render` on pull requests.
+
+name: Render
+
+on:
+  workflow_dispatch:
+  pull_request_target:
+
+jobs:
+  render-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
