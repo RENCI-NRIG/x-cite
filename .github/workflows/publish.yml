@@ -1,4 +1,7 @@
-# Workflow for rendering and deploying quarto site to GitHub Pages
+# Workflow for rendering and deploying quarto site to various places
+# (GitHub Pages, quarto.pub, and Netlify).  Still figuring out the
+# right place, hence the multiple targets.
+#
 # Via https://quarto.org/docs/publishing/github-pages.html
 
 name: Publish
