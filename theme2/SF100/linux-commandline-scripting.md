@@ -17,7 +17,10 @@ around, so let us see what you might need to know to in order to
 become a proficient user of the systems.
 
 
-## Some words about Linux
+## Linux
+
+Linux is an open source operating system known for stability,
+security, and versatility.
 
 
 ## Some words about command line
