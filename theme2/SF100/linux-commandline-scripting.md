@@ -1,4 +1,4 @@
-# Linux, Commandline, and Scripting
+# Linux, Command Line, and Scripting
 
 The following notes assume that you are all set up to use your
 accounts on the CLASSE Linux systems.
@@ -19,11 +19,15 @@ become a proficient user of the systems.
 
 ## Linux
 
+<!-- TODO: rewrite this to be useful -->
+
 Linux is an open source operating system known for stability,
 security, and versatility.
 
 
-## Some words about command line
+## The command line
+
+<!-- TODO: rewrite this -->
 
 Suppose you want to find all the text files in a directory that
 contain a certain pattern, like "hello".  How would you do that?
