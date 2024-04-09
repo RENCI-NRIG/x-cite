@@ -177,7 +177,7 @@ the root directory.  You can list things under `/` with the command
 `ls /`:
 
 ```{.bash}
-[user@lnx201 ~]$ ls /
+[sasidharan@lnx201 ~]$ ls /
 bin   cdat  cvmfs  etc   lib    media  mnt  nfs   opt   root  sbin  sys  usr
 boot  cifs  dev    home  lib64  misc   net  null  proc  run   srv   tmp  var
 ```
