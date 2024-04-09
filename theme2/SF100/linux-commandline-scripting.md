@@ -867,4 +867,10 @@ Bash provides some useful constructs such as loops and functions.
 
 # Further reading
 
-- https://missing.csail.mit.edu/2020/shell-tools/
+- [Shell Tools and Scripting][missing] module of MIT "The Missing
+  Semester of Your CS Education" class.
+- [The Linux Command Line, A Complete Introduction][tlcl] by William
+E. Shotts, Jr.
+
+[missing]: https://missing.csail.mit.edu/2020/shell-tools/
+[tlcl]: http://linuxcommand.org/tlcl.php
