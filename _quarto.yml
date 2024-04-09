@@ -12,10 +12,10 @@ website:
     border: true
     center: |-
       X-CITE is supported by the NSF under award numbers
-      [OAC-2320373](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320373&HistoricalAwards=false),
-      [OAC-2320374](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320374&HistoricalAwards=false),
+      [OAC-2320373](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320373),
+      [OAC-2320374](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320374),
       and
-      [OAC-2320375](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320375&HistoricalAwards=false).
+      [OAC-2320375](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320375).
 
       Contact [anirban@renci.org](mailto:anirban@renci.org) for more
       information.
