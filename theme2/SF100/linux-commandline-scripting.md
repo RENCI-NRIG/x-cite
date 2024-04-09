@@ -878,6 +878,9 @@ Bash provides some useful constructs such as loops and functions.
   Semester of Your CS Education" class.
 - [The Linux Command Line, A Complete Introduction][tlcl] by William
 E. Shotts, Jr.
+- [The Unix Programming Environment][tupe] by Brian W. Kernighan and
+  Rob Pike.
 
 [missing]: https://missing.csail.mit.edu/2020/shell-tools/
 [tlcl]: http://linuxcommand.org/tlcl.php
+[tupe]: https://archive.org/details/UNIXProgrammingEnvironment
