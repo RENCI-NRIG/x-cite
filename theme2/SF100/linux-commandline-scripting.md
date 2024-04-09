@@ -57,11 +57,23 @@ In the shell, you type a command, hit enter, and the command gets
 executed.  Shell is the program that is responsible for accepting your
 commands, executing them, and printing the results on a console.
 
-The screenshot below shows a how this works in practice: using a
-terminal program, I'm using `ssh` command to access `lnx201`, and then
-I'm running some commands on `lnx201`.
+The screenshots below shows a how this works in practice.
 
-![shell screenshot](./lnx201.png)
+Using a terminal program, I'm using `ssh` command to access `lnx201`,
+and then I'm running some commands on `lnx201`.
+
+![](./lnx201.png)
+
+Or you can use CLASSE's [JupyerLab], and then can launch a terminal
+(from File > New > Terminal from the menu, or the "Terminal" icon on
+the launcher):
+
+![](./jupyter01.png)
+
+Or you might be accessing CLASSE [NoMachine], either with a client or
+with a web browser.  You can launch a terminal from the desktop menu:
+
+![](./nomachine.png)
 
 Nearly all Linux distributions ship a shell named `bash`.  In the
 `lnx201` environment that you access, `bash` is the default shell. You
@@ -71,6 +83,9 @@ Although `bash` is the most popular shell, many other shells exist
 too: `csh`, `ksh`, `dash`, `zsh`, and so on.  But let us not get
 distracted and just commit to `bash` for now.
 
+[JupyerLab]: https://jupyter01.classe.cornell.edu/
+[NoMachine]: https://wiki.classe.cornell.edu/Computing/NoMachine
+[NoMachine-web]: https://nomachine.classe.cornell.edu/
 
 ## Using the shell prompt
 
