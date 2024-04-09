@@ -10,9 +10,6 @@ website:
       - about.md
   page-footer:
     border: true
-    left:
-      - icon: github
-        href: https://github.com/RENCI-NRIG/X-CITE
     center: |-
       X-CITE is supported by the NSF under award numbers
       [OAC-2320373](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320373&HistoricalAwards=false),
