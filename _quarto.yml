@@ -13,6 +13,15 @@ website:
     left:
       - icon: github
         href: https://github.com/RENCI-NRIG/X-CITE
+    center: |-
+      X-CITE is supported by the NSF under award numbers
+      [OAC-2320373](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320373&HistoricalAwards=false),
+      [OAC-2320374](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320374&HistoricalAwards=false),
+      and
+      [OAC-2320375](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320375&HistoricalAwards=false).
+
+      Contact [anirban@renci.org](mailto:anirban@renci.org) for more
+      information.
 
   repo-url: https://github.com/RENCI-NRIG/X-CITE
   repo-actions: [edit, issue]
