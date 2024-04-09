@@ -3,8 +3,11 @@
 The following notes assume that you are all set up to use your
 accounts on the CLASSE Linux systems.
 
-- You know how to use `ssh` to access `lnx201`; or
-- You know how to launch a terminal from CLASSE JupyterLab instance.
+- You know how to use `ssh` to access `lnx201.classe.cornell.edu`
+  (just `lnx201` henceforth); or
+- You know how to launch a terminal from CLASSE JupyterLab instance;
+  or
+- You know how to use NoMachine to access `lnx201`.
 
 Depending on your level of familiarity with the system, you might know
 enough commands to find your way around.
@@ -55,9 +58,8 @@ executed.  Shell is the program that is responsible for accepting your
 commands, executing them, and printing the results on a console.
 
 The screenshot below shows a how this works in practice: using a
-terminal program, I'm using `ssh` command to access the host
-`lnx201.classe.cornell.edu` (just `lnx201` henceforth), and then I'm
-running some commands on `lnx201`.
+terminal program, I'm using `ssh` command to access `lnx201`, and then
+I'm running some commands on `lnx201`.
 
 ![shell screenshot](./lnx201.png)
 
