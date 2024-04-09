@@ -1,5 +1,7 @@
 # X-CITE
 
+[![publish-badge]][publish-workflow]
+
 This repository is for CyberInfrastructure Training and Education for
 Synchrotron X-Ray Science (X-CITE) course materials.
 
@@ -29,6 +31,9 @@ When content is in the `main` branch of this GitHub repository, the
 [publish] workflow will then take care of the rest.
 
 <!-- References -->
+
+[publish-workflow]: https://github.com/RENCI-NRIG/X-CITE/actions/workflows/publish.yml
+[publish-badge]: https://github.com/RENCI-NRIG/X-CITE/actions/workflows/publish.yml/badge.svg (Publish)
 
 [CHESS]: https://www.chess.cornell.edu/
 [index]: ./index.md
