@@ -3,6 +3,8 @@ project:
 
 website:
   title: "X-CITE"
+  favicon: /images/logo.png
+
   navbar:
     left:
       - href: index.md
