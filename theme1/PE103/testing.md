@@ -217,3 +217,88 @@ FAILED test_temperature.py::TestCelsiusToFahrenheit::test_conversion_bad - TypeE
 ```
 
 ## Tox
+
+When you share your code with your colleagues, you will want to make
+sure that your code works in environments other than your own too.
+[Tox] will help you to test that your project builds and installs
+correctly under several environments.  You might want to test your
+code with several versions of Python, and various dependencies, for
+example.
+
+You will write a configuration file named `tox.ini`:
+
+```{.ini filename=tox.ini}
+[tox]
+requires =
+    tox>=4
+env_list = py{38,39,310,311}
+
+[testenv]
+description = run unit tests
+deps =
+    pytest>=7
+commands =
+    pytest {posargs:tests}
+```
+
+You can install `tox` like so:
+
+```{.bash}
+$ pip install tox
+```
+
+And then run `tox` like so:
+
+```{.bash}
+$ tox
+py38: skipped because could not find python interpreter with spec(s): py38
+py38: SKIP ⚠ in 0.01 seconds
+py39: skipped because could not find python interpreter with spec(s): py39
+py39: SKIP ⚠ in 0 seconds
+py310: skipped because could not find python interpreter with spec(s): py310
+py310: SKIP ⚠ in 0 seconds
+py311: commands[0]> pytest
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.1.1, pluggy-1.4.0
+cachedir: .tox/py311/.pytest_cache
+rootdir: /home/sajith/projects/x-cite/X-CITE/theme1/PE103
+collected 3 items                                                              
+
+test_temperature.py .F.                                                  [100%]
+
+=================================== FAILURES ===================================
+_________________ TestCelsiusToFahrenheit.test_conversion_bad __________________
+
+self = <test_temperature.TestCelsiusToFahrenheit testMethod=test_conversion_bad>
+
+    def test_conversion_bad(self):
+        # Test with bad input
+>       self.assertEqual(celsius_to_fahrenheit("not temperature"), 0)
+
+test_temperature.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+celsius = 'not temperature'
+
+    def celsius_to_fahrenheit(celsius):
+        """
+        Convert temperature from Celsius to Fahrenheit.
+    
+        :param celsius (float): Temperature in Celsius
+    
+        :returns: Temperature converted to Fahrenheit
+        """
+>       fahrenheit = (celsius * 9 / 5) + 32
+E       TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+temperature.py:9: TypeError
+=========================== short test summary info ============================
+FAILED test_temperature.py::TestCelsiusToFahrenheit::test_conversion_bad - TypeError: unsupported operand type(s) for /: 'str' and 'int'
+========================= 1 failed, 2 passed in 0.04s ==========================
+py311: exit 1 (0.29 seconds) /home/sajith/projects/x-cite/X-CITE/theme1/PE103> pytest pid=935973
+  py38: SKIP (0.01 seconds)
+  py39: SKIP (0.00 seconds)
+  py310: SKIP (0.00 seconds)
+  py311: FAIL code 1 (0.32=setup[0.04]+cmd[0.29] seconds)
+  evaluation failed :( (0.41 seconds)
+```
