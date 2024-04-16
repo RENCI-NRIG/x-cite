@@ -96,8 +96,8 @@ OK
 As you see, `unittest` module provides:
 
 -  A `TestCase` class, which has an `assertEqual()` method (and
-[several other _assert_ methods][asserts]) to check that the code has executed as
-expected.
+[several other _assert_ methods][asserts]) to check that the code has
+executed as expected.
 
 [asserts]: https://docs.python.org/3/library/unittest.html#assert-methods
 
@@ -159,12 +159,12 @@ failing on unexpected inputs is fine, and change the test accordingly:
 
 ## PyTest
 
-[PyTest] is a framework for writing and running tests, and you can use
-it along with `unittest` module.
+[PyTest] is a framework for writing and running tests. You can use
+PyTest along with `unittest` module.
 
 [PyTest]: https://docs.pytest.org/en/8.0.x/index.html
 
-You can install pytest with:
+You will need to install pytest with:
 
 ```{.bash}
 $ pip install pytest
