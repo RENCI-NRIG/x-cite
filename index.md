@@ -1,5 +1,6 @@
 ---
 title: "X-CITE course materials"
+toc: false
 ---
 
 X-CITE course is geared toward the community of scientists and
