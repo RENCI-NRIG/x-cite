@@ -9,15 +9,27 @@ There are many ways of doing this:
 
 You will want to add `print()` statements at various points in your
 code, to help you understand the flow of execution and understand
-where issues occur:
+where issues occur.
 
-```{.python}
+To use a rather contrived example:
+
+```{.python filename=temperature.py}
 def celsius_to_fahrenheit(celsius):
     print(f"input in deg C: {celsius}")
     fahrenheit = (celsius * 9 / 5) + 32
-
     print(f"output in deg F: {fahrenheit}")
     return fahrenheit
+
+print(f"0 deg C is {celsius_to_fahrenheit(0)} deg F")
+```
+
+Now you can watch the execution of the code:
+
+```{.bash}
+$ python3 temperature.py 
+input in deg C: 0
+output in deg F: 32.0
+0 deg C is 32.0 deg F
 ```
 
 ## Using logging
