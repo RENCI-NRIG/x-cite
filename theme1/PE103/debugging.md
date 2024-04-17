@@ -27,7 +27,7 @@ print(f"0 deg C is {celsius_to_fahrenheit(0)} deg F")
 Now you can watch the execution of the code:
 
 ```{.bash}
-$ python3 temperature.py 
+$ python3 temperature.py
 input in deg C: 0
 output in deg F: 32.0
 0 deg C is 32.0 deg F
@@ -95,7 +95,7 @@ INFO:__main__:Finished
 
 Python standard library has a [`pdb`][pdb] module, which provides an
 interactive debugging tool, or a "debugger".  Debuggers allow you to
-examine code while it is running.  
+examine code while it is running.
 
 [pdb]: https://docs.python.org/3/library/pdb.html
 
@@ -107,7 +107,7 @@ You can run a program under `pdb` with `python3 -m pdb <program.py>`,
 like so:
 
 ```{.bash}
-python3 -m pdb temperature.py 
+python3 -m pdb temperature.py
 > /tmp/temperature.py(1)<module>()
 -> def celsius_to_fahrenheit(celsius):
 (Pdb) help
@@ -115,12 +115,12 @@ python3 -m pdb temperature.py
 Documented commands (type help <topic>):
 ========================================
 EOF    c          d        h         list      q        rv       undisplay
-a      cl         debug    help      ll        quit     s        unt      
-alias  clear      disable  ignore    longlist  r        source   until    
-args   commands   display  interact  n         restart  step     up       
-b      condition  down     j         next      return   tbreak   w        
-break  cont       enable   jump      p         retval   u        whatis   
-bt     continue   exit     l         pp        run      unalias  where    
+a      cl         debug    help      ll        quit     s        unt
+alias  clear      disable  ignore    longlist  r        source   until
+args   commands   display  interact  n         restart  step     up
+b      condition  down     j         next      return   tbreak   w
+break  cont       enable   jump      p         retval   u        whatis
+bt     continue   exit     l         pp        run      unalias  where
 
 Miscellaneous help topics:
 ==========================
@@ -191,6 +191,21 @@ isolate points of failures.  You can use a combination of
 `print()` statements, logging, and `pdb`.
 
 See [Testing](./testing.md) for some examples.
+
+## Talk to a friend or a rubber duck
+
+Get a friend or colleagues to review your code to identify potential
+issues, provide feedback, and suggest improvements. Another set of
+eyes can often spot problems that you might have overlooked.
+Explaining your code line by line to someone else is often helpful in
+finding the flaws in it.
+
+If no human is immediately available, explain your code to a rubber
+duck!  This very powerful technique is called [rubber duck
+debugging][rdd], or simply, "rubberducking".
+
+[rdd]: https://en.wikipedia.org/wiki/Rubber_duck_debugging
+
 
 ## Using IDEs
 
