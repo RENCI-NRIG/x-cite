@@ -10,19 +10,20 @@ accounts on the CLASSE Linux systems.
 - You know how to use [NoMachine][nomachine] to access `lnx201`.
 
 Depending on your level of familiarity with the system, you might know
-enough commands to find your way around.
-
-But it probably is not a good idea to assume that you know your way
-around, so let us see what you might need to know to in order to
-become a proficient user of the systems.
+enough commands to find your way around.  Since it probably is not a
+good idea to make such assumptions right off the bat, let us see what
+you might need to know to in order to become a proficient user of the
+systems.
 
 
 ## Linux
 
-<!-- TODO: rewrite this to be useful -->
+Linux is a free and open source operating system known for stability,
+security, and versatility.  Linux runs on a variety of machines from
+small embedded systems to powerful servers. A great deal of software
+runs on Linux.
 
-Linux is an open source operating system known for stability,
-security, and versatility.
+You probably know all this already, so let us skip ahead.
 
 
 ## The command line
