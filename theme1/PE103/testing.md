@@ -1,13 +1,12 @@
 # Testing
 
-When you write functions and classes and methods, you want to be able
-to test that code.  Testing proves that your code works as expected in
-response to the inputs that it is expected to receive.  
+Testing proves that your code works as expected in response to the
+inputs that it is expected to receive.
 
 Of course you can "manually" run your code and check that it works as
-expected.  Since frequent manual testing can become tedious, you can
-also write tests for your code, so that much of your testing is
-automated.
+expected.  Since frequent manual testing will soon become tedious, you
+can also write code that tests your code, so that much of your testing
+is automated.
 
 When you test your code, you will be more confident about the
 correctness of your code.  As your project evolves, the tests you have
@@ -15,25 +14,20 @@ written will help you to test the changes more confidently.  Your
 tests will also serve as a sort of documentation about how to use the
 code.
 
-<!-- Unit tests -->
-<!-- Integration tests -->
+There are several ways to test your code:
 
-There are serveral ways to test your code:
-
-- _Unit tests_ test the smallest units of your code, namely functions,
-  classes, and methods.
+- **Unit tests** test the smaller units of your code, namely:
+  functions, classes, and methods.
   
-- When your code interacts with other things that are external to your
-  code (for example: you read weather data from NOAA), you write
-  _integration tests_ to prove that your code works with the external
-  system correctly.
+- **Integration tests** are used to prove that your code works
+  correctly when they interface with externals systems (for example:
+  you read weather data from NOAA).
   
-- When you want to prove that your application as a whole (with
-  external data providers, user interfaces, databases, etc), you write
-  _system tests_.
+- **System tests** are used to test that your application as a whole
+  works as expected.
   
-In the interest of brevity, here we will limit the discussion to unit
-tests.
+This is a big topic.  In the interest of practicality, we will limit
+the discussion to unit tests here.
 
 ## Writing unit tests
 
