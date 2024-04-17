@@ -1,17 +1,18 @@
 # Debugging
 
 Debugging is the process of finding errors, unexpected behavior, or
-performance issues, and fixing them.
+performance issues in software, and fixing them.
 
-There are many ways of doing this:
+There are multiple approaches to debugging. You might find one of
+these approaches or a combination of several approaches helpful.
 
 ## Using print statements
 
-You will want to add `print()` statements at various points in your
-code, to help you understand the flow of execution and understand
-where issues occur.
+You will add `print()` statements at various points in your code, in
+order to help you understand the flow of execution and find out where
+issues occur.
 
-To use a rather contrived example:
+Let us add some print statements to our rather contrived example.
 
 ```{.python filename=temperature.py}
 def celsius_to_fahrenheit(celsius):
@@ -37,7 +38,13 @@ output in deg F: 32.0
 Python standard library provides a [logging] module, which you can use
 to log various events in your code.  One benefit of using `logging` is
 that your application's logs can include log messages from the
-libraries you use, so you will have more information to work with.
+libraries you use (if they are set up to use `logging`), so you will
+have more information to work with.
+
+The module provides enough knobs to tune things like: level of logging
+(you can choose to log statements based on their severity, from all
+messages to just the critical messages), the format of log statements,
+the location of log files, time stamps of log statements, etc.
 
 [logging]: https://docs.python.org/3/library/logging.html
 
@@ -66,24 +73,88 @@ logger = logging.getLogger(__name__)
 def main():
     logging.basicConfig(filename="temperature.log", level=logging.INFO)
     logger.info("Started")
-    celsius_to_fahrenheit()
+    celsius_to_fahrenheit(0)
     logger.info("Finished")
 
 if __name__ == "__main__":
     main()
 ```
 
+Running the code above with `python3 main.py` will write log
+statements to a file named `temperature.log`.
+
+```{.log filename=temperature.log}
+INFO:__main__:Started
+INFO:__main__:Started
+INFO:temperature:input in deg C: 0
+INFO:temperature:output in deg F: 32.0
+INFO:__main__:Finished
+```
+
 ## Using the `pdb` module
 
 Python standard library has a [`pdb`][pdb] module, which provides an
-interactive debugging tool.
+interactive debugging tool, or a "debugger".  Debuggers allow you to
+examine code while it is running.  
 
 [pdb]: https://docs.python.org/3/library/pdb.html
 
-The typical usage to break into the debugger is to insert an `import
+Using a debugger, you can set _breakpoints_ where the execution will
+stop, you can print values, you can _step_ into through the execution
+of methods, etc.
+
+You can run a program under `pdb` with `python3 -m pdb <program.py>`,
+like so:
+
+```{.bash}
+python3 -m pdb temperature.py 
+> /tmp/temperature.py(1)<module>()
+-> def celsius_to_fahrenheit(celsius):
+(Pdb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF    c          d        h         list      q        rv       undisplay
+a      cl         debug    help      ll        quit     s        unt      
+alias  clear      disable  ignore    longlist  r        source   until    
+args   commands   display  interact  n         restart  step     up       
+b      condition  down     j         next      return   tbreak   w        
+break  cont       enable   jump      p         retval   u        whatis   
+bt     continue   exit     l         pp        run      unalias  where    
+
+Miscellaneous help topics:
+==========================
+exec  pdb
+
+(Pdb) next
+> /tmp/temperature.py(5)<module>()
+-> print(f"0 deg C is {celsius_to_fahrenheit(0)}")
+(Pdb) step
+--Call--
+> /tmp/temperature.py(1)celsius_to_fahrenheit()
+-> def celsius_to_fahrenheit(celsius):
+(Pdb) p celsius
+0
+(Pdb) next
+> /tmp/temperature.py(2)celsius_to_fahrenheit()
+-> fahrenheit = (celsius * 9 / 5) + 32
+(Pdb) next
+> /tmp/temperature.py(3)celsius_to_fahrenheit()
+-> return fahrenheit
+(Pdb) p fahrenheit
+32.0
+(Pdb) continue
+0 deg C is 32.0
+The program finished and will be restarted
+> /tmp/temperature.py(1)<module>()
+-> def celsius_to_fahrenheit(celsius):
+(Pdb) exit
+```
+
+Another typical usage to break into the debugger is to insert an `import
 pdb; pdb.set_trace()` line into your code:
 
-```{.python filename=temperature-pdb.py}
+```{.python filename=temperature.py}
 import pdb; pdb.set_trace()
 
 def celsius_to_fahrenheit(celsius):
@@ -93,54 +164,13 @@ def celsius_to_fahrenheit(celsius):
 print(f"0 deg C in fahrenheit: {celsius_to_fahrenheit(0)}")
 ```
 
-Now you can run the code like so, and use various `pdb` commands such
-as `print` (to print the value and `step` and `next`:
-
-```{.bash}
-$ python3 temp-pdb.py
-> /home/sajith/projects/x-cite/X-CITE/theme1/PE103/temp-pdb.py(3)<module>()
--> def celsius_to_fahrenheit(celsius):
-(Pdb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF    c          d        h         list      q        rv       undisplay
-a      cl         debug    help      ll        quit     s        unt
-alias  clear      disable  ignore    longlist  r        source   until
-args   commands   display  interact  n         restart  step     up
-b      condition  down     j         next      return   tbreak   w
-break  cont       enable   jump      p         retval   u        whatis
-bt     continue   exit     l         pp        run      unalias  where
-
-Miscellaneous help topics:
-==========================
-exec  pdb
-
-(Pdb) next
-> /home/sajith/projects/x-cite/X-CITE/theme1/PE103/temp-pdb.py(7)<module>()
--> print(f"0 deg C in fahrenheit: {celsius_to_fahrenheit(0)}")
-(Pdb) step
---Call--
-> /home/sajith/projects/x-cite/X-CITE/theme1/PE103/temp-pdb.py(3)celsius_to_fahrenheit()
--> def celsius_to_fahrenheit(celsius):
-(Pdb) p celsius
-0
-(Pdb) next
-> /home/sajith/projects/x-cite/X-CITE/theme1/PE103/temp-pdb.py(4)celsius_to_fahrenheit()
--> fahrenheit = (celsius * 9 / 5) + 32
-(Pdb) next
-> /home/sajith/projects/x-cite/X-CITE/theme1/PE103/temp-pdb.py(5)celsius_to_fahrenheit()
--> return fahrenheit
-(Pdb) p fahrenheit
-32.0
-(Pdb) continue
-0 deg C in fahrenheit: 32.0
-```
+Now you can run the code with `python3 temperature-pdb.py`, and use
+various `pdb` commands.
 
 Or you can insert a `breakpoint()` statement at the location you want
 to break into the debugger:
 
-```{.python filename=temperature-bp.py}
+```{.python filename=temperature.py}
 def celsius_to_fahrenheit(celsius):
     breakpoint()
     fahrenheit = (celsius * 9 / 5) + 32
@@ -149,9 +179,9 @@ def celsius_to_fahrenheit(celsius):
 print(f"0 deg C in fahrenheit: {celsius_to_fahrenheit(0)}")
 ```
 
-Now you can run the program, and step through the code following the
-`breakpoint()`, and continue running without the debugger using the
-`continue` command.
+Now you can run the program with `python3 -m temperature.py`. Once the
+execution reaches the line with `breakpoint()`, you will be dropped
+into the `pdb` shell.
 
 ## Using unit tests
 
@@ -162,7 +192,6 @@ isolate points of failures.  You can use a combination of
 
 See [Testing](./testing.md) for some examples.
 
-
 ## Using IDEs
 
 IDEs such as PyCharm and VS Code have built-in debugging facilities.
@@ -172,3 +201,5 @@ IDEs such as PyCharm and VS Code have built-in debugging facilities.
 JupyterLab also has a built-in debugger:
 
 ![](./jupyter-debug.png)
+
+How to use these are left as an exercise to the reader. ;-)
