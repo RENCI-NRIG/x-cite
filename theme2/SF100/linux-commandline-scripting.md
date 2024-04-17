@@ -28,33 +28,38 @@ You probably know all this already, so let us skip ahead.
 
 ## The command line
 
-<!-- TODO: rewrite this -->
-
-Suppose you want to find all the text files in a directory that
-contain a certain pattern, like "hello".  How would you do that?
-
-Now suppose you want to replace all instances of "hello" with
-"bonjour". How would you do that?
-
-You can do these things using the Linux command line.  You would be
-invoking commands like `find` and `grep` and `sed` and `awk`, instead
-of using programs with a graphical user interfaces.
-
-Plenty of software with friendly user interfaces exist, and they are
-often easier to use.  In order to use the command line, you will have
-to be familiar with often arcane tools and memorize stuff.
-
-Why would you want to use the command line then?
-
-Because, for certain types of tasks, it is often quick and efficient
-to use the command line.  You can "chain" or compose separate programs
-that do different things together.  You can also save fairly
+To perform certain kinds of tasks, using the command line is often
+quicker and more efficient.  You can "chain" or compose separate
+programs that do different things together.  You can also save fairly
 complicated tasks in the form of scripts for later use, and share them
 with your colleagues.
+
+For example, you will find documentation for the software installed on
+`lnx201` in the directory `/usr/share/doc`.  Many of those are named
+`README`, or `README.md`, or `README.rst`, or `readme.txt`, or some
+such variation. How many such files are there in `/usr/share/doc`?
+
+We can find that out by using [find] (a program for finding files) and
+[wc] (a word count program):
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ find /usr/share/doc/ -iname "readme*" | wc -l
+1589
+```
+
+Many of the files in `/usr/share/doc` mention the word "license" or
+"LICENSE" or some variation thereof.  How many such lines are there?
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ grep -ir license /usr/share/doc/ | wc -l
+84089
+```
 
 Learning to use the command line well will leave more power on your
 hands.
 
+[find]: https://www.man7.org/linux/man-pages/man1/find.1.html
+[wc]: https://man7.org/linux/man-pages/man1/wc.1.html
 
 # The shell
 
