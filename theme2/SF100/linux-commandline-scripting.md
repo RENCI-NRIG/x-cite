@@ -5,9 +5,9 @@ accounts on the CLASSE Linux systems.
 
 - You know how to use `ssh` to access `lnx201.classe.cornell.edu`
   (just `lnx201` henceforth); or
-- You know how to launch a terminal from CLASSE JupyterLab instance;
-  or
-- You know how to use NoMachine to access `lnx201`.
+- You know how to launch a terminal from [CLASSE JupyterLab
+  instance][jupyerlab]; or
+- You know how to use [NoMachine][nomachine] to access `lnx201`.
 
 Depending on your level of familiarity with the system, you might know
 enough commands to find your way around.
