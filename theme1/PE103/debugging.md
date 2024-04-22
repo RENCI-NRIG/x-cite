@@ -199,6 +199,28 @@ Now you can run the program with `python3 -m temperature.py`. Once the
 execution reaches the line with `breakpoint()`, you will be dropped
 into the `pdb` shell.
 
+
+## Using the `trace` module
+
+Python's [trace] module allows you to trace program execution:
+
+```{.bash}
+$ python3 -m trace --trace code/temperature.py 
+ --- modulename: temperature, funcname: <module>
+temperature.py(1): def celsius_to_fahrenheit(celsius):
+temperature.py(12): print(f"0 deg C is {celsius_to_fahrenheit(0)} deg F")
+ --- modulename: temperature, funcname: celsius_to_fahrenheit
+temperature.py(9):     fahrenheit = (celsius * 9 / 5) + 32
+temperature.py(10):     return fahrenheit
+0 deg C is 32.0 deg F
+```
+
+To learn more, run `python3 -m trace --help`, and read the module
+[documentation][trace].
+
+[trace]: https://docs.python.org/3/library/trace.html
+
+
 ## Using unit tests
 
 It is much easier to debug code when you have tests.  The tests you
