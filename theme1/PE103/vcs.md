@@ -52,14 +52,62 @@ messy schemes based on filenames.
 As stated above, Git is the most popular version control system in use
 today.  Git is a command-line program that runs on all popular
 operating systems.  If you use macOS or Linux, you probably have Git
-installed already.
+installed already.  Here we assume that you are using the account that
+you have with CLASSE.
 
-Here we assume that you are using the shell account that you have with
-CLASSE.
+You can start trying out `git` by running the below in a terminal:
 
 ```{.bash}
 $ git --help
 ```
+
+These very notes that you are currently reading are version controlled
+using Git.  They are hosted at the _repository_ at
+<https://github.com/RENCI-NRIG/X-CITE/>.  You can _clone_ that
+repository using `git clone` command:
+
+```{.bash}
+$ git clone https://github.com/RENCI-NRIG/X-CITE.git
+Cloning into 'X-CITE'...
+remote: Enumerating objects: 948, done.
+remote: Counting objects: 100% (485/485), done.
+remote: Compressing objects: 100% (266/266), done.
+remote: Total 948 (delta 228), reused 421 (delta 172), pack-reused 463
+Receiving objects: 100% (948/948), 4.52 MiB | 0 bytes/s, done.
+Resolving deltas: 100% (446/446), done.
+```
+
+You just have obtained a _clone_ of X-CITE course repository in a
+local directory named `X-CITE`.  You can `cd` into that directory now
+with `cd X-CITE`, and then run some `git` commands such as `git
+status` and `git log` there:
+
+```{.bash}
+$ cd X-CITE/
+$ git status 
+# On branch main
+nothing to commit, working directory clean
+$ git log
+commit fd95497e30827d52dd99855a0e1be99b3db4282e
+Author: Sajith Sasidharan <sajith@hcoop.net>
+Date:   Mon Apr 22 09:27:27 2024 -0500
+
+    Mention the trace module
+
+commit 7d55b104b50f8b1f5b8201765ceac8541f9543df
+Author: Sajith Sasidharan <sajith@hcoop.net>
+Date:   Mon Apr 22 09:16:44 2024 -0500
+
+    Add a line
+
+[... more output, elided for brevity ...]
+```
+
+If you are new to version control in general and Git in particular,
+you will need to understand some concepts (such as _repositories_,
+_cloning a repository_, _commits_, _log messages_, _branches_) in
+order to understand what just happened above. Let us unpack stuff.
+
 
 ## Git concepts
 
