@@ -1,5 +1,6 @@
 ---
 title: "About"
+toc: false
 ---
 
 This website hosts material meant for CyberInfrastructure Training and
