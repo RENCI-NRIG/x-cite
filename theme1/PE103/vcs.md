@@ -13,7 +13,7 @@ appears to have "won", so Git is what we will be discussing here.
 [vcs-list]: https://en.wikipedia.org/wiki/List_of_version-control_software
 
 
-## Why do we need it?
+## Why do we need version control?
 
 When you work on a project, you often will want to save the state of
 your code at various points, such that you can go back and forth
