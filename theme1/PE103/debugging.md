@@ -1,10 +1,26 @@
 # Debugging
 
 Debugging is the process of finding errors, unexpected behavior, or
-performance issues in software, and fixing them.
+performance issues in software, and fixing them.  
 
-There are multiple approaches to debugging. You might find one of
-these approaches or a combination of several approaches helpful.
+Sometimes the problems may seem inscrutable or mysterious. Often in
+those cases, the real problem would turn out that your mental model of
+how the thing works is not quite accurate.  It would be helpful to
+deploy the [Feynman Algorithm][feynman]:
+
+1. Write down the problem.
+2. Think real hard.
+3. Write down the solution. 
+
+[feynman]: https://wiki.c2.com/?FeynmanAlgorithm=
+
+Obviously you have to follow these steps in sequence.  But what if you
+do not understand the problem quite well _yet_?
+
+When figuring out problems with software written in Python, there are
+multiple tools at your disposal. You might find one of these
+approaches or a combination of several approaches helpful.
+
 
 ## Using print statements
 
