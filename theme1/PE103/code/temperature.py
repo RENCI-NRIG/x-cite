@@ -8,3 +8,5 @@ def celsius_to_fahrenheit(celsius):
     """
     fahrenheit = (celsius * 9 / 5) + 32
     return fahrenheit
+
+print(f"0 deg C is {celsius_to_fahrenheit(0)} deg F")
