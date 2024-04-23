@@ -46,9 +46,9 @@ This scheme is basically a messy reinvention of a version control
 system.  That might work in the simple cases, but it will soon break
 down as you do more work on your project.
 
-Instead, what you want to do is learn to use a version control system
-properly.  You want to avoid the cognitive overload of dealing with
-messy schemes based on filenames.
+You want to avoid the cognitive overload of dealing with messy schemes
+based on file names.  You want to do is learn to use a version control
+system properly.  
 
 
 ## Version control in practice: Git
