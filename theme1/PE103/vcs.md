@@ -128,14 +128,6 @@ order to understand what just happened above. Let us unpack stuff.
 
 <!-- TODO: elaborate -->
 
-### Generating ssh keys
-
-```{.bash}
-$ ssh-keygen -t rsa -b 4096 -C "you@example.com"
-```
-
-<!-- TODO: elaborate ssh public and private keys -->
-
 ### Initial configuration
 
 Git keeps track of who makes changes.  For this to work, you'll need
@@ -211,6 +203,14 @@ $ git fetch
 $ git pull
 $ git push
 ```
+
+### Generating ssh keys
+
+```{.bash}
+$ ssh-keygen -t rsa -b 4096 -C "you@example.com"
+```
+
+<!-- TODO: elaborate ssh public and private keys -->
 
 
 ## Git subcommands
