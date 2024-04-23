@@ -159,17 +159,70 @@ Of course, you should use "real" values instead of `Your Name` and
 `you@example.com`.  
 
 
-### Starting a project
+### Starting a new repository
+
+Let us start with a very simple example, just for practice.  
+
+On `lnx201`, let us create a new directory (with `mkdir hello-world`),
+change to that directory (with `cd hello-world`), create a file in
+that repository, and initialize a git repository there (with `git
+init`):
 
 ```{.bash}
+$ mkdir hello-world
+$ cd hello-world/
+$ echo "hello $USER"
+hello ssasidharan
+$ echo "hello $USER" > hello.txt
+$ cat hello.txt 
+hello ssasidharan
 $ git init
+Initialized empty Git repository in /home/ssasidharan/hello-world/.git/
+```
+
+That created an empty repository, meaning, nothing has been added to
+it.  Running `git status` will show an "untracked file":
+
+```{.bash}
+$ git status 
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hello.txt
+nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 ### Adding changes
 
+Let us add `hello.txt` to the repository, and check the status again:
+
 ```{.bash}
-$ git add
+$ git add hello.txt
+$ git status 
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   hello.txt
+#
 ```
+
+The command `git add hello.txt` adds the file `hello.txt` to the
+repository.  You could also have done a `git add .` to add all files
+in the directory to the repository.
+
+Note that `git add hello.txt` does not _commit_ `hello.txt` to the
+repository; it just tells Git to pay attention to the file.  With `git
+status`, we can see that Git is aware of the fact that there are some
+changes to be committed in the repository.
+
 
 ### Committing changes
 
