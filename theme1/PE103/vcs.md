@@ -226,23 +226,137 @@ changes to be committed in the repository.
 
 ### Committing changes
 
-```{.bash}
-$ git commit
-```
-
-### Reviewing changes
+Use `git commit` to actually commit the tracked file to the
+repository:
 
 ```{.bash}
-$ git status
+$ git commit -m "Add hello.txt"
+[master (root-commit) 708bfca] Add hello.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
 ```
+
+The string following `-m` option (`-m` is short for `--message`) is a
+_commit message_.  You use commit messages to describe the change in a
+single short line.
+
+Over time, your commit messages will tell the story about how your
+project evolved.  Note that commit messages are not required to be
+single lines. You can configure an editor for writing commit messages,
+and can write longer commit messages.  More detailed commit messages
+would be quite useful when you revisit the change at some point in the
+future.
+
+Now we can use `git status` to re-check status of the repository:
+
+```{.bash}
+$ git status 
+# On branch master
+nothing to commit, working directory clean
+```
+
+We can use `git log` to view the commit history:
 
 ```{.bash}
 $ git log
+commit 708bfcafe32528e90e1d52fd6b94f0c44476518a
+Author: Sajith Sasidharan <ssasidharan@lnx201.classe.cornell.edu>
+Date:   Tue Apr 23 19:10:02 2024 -0400
+
+    Add hello.txt
 ```
 
+Let us add some more changes, and commit them:
+
 ```{.bash}
-$ git diff
+$ echo "hello from $HOSTNAME" >> hello.txt 
+$ git status 
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   hello.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git add hello.txt
+$ git commit -m "Update hello.txt"
+[master 233c748] Update hello.txt
+ 1 file changed, 1 insertion(+)
+$ git status 
+# On branch master
+nothing to commit, working directory clean
+$ git log
+commit 233c748ad3dd31c11a3bc12d0cf106d7fe888fc3
+Author: Sajith Sasidharan <ssasidharan@lnx201.classe.cornell.edu>
+Date:   Tue Apr 23 19:22:29 2024 -0400
+
+    Update hello.txt
+
+commit 708bfcafe32528e90e1d52fd6b94f0c44476518a
+Author: Sajith Sasidharan <ssasidharan@lnx201.classe.cornell.edu>
+Date:   Tue Apr 23 19:10:02 2024 -0400
+
+    Add hello.txt
 ```
+
+
+### Reviewing changes
+
+We have `git status` and `git log` in action already.  Another command
+is `git diff`, which is used to find the difference between two commits:
+
+```{.bash}
+$ git diff 708bfcafe32528e90e1d52fd6b94f0c44476518a 233c748ad3dd31c11a3bc12d0cf106d7fe888fc3 
+diff --git a/hello.txt b/hello.txt
+index c5d1025..3f4c47c 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -1 +1,2 @@
+ hello ssasidharan
++hello from lnx201.classe.cornell.edu
+```
+
+A useful shortcut is `git diff HEAD~`:
+
+```{.bash}
+$ git diff HEAD~
+diff --git a/hello.txt b/hello.txt
+index c5d1025..3f4c47c 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -1 +1,2 @@
+ hello ssasidharan
++hello from lnx201.classe.cornell.edu
+```
+
+In Git parlance, `HEAD` implies the last commit on the current branch,
+and `HEAD~` is the commit before that, and `git diff HEAD~` would
+print the difference between the latest commit and the one before
+that.
+
+Eventually, once there are more commits in the repository, you can
+view the difference with an arbitrary number of commits in history
+with `git diff HEAD~1` etc.
+
+Another shortcut for those really long commit hashes is using a
+smaller prefix of them.  You can find these "short hashes" with `git
+log --abbrev-commit` or `git log --oneline`:
+
+```{.bash}
+$ git log --oneline 
+233c748 Update hello.txt
+708bfca Add hello.txt
+$ git diff 708bfca 233c748 
+diff --git a/hello.txt b/hello.txt
+index c5d1025..3f4c47c 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -1 +1,2 @@
+ hello ssasidharan
++hello from lnx201.classe.cornell.edu
+```
+
 
 ### Ignoring files
 
