@@ -90,7 +90,7 @@ status` and `git log` there:
 
 ```{.bash}
 $ cd X-CITE/
-$ git status 
+$ git status
 # On branch main
 nothing to commit, working directory clean
 $ git log
@@ -149,19 +149,19 @@ This will write configuration to a file named `.gitconfig` in your
 home directory.
 
 ```{.bash}
-$ cat ~/.gitconfig 
+$ cat ~/.gitconfig
 [user]
 	name = Your Name
 	email = you@example.com
 ```
 
 Of course, you should use "real" values instead of `Your Name` and
-`you@example.com`.  
+`you@example.com`.
 
 
 ### Starting a new repository
 
-Let us start with a very simple example, just for practice.  
+Let us start with a very simple example, just for practice.
 
 On `lnx201`, let us create a new directory (with `mkdir hello-world`),
 change to that directory (with `cd hello-world`), create a file in
@@ -174,7 +174,7 @@ $ cd hello-world/
 $ echo "hello $USER"
 hello ssasidharan
 $ echo "hello $USER" > hello.txt
-$ cat hello.txt 
+$ cat hello.txt
 hello ssasidharan
 $ git init
 Initialized empty Git repository in /home/ssasidharan/hello-world/.git/
@@ -184,7 +184,7 @@ That created an empty repository, meaning, nothing has been added to
 it.  Running `git status` will show an "untracked file":
 
 ```{.bash}
-$ git status 
+$ git status
 # On branch master
 #
 # Initial commit
@@ -202,7 +202,7 @@ Let us add `hello.txt` to the repository, and check the status again:
 
 ```{.bash}
 $ git add hello.txt
-$ git status 
+$ git status
 # On branch master
 #
 # Initial commit
@@ -324,10 +324,9 @@ your changes as email attachments, if you want.
 2. Create a new repository on GitHub.com.  Push some code that you are
   working on to that repository.  If your project is not under version
   control, you will want to do that now.
-  
+
 3. Add some changes to the code. Commit the code. Push those commits
   also to the Git repository.
 
 4. Create a "tag" (based on today's date, or a version number), and
   push the tag to your repository.
-  
