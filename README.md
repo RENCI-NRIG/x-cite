@@ -27,8 +27,9 @@ To add/update content, do this:
 - Once you are satisfied with your changes, commit them, and push them
   to this repository, or submit a pull request.
 
-When content is in the `main` branch of this GitHub repository, the
-[publish] workflow will then take care of the rest.
+Once content is in the `main` branch of this GitHub repository, the
+[publish] workflow should take care of the building and publishing the
+site.
 
 <!-- References -->
 
