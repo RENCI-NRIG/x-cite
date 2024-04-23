@@ -337,7 +337,8 @@ that.
 
 Eventually, once there are more commits in the repository, you can
 view the difference with an arbitrary number of commits in history
-with `git diff HEAD~1` etc.
+with `git diff HEAD~~~` (or, more conveniently: `git diff HEAD~3`),
+and so on.  You get the idea.
 
 Another shortcut for those really long commit hashes is using a
 smaller prefix of them.  You can find these "short hashes" with `git
