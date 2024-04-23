@@ -160,6 +160,59 @@ Of course, you should use "real" values instead of `Your Name` and
 `you@example.com`.  
 
 
+### Starting a project
+
+```{.bash}
+$ git init
+```
+
+### Adding changes
+
+```{.bash}
+$ git add
+```
+
+### Committing changes
+
+```{.bash}
+$ git commit
+```
+
+### Reviewing changes
+
+```{.bash}
+$ git status
+```
+
+```{.bash}
+$ git log
+```
+
+```{.bash}
+$ git diff
+```
+
+### Ignoring files
+
+TODO: describe `.gitignore`.
+
+## Working with branches
+
+```{.bash}
+$ git branch
+$ git merge
+```
+
+## Working with repositories
+
+```{.bash}
+$ git clone
+$ git fetch
+$ git pull
+$ git push
+```
+
+
 ## Git subcommands
 
 <!-- TODO: elaborate -->
