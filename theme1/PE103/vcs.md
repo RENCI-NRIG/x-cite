@@ -31,12 +31,16 @@ with a chaotic mess which achieves the above goals in a poorer manner.
 You will likely resort to several almost-same-but-not-quite files
 variously named like so:
 
-- `notebook.ipynb`
-- `notebook-2024-05-01.ipynb`
-- `notebook-2024-05-01-final.ipynb`
-- `notebook-working.ipynb`
-- `notebook-test.ipynb`
-- `notebook-final.ipynb`
+<!-- - `notebook.ipynb` -->
+<!-- - `notebook-2024-05-01.ipynb` -->
+<!-- - `notebook-2024-05-01-final.ipynb` -->
+<!-- - `notebook-working.ipynb` -->
+<!-- - `notebook-test.ipynb` -->
+<!-- - `notebook-final.ipynb` -->
+
+[![](http://www.phdcomics.com/comics/archive/phd101212s.gif)][notfinal]
+
+[notfinal]: https://phdcomics.com/comics/archive.php?comicid=1531
 
 This scheme is basically a messy reinvention of a version control
 system.  That might work in the simple cases, but it will soon break
