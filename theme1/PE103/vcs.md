@@ -138,12 +138,27 @@ $ ssh-keygen -t rsa -b 4096 -C "you@example.com"
 
 ### Initial configuration
 
-<!-- TODO: elaborate -->
+Git keeps track of who makes changes.  For this to work, you'll need
+to configure Git using `git config` subcommand:
 
 ```{.bash}
 $ git config --global user.name "Your Name"
-$ git config --global user.email "you@example.com
+$ git config --global user.email "you@example.com"
 ```
+
+This will write configuration to a file named `.gitconfig` in your
+home directory.
+
+```{.bash}
+$ cat ~/.gitconfig 
+[user]
+	name = Your Name
+	email = you@example.com
+```
+
+Of course, you should use "real" values instead of `Your Name` and
+`you@example.com`.  
+
 
 ## Git subcommands
 
