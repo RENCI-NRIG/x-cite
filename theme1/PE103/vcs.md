@@ -126,7 +126,14 @@ order to understand what just happened above. Let us unpack stuff.
 
 ## Getting started with Git
 
-<!-- TODO: elaborate -->
+Git commands are generally of the form `git <subcommand>`, where
+`<subcommand>` is for the specific operation you want to do.  We will
+discuss them in the following sections.
+
+There is also a little bit of configuration that you should do, before
+you are able to `git add` and `git commit` your changes.  Let us start
+with this configuration.
+
 
 ### Initial configuration
 
