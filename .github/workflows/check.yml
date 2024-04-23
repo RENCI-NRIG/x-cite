@@ -7,7 +7,7 @@ on:
   pull_request_target:
 
 jobs:
-  render-deploy:
+  render:
     runs-on: ubuntu-latest
 
     steps:
