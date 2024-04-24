@@ -21,11 +21,13 @@ To add/update content, do this:
 
 - Download and install Quarto from [quarto.org][Quarto].
 - Clone/fork this repository.
+- Create a branch to work on, with `git checkout -b <branch-name>`.
 - Add/edit content in the form of `.md`, `.qmd`, or `.ipynb` files.
 - Run `quarto preview` in a terminal, which will start a local web
   server with a live preview that opens in your web browser.
-- Once you are satisfied with your changes, commit them, and push them
-  to this repository, or submit a pull request.
+- Once you are satisfied with your changes, commit them, push the
+  branch to GitHub, and submit a pull request.  The PR will be
+  eventually be reviewed and merged.
 
 Once content is in the `main` branch of this GitHub repository, the
 [publish] workflow should take care of the building and publishing the
