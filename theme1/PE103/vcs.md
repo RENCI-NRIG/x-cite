@@ -386,7 +386,13 @@ $ git branch
 $ git merge
 ```
 
-## Working with repositories
+## Working with tags
+
+```{.bash}
+$ git tag
+```
+
+## Working with remote repositories
 
 ```{.bash}
 $ git clone
