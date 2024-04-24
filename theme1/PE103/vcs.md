@@ -250,7 +250,7 @@ future.
 Now we can use `git status` to re-check status of the repository:
 
 ```{.bash}
-$ git status 
+$ git status
 # On branch master
 nothing to commit, working directory clean
 ```
@@ -269,8 +269,8 @@ Date:   Tue Apr 23 19:10:02 2024 -0400
 Let us add some more changes, and commit them:
 
 ```{.bash}
-$ echo "hello from $HOSTNAME" >> hello.txt 
-$ git status 
+$ echo "hello from $HOSTNAME" >> hello.txt
+$ git status
 # On branch master
 # Changes not staged for commit:
 #   (use "git add <file>..." to update what will be committed)
@@ -283,7 +283,7 @@ $ git add hello.txt
 $ git commit -m "Update hello.txt"
 [master 233c748] Update hello.txt
  1 file changed, 1 insertion(+)
-$ git status 
+$ git status
 # On branch master
 nothing to commit, working directory clean
 $ git log
@@ -307,7 +307,7 @@ We have `git status` and `git log` in action already.  Another command
 is `git diff`, which is used to find the difference between two commits:
 
 ```{.bash}
-$ git diff 708bfcafe32528e90e1d52fd6b94f0c44476518a 233c748ad3dd31c11a3bc12d0cf106d7fe888fc3 
+$ git diff 708bfcafe32528e90e1d52fd6b94f0c44476518a 233c748ad3dd31c11a3bc12d0cf106d7fe888fc3
 diff --git a/hello.txt b/hello.txt
 index c5d1025..3f4c47c 100644
 --- a/hello.txt
@@ -345,10 +345,10 @@ smaller prefix of them.  You can find these "short hashes" with `git
 log --abbrev-commit` or `git log --oneline`:
 
 ```{.bash}
-$ git log --oneline 
+$ git log --oneline
 233c748 Update hello.txt
 708bfca Add hello.txt
-$ git diff 708bfca 233c748 
+$ git diff 708bfca 233c748
 diff --git a/hello.txt b/hello.txt
 index c5d1025..3f4c47c 100644
 --- a/hello.txt
