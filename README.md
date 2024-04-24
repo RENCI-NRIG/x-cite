@@ -40,5 +40,5 @@ site.
 [index]: ./index.md
 [publish]: .github/workflows/publish.yml
 
-[Quarto]: https://quarto.org
+[Quarto]: https://quarto.org/
 [x-cite]: https://xcitecourse.org/
