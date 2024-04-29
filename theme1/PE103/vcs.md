@@ -1,4 +1,7 @@
-# Version Control
+---
+title: Version Control
+lightbox: true
+---
 
 Version control systems (or VCS) are software tools that are used to
 track changes to source code or other collections of files.
