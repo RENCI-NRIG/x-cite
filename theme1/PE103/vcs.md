@@ -471,6 +471,9 @@ your changes as email attachments, if you want.
 
 - [Pro Git][pro-git]
 - [Git cheat sheet][cheat-sheet]
+- [Version Control][missing-vcs] module of The Missing Semester of
+  Your CS Education.
 
 [pro-git]: https://git-scm.com/book/en/v2
 [cheat-sheet]: https://education.github.com/git-cheat-sheet-education.pdf
+[missing-vcs]: https://missing.csail.mit.edu/2020/version-control/
