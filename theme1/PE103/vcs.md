@@ -55,11 +55,10 @@ properly.
 
 ## Version control in practice: Git
 
-As stated above, Git is the most popular version control system in use
-today.  Git is a command-line program that runs on all popular
-operating systems.  If you use macOS or Linux, you probably have Git
-installed already.  Here we assume that you are using the account that
-you have with CLASSE.
+Git is a command-line program that runs on all popular operating
+systems.  If you use macOS or Linux, you probably have Git installed
+already.  Here we assume that you are using the account that you have
+with CLASSE.
 
 You can start trying out `git` by running the below in a terminal:
 
