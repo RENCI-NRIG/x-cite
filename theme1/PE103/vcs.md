@@ -78,9 +78,9 @@ practice, it can be tamed.
 Depending on your background, you might find that learning Git by
 first understanding the data model more helpful.  The [version control
 module][missing-vcs] of MIT course "The Missing Semester of Your CS
-Education" and [Git from the Bottom Up][git-bottom-up] take this
-route.  These notes here, however, take the traditional path of
-familiarizing with frequently used Git commands.
+Education" and [Git from the Bottom Up][git-bottom-up] by John Wiegley
+take this route.  These notes here, however, take the traditional path
+of familiarizing with frequently used Git commands.
 
 [git-bottom-up]: https://jwiegley.github.io/git-from-the-bottom-up/
 
