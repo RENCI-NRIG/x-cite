@@ -467,3 +467,11 @@ your changes as email attachments, if you want.
 
 4. Create a "tag" (based on today's date, or a version number), and
   push the tag to your repository.
+
+## References
+
+- [Pro Git][pro-git]
+- [Git cheat sheet][cheat-sheet]
+
+[pro-git]: https://git-scm.com/book/en/v2
+[cheat-sheet]: https://education.github.com/git-cheat-sheet-education.pdf
