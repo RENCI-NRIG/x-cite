@@ -63,11 +63,41 @@ systems.  If you use macOS or Linux, you probably have Git installed
 already.  Here we assume that you are using the account that you have
 with CLASSE.
 
+Let us prime ourselves for Git with an XKCD strip:
+
+[![](git.png)][xkcd-git]
+
+[xkcd-git]: https://xkcd.com/1597/
+
+As the cartoon suggests, Git has a (perhaps well-deserved) reputation
+for being rather unfriendly or inscrutable.  With some familiarity and
+practice, it can be tamed.
+
+::: {.callout-note} 
+
+Depending on your background, you might find that learning Git by
+first understanding the data model more helpful.  The [version control
+module][missing-vcs] of MIT course "The Missing Semester of Your CS
+Education" and [Git from the Bottom Up][git-bottom-up] take this
+route.  These notes here, however, take the traditional path of
+familiarizing with frequently used Git commands.
+
+[git-bottom-up]: https://jwiegley.github.io/git-from-the-bottom-up/
+
+:::
+
 You can start trying out `git` by running the below in a terminal:
 
 ```{.bash}
 $ git --help
 ```
+
+This should print some common Git commands used in various situations.
+The specific output from `git --help` might vary depending on the
+version of Git that you are using.  You can find that out by running
+`git --version`.
+
+### First steps with Git
 
 These very notes that you are currently reading are version controlled
 using Git.  They are hosted at the _repository_ at
