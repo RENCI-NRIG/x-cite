@@ -7,10 +7,11 @@ Wikipedia has a [fairly long list][vcs-list] of version control
 systems, each of them varying in practical usage and in implementation
 details.
 
-Today Git is the most popular version control system in use. Git
+Today [Git][git] is the most popular version control system in use. Git
 appears to have "won", so Git is what we will be discussing here.
 
 [vcs-list]: https://en.wikipedia.org/wiki/List_of_version-control_software
+[git]: https://git-scm.com/
 
 
 ## Why do we need version control?
