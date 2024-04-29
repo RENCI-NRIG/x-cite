@@ -86,18 +86,23 @@ familiarizing with frequently used Git commands.
 
 :::
 
+### First steps with Git
+
 You can start trying out `git` by running the below in a terminal:
 
 ```{.bash}
-$ git --help
+$ git help
 ```
 
 This should print some common Git commands used in various situations.
-The specific output from `git --help` might vary depending on the
-version of Git that you are using.  You can find that out by running
-`git --version`.
 
-### First steps with Git
+::: {.callout-note}
+
+The specific output from `git help` might vary depending on the
+version of Git that you are using.  You can find the version of Git
+that you're using by running `git version`.
+
+:::
 
 These very notes that you are currently reading are version controlled
 using Git.  They are hosted at the _repository_ at
