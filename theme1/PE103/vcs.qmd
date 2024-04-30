@@ -62,11 +62,6 @@ a directed graph:
 digraph G {
   rankdir=LR;  
   
-  v1 [label="version 1"];
-  v2 [label="version 2"];  
-  v3 [label="version 3"];    
-  v4 [label="version 4"];      
-
   v1 -> v2; 
   v2 -> v3;
   v3 -> v4;
@@ -78,13 +73,6 @@ Sometimes you branch out, say, when exploring a new direction:
 ```{dot}
 digraph G {
   rankdir=LR;
-
-  v1 [label="version 1"];
-  v2 [label="version 2"];
-  v3 [label="version 3"];
-  v4 [label="version 4"];
-  v5 [label="version 5"];
-  v6 [label="version 6"];  
 
   v1 -> v2;
   v2 -> v3;
@@ -100,13 +88,6 @@ your graph:
 ```{dot}
 digraph G {
   rankdir=LR;
-
-  v1 [label="version 1"];
-  v2 [label="version 2"];
-  v3 [label="version 3"];
-  v4 [label="version 4"];
-  v5 [label="version 5"];
-  v6 [label="version 6"];  
 
   v1 -> v2;
   v2 -> v3;
