@@ -1,0 +1,12 @@
+---
+title: Python Programming and Jupyter Notebooks
+toc: false
+---
+
+- [Repetition](PE100-04Repetition.ipynb)
+- [Functions](PE100-05Functions.ipynb)
+- [Files](PE100-06Files.ipynb)
+- [Exceptions](PE100-07Exceptions.ipynb)
+- [Lists](PE100-08Lists.ipynb)
+- [Strings](PE100-09Strings.ipynb)
+- [Dictionaries](PE100-10Dictionaries.ipynb)
