@@ -60,9 +60,9 @@ a directed graph:
 
 ```{dot}
 digraph G {
-  rankdir=LR;  
-  
-  v1 -> v2; 
+  rankdir=LR;
+
+  v1 -> v2;
   v2 -> v3;
   v3 -> v4;
 }
@@ -116,7 +116,7 @@ As the cartoon suggests, Git has a (perhaps well-deserved) reputation
 for being rather unfriendly or inscrutable.  With some familiarity and
 practice, it can be tamed.
 
-::: {.callout-note} 
+::: {.callout-note}
 
 Depending on your background, you might find that learning Git by
 first understanding the data model more helpful.  [Version control
