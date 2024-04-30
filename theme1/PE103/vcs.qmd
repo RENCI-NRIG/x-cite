@@ -55,6 +55,68 @@ You want to avoid the cognitive overload of dealing with messy schemes
 based on file names.  You want to use a version control system
 properly.
 
+Conceptually, you can think of the evolution of versions over time as
+a directed graph:
+
+```{dot}
+digraph G {
+  rankdir=LR;  
+  
+  v1 [label="version 1"];
+  v2 [label="version 2"];  
+  v3 [label="version 3"];    
+  v4 [label="version 4"];      
+
+  v1 -> v2; 
+  v2 -> v3;
+  v3 -> v4;
+}
+```
+
+Sometimes you branch out, say, when exploring a new direction:
+
+```{dot}
+digraph G {
+  rankdir=LR;
+
+  v1 [label="version 1"];
+  v2 [label="version 2"];
+  v3 [label="version 3"];
+  v4 [label="version 4"];
+  v5 [label="version 5"];
+  v6 [label="version 6"];  
+
+  v1 -> v2;
+  v2 -> v3;
+  v3 -> v4;
+  v3 -> v5;
+  v5 -> v6;
+}
+```
+
+Sometimes you may eventually merge the branch to the "main" body of
+your graph:
+
+```{dot}
+digraph G {
+  rankdir=LR;
+
+  v1 [label="version 1"];
+  v2 [label="version 2"];
+  v3 [label="version 3"];
+  v4 [label="version 4"];
+  v5 [label="version 5"];
+  v6 [label="version 6"];  
+
+  v1 -> v2;
+  v2 -> v3;
+  v3 -> v4;
+  v3 -> v5;
+  v5 -> v6;
+  v6 -> v4
+}
+```
+
 
 ## Version control in practice: Git
 
