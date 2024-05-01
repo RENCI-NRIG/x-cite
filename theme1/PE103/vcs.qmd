@@ -5,7 +5,8 @@ lightbox: true
 format:
   html:
     mermaid-format: png
-    theme: sandstone
+    mermaid:
+       theme: neutral
 ---
 
 Version control systems (or VCS) are software tools that are used to
