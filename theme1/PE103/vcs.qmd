@@ -1,6 +1,11 @@
 ---
 title: Version Control
 lightbox: true
+
+format:
+  html:
+    mermaid-format: png
+    theme: sandstone
 ---
 
 Version control systems (or VCS) are software tools that are used to
@@ -58,45 +63,79 @@ properly.
 Conceptually, you can think of the evolution of versions over time as
 a directed graph:
 
-```{dot}
-digraph G {
-  rankdir=LR;
-
-  v1 -> v2;
-  v2 -> v3;
-  v3 -> v4;
-}
+```{mermaid}
+flowchart LR
+  v1(version 1) --> v2(version 2)
+  v2(version 2) --> v3(version 3)
+  v3(version 3) --> v4(version 4)
 ```
+
+<!-- ```{dot} -->
+<!-- digraph G { -->
+<!--   rankdir=LR; -->
+
+<!--   v1 -> v2; -->
+<!--   v2 -> v3; -->
+<!--   v3 -> v4; -->
+<!-- } -->
+<!-- ``` -->
 
 Sometimes you branch out, say, when exploring a new direction:
 
-```{dot}
-digraph G {
-  rankdir=LR;
-
-  v1 -> v2;
-  v2 -> v3;
-  v3 -> v4;
-  v3 -> v5;
-  v5 -> v6;
-}
+```{mermaid}
+flowchart LR
+  v1(version 1) --> v2(version 2)
+  v2(version 2) --> v3(version 3)
+  v3(version 3) --> v4(version 4)
+  v4(version 4) --> v5(version 5)
+  v3(version 3) --> v3.1(version 3.1)
+  v3.1(version 3.1) --> v3.2(version 3.2)  
 ```
+
+
+<!-- ```{dot} -->
+<!-- digraph G { -->
+<!--   rankdir=LR; -->
+
+<!--   v1 -> v2; -->
+<!--   v2 -> v3; -->
+<!--   v3 -> v4; -->
+<!--   v3 -> v5; -->
+<!--   v5 -> v6; -->
+<!-- } -->
+<!-- ``` -->
 
 Sometimes you may eventually merge the branch to the "main" body of
 your graph:
 
-```{dot}
-digraph G {
-  rankdir=LR;
-
-  v1 -> v2;
-  v2 -> v3;
-  v3 -> v4;
-  v3 -> v5;
-  v5 -> v6;
-  v6 -> v4
-}
+```{mermaid}
+flowchart LR
+  v1(version 1) --> v2(version 2)
+  v2(version 2) --> v3(version 3)
+  v3(version 3) --> v4(version 4)
+  v4(version 4) --> v5(version 5)
+  v5(version 5) --> v6(version 6)
+  v3(version 3) --> v3.1(version 3.1)
+  v3.1(version 3.1) --> v3.2(version 3.2)  
+  v3.2(version 3.2) --> v6(version 6)
 ```
+
+<!-- ```{dot} -->
+<!-- digraph G { -->
+<!--   rankdir=LR; -->
+
+<!--   v1 -> v2; -->
+<!--   v2 -> v3; -->
+<!--   v3 -> v4; -->
+<!--   v3 -> v5; -->
+<!--   v5 -> v6; -->
+<!--   v6 -> v4 -->
+<!-- } -->
+<!-- ``` -->
+
+
+With a version control system, you can to do these things in a less
+ad-hoc manner.
 
 
 ## Version control in practice: Git
