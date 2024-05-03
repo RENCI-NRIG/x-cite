@@ -128,20 +128,20 @@ that you're using by running `git version`.
 
 :::
 
-If you are new to version control in general and Git in particular,
-you will need to understand some concepts (such as _repositories_,
-_cloning a repository_, _commits_, _log messages_, _branches_) in
-order to understand what just happened above. Let us unpack stuff.
+<!-- If you are new to version control in general and Git in particular, -->
+<!-- you will need to understand some concepts (such as _repositories_, -->
+<!-- _cloning a repository_, _commits_, _log messages_, _branches_) in -->
+<!-- order to understand what just happened above. Let us unpack stuff. -->
 
 
-## Git concepts
+<!-- ## Git concepts -->
 
-<!-- TODO: elaborate -->
+<!-- <\!-- TODO: elaborate -\-> -->
 
-- commits
-- staging area
-- remotes
-- branches
+<!-- - commits -->
+<!-- - staging area -->
+<!-- - remotes -->
+<!-- - branches -->
 
 ## Getting started with Git
 
