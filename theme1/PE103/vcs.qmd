@@ -305,6 +305,11 @@ $ git commit -m "Update hello.txt"
 $ git status
 # On branch master
 nothing to commit, working directory clean
+```
+
+Try `git log` to show commit history again:
+
+```{.bash}
 $ git log
 commit 233c748ad3dd31c11a3bc12d0cf106d7fe888fc3
 Author: Sajith Sasidharan <ssasidharan@lnx201.classe.cornell.edu>
