@@ -446,6 +446,46 @@ index c5d1025..3f4c47c 100644
 +hello from lnx201.classe.cornell.edu
 ```
 
+## Undoing changes
+
+You have made some changes, but you don't actually want to keep those
+changes.  You do not want to add them or commit them.  To discard all
+such changes in your working directory, use `git reset`:
+
+```{.bash}
+$ git reset --hard HEAD
+```
+
+If you want to keep the changes but continue working on them without
+committing yet, you probably want to do:
+
+```{.bash}
+$ git reset --soft HEAD
+```
+
+Often you can do a `git reset <commit>` to restore the state of your
+working tree to what is reflected by `<commit>`.
+
+At any point, you can use `git reflog` (or "reference log") to find
+where you were previously:
+
+```{.bash}
+$ git reflog 
+d73c5c8 HEAD@{0}: commit: Add a third line
+233c748 HEAD@{1}: commit: Update hello.txt
+708bfca HEAD@{2}: commit (initial): Add hello.txt
+```
+
+This output is useful when you want to set the state of your working
+tree using `git reset` or `git checkout`.
+
+Once you have made a commit, you can undo that with `git revert`,
+which will create a new commit which will revert undesired changes:
+
+```{.bash}
+$ git revert <commit>
+```
+
 
 ### Ignoring (some) files
 
