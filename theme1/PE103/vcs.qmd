@@ -601,25 +601,6 @@ $ ssh-keygen -t rsa -b 4096 -C "you@example.com"
 <!-- TODO: elaborate ssh public and private keys -->
 
 
-## Git subcommands
-
-<!-- TODO: elaborate -->
-
-```{.bash}
-$ git init
-$ git add
-$ git commit
-$ git log
-$ git diff
-$ git merge
-$ git status
-$ git branch
-$ git clone
-$ git fetch
-$ git pull
-$ git push
-```
-
 ## GitHub
 
 [GitHub.com](https://github.com/) is what is known as a software
