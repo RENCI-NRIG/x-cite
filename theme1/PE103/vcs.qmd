@@ -88,9 +88,11 @@ with CLASSE.
 
 Let us prime ourselves for Git with an XKCD strip:
 
-[![](git.png)][xkcd-git]
+[![© Randall Munroe, Creative Commons Attibution-NonCommercial
+license](git.png)][xkcd-git]
 
 [xkcd-git]: https://xkcd.com/1597/
+[by-nc]: https://creativecommons.org/licenses/by-nc/2.5/
 
 As the cartoon suggests, Git has a (perhaps well-deserved) reputation
 for being rather unfriendly or inscrutable.  With some familiarity and
