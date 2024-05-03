@@ -212,7 +212,17 @@ Initialized empty Git repository in /home/ssasidharan/hello-world/.git/
 ```
 
 That created an empty repository, meaning, nothing has been added to
-it.  Running `git status` will show an "untracked file":
+it.  As you can see, `git init` created a directory named `.git/`
+inside `hello-world/`.  This `.git` directory is the repository's
+"database" -- this is where Git stores information about your project,
+including version history, configuration settings, and references to
+commits, and more.
+
+The `"."` prefix in `.git/` means that it is a "hidden" directory.  It
+won't appear in the output of commands such as `ls`.  You will need to
+use `ls --all` or `ls -a`.
+
+Running `git status` will show an "untracked file":
 
 ```{.bash}
 $ git status
@@ -226,6 +236,9 @@ $ git status
 #	hello.txt
 nothing added to commit but untracked files present (use "git add" to track)
 ```
+
+An "untracked file" means Git do not know about the file.  We will
+need to add that file to Git.
 
 ### Adding changes
 
@@ -336,6 +349,45 @@ Date:   Tue Apr 23 19:10:02 2024 -0400
     Add hello.txt
 ```
 
+### Some more terminology
+
+Files that are tracked by Git can be in one of these stages:
+
+- **Modified**: you have changed the file, but has not added or
+  committed it.
+- **Staged**: you have done a `git add` on the file, thus moving into
+  the "staging area" of the repository.
+- **Committed**: you have done a `git commit`, thus storing the file in
+  your local Git database.
+
+Let us see what this means with a diagram:
+
+![](staging.png)
+
+The **working tree** is what you get when you initialize repository
+(with `git init`) or check out a repository (with `git clone`).  The
+files you work with are here.  When you modify a file, you will need
+to move it to the **staging area** before committing it.
+
+The **staging area** stores information about what will go into your
+next commit.  In Git terminology, staging area is also called the
+**index**.
+
+When you do `git commit`, your staged changes will be committed to the
+database in `.git` directory.  With these two-step actions, you get
+more control over what set of changes you get to commit to the
+project.
+
+With `git commit -a` (or `git commit --all`), you can stage the
+changes and commit them at once:
+
+```{.bash}
+$ echo "third line" >> hello.txt
+$ git commit -am "Add a third line"
+```
+
+Note that `git commit -am "Add a third line"` is the same as `git
+commit --all --message "Add a third line"`.
 
 ### Reviewing changes
 
