@@ -180,7 +180,19 @@ Of course, you should use "real" values instead of `Your Name` and
 
 ### Starting a new repository
 
-Let us start with a very simple example, just for practice.
+Let us start with a very simple example, just for practice.  We will
+create a brand new Git repository, and commit some changes to it.
+
+Now, what is a repository, and what are commits?
+
+- A Git **repository** is essentially a directory where Git tracks
+your files and manages changes to them.  It is a database that stores
+your project's history. This history includes every version of every
+file in your project, and who made those changes, and when, among
+other things.
+
+- A Git **commit** is a snapshot of your project at some point in
+time.  You can think of them as versions.
 
 On `lnx201`, let us create a new directory (with `mkdir hello-world`),
 change to that directory (with `cd hello-world`), create a file in
