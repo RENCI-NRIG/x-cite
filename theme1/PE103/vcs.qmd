@@ -64,76 +64,16 @@ properly.
 Conceptually, you can think of the evolution of versions over time as
 a directed graph:
 
-```{mermaid}
-flowchart LR
-  v1(version 1) --> v2(version 2)
-  v2(version 2) --> v3(version 3)
-  v3(version 3) --> v4(version 4)
-```
-
-<!-- ```{dot} -->
-<!-- digraph G { -->
-<!--   rankdir=LR; -->
-
-<!--   v1 -> v2; -->
-<!--   v2 -> v3; -->
-<!--   v3 -> v4; -->
-<!-- } -->
-<!-- ``` -->
+![](versions.png)
 
 Sometimes you branch out, say, when exploring a new direction:
 
-```{mermaid}
-flowchart LR
-  v1(version 1) --> v2(version 2)
-  v2(version 2) --> v3(version 3)
-  v3(version 3) --> v4(version 4)
-  v4(version 4) --> v5(version 5)
-  v3(version 3) --> v3.1(version 3.1)
-  v3.1(version 3.1) --> v3.2(version 3.2)  
-```
+![](versions-branch.png)
 
+And you might eventually want to merge the branch to the "main" body
+of your graph:
 
-<!-- ```{dot} -->
-<!-- digraph G { -->
-<!--   rankdir=LR; -->
-
-<!--   v1 -> v2; -->
-<!--   v2 -> v3; -->
-<!--   v3 -> v4; -->
-<!--   v3 -> v5; -->
-<!--   v5 -> v6; -->
-<!-- } -->
-<!-- ``` -->
-
-Sometimes you may eventually merge the branch to the "main" body of
-your graph:
-
-```{mermaid}
-flowchart LR
-  v1(version 1) --> v2(version 2)
-  v2(version 2) --> v3(version 3)
-  v3(version 3) --> v4(version 4)
-  v4(version 4) --> v5(version 5)
-  v5(version 5) --> v6(version 6)
-  v3(version 3) --> v3.1(version 3.1)
-  v3.1(version 3.1) --> v3.2(version 3.2)  
-  v3.2(version 3.2) --> v6(version 6)
-```
-
-<!-- ```{dot} -->
-<!-- digraph G { -->
-<!--   rankdir=LR; -->
-
-<!--   v1 -> v2; -->
-<!--   v2 -> v3; -->
-<!--   v3 -> v4; -->
-<!--   v3 -> v5; -->
-<!--   v5 -> v6; -->
-<!--   v6 -> v4 -->
-<!-- } -->
-<!-- ``` -->
-
+![](versions-branch-merge.png)
 
 With a version control system, you can to do these things in a less
 ad-hoc manner.
