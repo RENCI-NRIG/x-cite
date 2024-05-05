@@ -665,18 +665,29 @@ your changes as email attachments, if you want.
 
 ## Exercises
 
-1. Create an account on GitHub.com, if you do not have an account
-  there already.
+1. Create an account on GitHub.com (or another forge of your choice),
+   if you do not have an account there already.  Create a new
+   repository on the forge of your choice.  Push some code that you
+   are working on to that repository.
 
-2. Create a new repository on GitHub.com.  Push some code that you are
-  working on to that repository.  If your project is not under version
-  control, you will want to do that now.
+3. Make some more changes to your project, and commit them. Push those
+   commits also to the Git repository.
 
-3. Add some changes to the code. Commit the code. Push those commits
-  also to the Git repository.
+4. Create a Git tag (based on today's date, or a version number), and
+   push the tag to your repository.
+   
+5. If you want to add a new feature to your project, create a branch,
+   and make your changes on the branch. When you are done, merge the
+   feature branch to your `main` or `master` branch.
+   
+5. If you find errors in these notes, or want to suggest improvements,
+   report them by creating an issue on
+   <https://github.com/RENCI-NRIG/X-CITE/>.
+   
+6. If you want to propose some changes to these notes (such a fixing a
+   mistake or improving these notes), create a pull request against
+   <https://github.com/RENCI-NRIG/X-CITE/>.
 
-4. Create a "tag" (based on today's date, or a version number), and
-  push the tag to your repository.
 
 ## References
 
