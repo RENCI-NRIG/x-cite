@@ -264,6 +264,23 @@ $ git status
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
+::: {.callout-note}
+
+What does `On branch master` mean? 
+
+Think of a branch as a line of development.  Your work almost always
+happen on a branch.  When you start a project, Git uses a default
+branch called a `master`.  With newer versions of Git (since , the default
+branch is called `main`.
+
+If you want to use `main` as the default branch, do:
+
+```{.bash}
+$ git config --global init.defaultBranch main
+```
+
+:::
+
 An "untracked file" means Git do not know about the file.  We will
 need to add that file to Git.
 
