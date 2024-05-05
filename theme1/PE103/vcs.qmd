@@ -273,11 +273,11 @@ happen on a branch.  When you start a project, Git uses a default
 branch called a `master`.  With newer versions of Git (since , the default
 branch is called `main`.
 
-If you want to use `main` as the default branch, do:
+<!-- If you want to use `main` as the default branch, do: -->
 
-```{.bash}
-$ git config --global init.defaultBranch main
-```
+<!-- ```{.bash} -->
+<!-- $ git config --global init.defaultBranch main -->
+<!-- ``` -->
 
 :::
 
