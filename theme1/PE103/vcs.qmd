@@ -553,7 +553,16 @@ You should tell Git to ignore these files by adding their names to a
 `.gitignore` file, with one name on a line, so that `git status` will
 ignore them.  You can use wildcard patterns such as `*.pyc`.
 
-Take a look at X-CITE course's [.gitignore] for an example.
+On `lnx201`, you probably should ignore the `.directoryhash` files
+automatically created by the file system; when you use macOS, you want
+to ignore `.DS_Store` files.  So your `.gitignore` should have:
+
+```{.conf}
+.directoryhash
+.DS_Store
+```
+
+Take a look at X-CITE course's [.gitignore] for another example.
 
 [.gitignore]: https://github.com/RENCI-NRIG/X-CITE/blob/main/.gitignore
 
