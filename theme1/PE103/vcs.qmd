@@ -311,11 +311,18 @@ The string following `-m` option (`-m` is short for `--message`) is a
 _commit message_.  You use commit messages to describe the change in a
 single short line.
 
+Note that commit messages are not required to be single lines. On
+`lnx201`, if you run `git commit` without `-m <message>`, an editor
+will be launched where you can write a more detailed commit message.
+You can configure a different editor for writing commit messages, if
+you want to do so.  As a general rule, your commit message should
+start with a short description of the commit in a single line,
+followed by a blank line, followed by a more detailed description of
+the commit.
+
 Over time, your commit messages will tell the story about how your
-project evolved.  Note that commit messages are not required to be
-single lines. You can configure an editor for writing commit messages,
-and can write longer commit messages.  More detailed commit messages
-would be quite useful when you revisit the change at some point in the
+project evolved. More details in commit messages would be quite useful
+when you or someone else revisit the change at some point in the
 future.
 
 Now we can use `git status` to re-check status of the repository:
