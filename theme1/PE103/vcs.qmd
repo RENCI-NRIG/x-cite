@@ -325,6 +325,12 @@ project evolved. More details in commit messages would be quite useful
 when you or someone else revisit the change at some point in the
 future.
 
+[![© Randall Munroe, Creative Commons Attibution-NonCommercial
+license](git_commit.png)][xkcd-git-commit]
+
+[xkcd-git-commit]: https://xkcd.com/1296/
+[by-nc]: https://creativecommons.org/licenses/by-nc/2.5/
+
 Now we can use `git status` to re-check status of the repository:
 
 ```{.bash}
