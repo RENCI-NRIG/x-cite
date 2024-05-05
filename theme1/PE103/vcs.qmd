@@ -520,10 +520,11 @@ At any point, you can use `git reflog` (or "reference log") to find
 where you were previously:
 
 ```{.bash}
-$ git reflog 
-d73c5c8 HEAD@{0}: commit: Add a third line
-233c748 HEAD@{1}: commit: Update hello.txt
-708bfca HEAD@{2}: commit (initial): Add hello.txt
+$  git reflog 
+ddec657 HEAD@{0}: commit: Remove hello.txt
+d73c5c8 HEAD@{1}: commit: Add a third line
+233c748 HEAD@{2}: commit: Update hello.txt
+708bfca HEAD@{3}: commit (initial): Add hello.txt
 ```
 
 This output is useful when you want to set the state of your working
