@@ -486,6 +486,16 @@ index c5d1025..3f4c47c 100644
 +hello from lnx201.classe.cornell.edu
 ```
 
+### Removing files
+
+To remove files from your project, use `git rm <path>` followed by
+`git commit`:
+
+```{.bash}
+$ git rm hello.txt
+$ git commit -m "Remove hello.txt"
+```
+
 ## Undoing changes
 
 You have made some changes, but you don't actually want to keep those
