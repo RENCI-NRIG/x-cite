@@ -654,7 +654,11 @@ people.
 While GitHub happens to be the most popular software forge, many
 others exist too:
 
- - [Gitlab.com](https://gitlab.com)
+ - [Gitlab.com](https://gitlab.com).  
+   - Many organizations and projects choose to self-host a version of
+     GitLab. See [CLASSE
+     GitLab](https://gitlab01.classe.cornell.edu/explore), for
+     example.
  - [BitBucket.com](https://bitbucket.org/)
  - [Codeberg.org](https://codeberg.org/)
 
