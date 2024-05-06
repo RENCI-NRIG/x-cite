@@ -367,6 +367,12 @@ Date:   Tue Apr 23 19:10:02 2024 -0400
     Add hello.txt
 ```
 
+The `commit 708bfcafe32528e90e1d52fd6b94f0c44476518a` part is what is
+known as a "commmit hash" or a "commit ID".  It is a 40-character
+hexadecimal string generated using a cryptographic hashing algorithm.
+Each commits get a unique commit hash, and represents the state of the
+repository at a given point of time.
+
 Let us add some more changes, and commit them:
 
 ```{.bash}
