@@ -846,14 +846,18 @@ username and password, and even if they are correct, `git push` will
 most likely fail, because you do not have the necessary permissions to
 write to the remote repository.
 
-(If you want to add your changes to X-CITE repository on GitHub, you
+::: {.callout-note}
+
+If you want to add your changes to X-CITE repository on GitHub, you
 will want to make your changes in your own fork of the repository, and
 send a pull request to X-CITE repository.  This is a somewhat separate
 discussion.  Start with "[GitHub][git-book-github]" chapter of "Pro
-Git" book, or GitHub's [documentation][github-start].)
+Git" book, or GitHub's [documentation][github-start].
 
 [git-book-github]: https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration
 [github-start]: https://docs.github.com/en/get-started/start-your-journey
+
+:::
 
 <!-- ### Generating ssh keys -->
 
