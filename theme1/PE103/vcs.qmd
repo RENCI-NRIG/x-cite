@@ -901,6 +901,7 @@ all: you can share your changes as email attachments, if you want.
 Git was originally developed for Linux kernel development, which uses
 no forge at all.
 
+<!-- TODO: explain SSH URLs -->
 
 ## Exercises
 
