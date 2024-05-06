@@ -586,10 +586,123 @@ Take a look at X-CITE course's [.gitignore] for another example.
 
 ## Working with branches
 
+A branch is a line of development.  The default branch for Git is
+`master` (or `main`, for newer versions of Git).  If you are working
+on a small project by yourself, you probably can commit your changes
+on the default branch.
+
+However, when working on bigger projects or working with others, you
+will want to use branches.  This will ensure that there is less
+"churn" in the default branch, and keep things manageable.
+
+You will create a branch when you implement a feature, for example,
+and when you are done implementing the feature, you will merge that
+branch to the default branch.
+
+![](branching.png)
+
+Nothing stops you from branching off from your non-`main` branches and
+merging back to the branch either.  Branching and merging are
+(usually!) quick and easy with Git.  (Well, except when there are
+merge conflicts.  This happens when the changes on your branches
+diverge from the changes on the branch that you are trying to merge
+to.)
+
+<!-- The particular branching strategy will likely depend on the project. -->
+<!-- Some projects may choose to have a fast moving `develop` branch, and a -->
+<!-- slow moving `main` branch. -->
+
+To find the branch on which you currently are, use:
+
 ```{.bash}
 $ git branch
-$ git merge
 ```
+
+To create a new branch named `feature-branch`, use:
+
+```{.bash}
+$ git branch feature-branch
+```
+
+To switch to the newly created `feature-branch`, do:
+
+```{.bash}
+$ git checkout feature-branch
+```
+
+You can also create a branch and check it out in a single command:
+
+```{.bash}
+$ git checkout -b feature-branch
+```
+
+When you are ready to merge `feature-branch` to `main` branch, you
+will do:
+
+```{.bash}
+$ git checkout main 
+$ git merge feature-branch
+```
+
+If the merge is not successful, you will encounter an error message:
+
+```{.bash}
+$ git merge feature-branch 
+Auto-merging test.txt
+CONFLICT (content): Merge conflict in test.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+Now `git status` would indicate that you have a situation:
+
+```{.bash}
+$ git status 
+# On branch master
+# You have unmerged paths.
+#   (fix conflicts and run "git commit")
+#
+# Unmerged paths:
+#   (use "git add <file>..." to mark resolution)
+#
+#	both modified:      test.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Git would have added some conflict markers (`<<<<<<<` and `=======`
+and `>>>>>>>`) to indicate the places where it had trouble merging.
+
+```{.md filename="test.txt"}
+<<<<<<< HEAD
+line 1
+line 2
+=======
+line 3
+>>>>>>> feature-branch
+```
+
+This is when you open a text editor, find the conflicts, and _resolve_
+them manually.  It is up to you to accept what you want and reject
+what you do not. You should do that, and remove the conflict markers.
+You will probably end up with:
+
+```{.md filename="test.txt"}
+line 1
+line 2
+line 3
+```
+
+Now you can commit this with:
+
+```{.bash}
+$ git commit -am "Resolve conflict"
+```
+
+In more complicated situations, you will probably have to use a merge
+tool.  See [git-mergetool] for details.
+
+[git-mergetool]: https://git-scm.com/docs/git-mergetool 
+
 
 ## Working with tags
 
