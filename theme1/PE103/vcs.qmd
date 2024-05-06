@@ -884,18 +884,22 @@ collaborate with other people.
 
  - [GitHub.com](https://github.com/) happens to be the most popular
    one.
- - [Gitlab.com](https://gitlab.com).  
+ - [Gitlab.com](https://gitlab.com)
    - Many organizations and projects choose to self-host a version of
      GitLab. See [CLASSE
      GitLab](https://gitlab01.classe.cornell.edu/explore), for
      example.
- - [BitBucket.com](https://bitbucket.org/)
- - [Codeberg.org](https://codeberg.org/)
+ - [Codeberg.org](https://codeberg.org/), which runs
+   [Forgejo](https://en.wikipedia.org/wiki/Forgejo) software.
+ - [SourceHut.org](https://sourcehut.org/)
+ - [BitBucket.com](https://bitbucket.org/) 
 
-Some people prefer to self-host a forge, and some people prefer no
-forge at all. Since Git is a _distributed_ version control system, and
-you should be able to collaborate with no forge at all: you can share
-your changes as email attachments, if you want.
+Some organizations and people prefer to self-host a forge, and some
+people prefer no forge at all. Since Git is a _distributed_ version
+control system, you should be able to collaborate with no forge at
+all: you can share your changes as email attachments, if you want.
+Git was originally developed for Linux kernel development, which uses
+no forge at all.
 
 
 ## Exercises
