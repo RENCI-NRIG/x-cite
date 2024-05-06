@@ -802,11 +802,58 @@ Date:   Mon Apr 22 09:16:44 2024 -0500
 [... more output, elided for brevity ...]
 ```
 
+### Getting updates from a remote repository
+
+After you originally cloned a remote repository, other people might
+have pushed new commits or branches or tags there.  Using `git fetch`
+command will retrieve those updates, but without committing them to
+your local repository.
+
 ```{.bash}
-$ git fetch
-$ git pull
-$ git push
+$ git fetch origin
 ```
+
+Here `origin` refers to the remote repository.  You can list remote
+repository with `git remote`, and `git remote -v` will print some more
+details about them.
+
+You can then do `git diff origin/main` to view the changes, and do
+`git merge origin/main` (or `git rebase origin/main`) to get those
+changes in your local copy.
+
+When you want to fetch updates from the remote repository and
+automatically merge them into your current branch in one step, you
+will do a `git pull`:
+
+```{.bash}
+$ git pull
+```
+
+Here you are fetching and merging changes from the `main` branch in
+the remote repository to your current local branch.
+
+### Getting updates to a remote repository
+
+The inverse of a `git pull` is `git push`.  You use a `git push` to
+get your changes to a remote repository:
+
+```{.bash}
+$ git push origin main
+```
+
+If you are trying to push to X-CITE repository, this will ask for your
+username and password, and even if they are correct, `git push` will
+most likely fail, because you do not have the necessary permissions to
+write to the remote repository.
+
+(If you want to add your changes to X-CITE repository on GitHub, you
+will want to make your changes in your own fork of the repository, and
+send a pull request to X-CITE repository.  This is a somewhat separate
+discussion.  Start with "[GitHub][git-book-github]" chapter of "Pro
+Git" book, or GitHub's [documentation][github-start].)
+
+[git-book-github]: https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration
+[github-start]: https://docs.github.com/en/get-started/start-your-journey
 
 ### Generating ssh keys
 
