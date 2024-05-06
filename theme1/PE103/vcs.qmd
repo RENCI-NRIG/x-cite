@@ -737,10 +737,35 @@ $ git tag -d 1.0.1
 
 ## Working with remote repositories
 
+This far, we've talked about how you work in a local repository.
+
+You will want to be able to share your work with others, and be able
+to check out the projects others have created.  This is typically done
+with hosting your repository somewhere in a server.  These are
+called remote repositories.
+
+![](remote-repository.png)
+
+You will `git clone` remote repositories, and you will `git fetch` or
+`git pull` updates them from, and you will `git push` your changes to
+them.  In practice, you will very likely use an account on a code
+hosting site such as GitHub, and push your code to a repository there.  
+
+::: {.callout-note}
+
+While working with a central remote repository is the most usual Git
+workflow, it is worth noting that Git enables other kinds of workflows
+also.  See the chapter [Distributed Git - Distributed
+Workflows][git-dist] from Pro Git for some examples.
+
+[git-dist]: https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows
+
+:::
+
 These very notes that you are currently reading are version controlled
-using Git.  They are hosted at the _repository_ at
-<https://github.com/RENCI-NRIG/X-CITE/>.  You can _clone_ that
-repository using `git clone` command:
+using Git, and they are hosted at the GitHub repository at
+<https://github.com/RENCI-NRIG/X-CITE/>.  You can get a local copy of
+that repository using `git clone` command:
 
 ```{.bash}
 $ git clone https://github.com/RENCI-NRIG/X-CITE.git
@@ -753,10 +778,8 @@ Receiving objects: 100% (948/948), 4.52 MiB | 0 bytes/s, done.
 Resolving deltas: 100% (446/446), done.
 ```
 
-You just have obtained a _clone_ of X-CITE course repository in a
-local directory named `X-CITE`.  You can `cd` into that directory now
-with `cd X-CITE`, and then run some `git` commands such as `git
-status` and `git log` there:
+You can `cd` into that directory now with `cd X-CITE`, and then run
+some `git` commands such as `git status` and `git log` there:
 
 ```{.bash}
 $ cd X-CITE/
@@ -780,7 +803,6 @@ Date:   Mon Apr 22 09:16:44 2024 -0500
 ```
 
 ```{.bash}
-$ git clone
 $ git fetch
 $ git pull
 $ git push
