@@ -706,8 +706,33 @@ tool.  See [git-mergetool] for details.
 
 ## Working with tags
 
+Tags are used to mark certain points in a repository's history as
+important in some manner. In the case of a release, you will want to
+tag the commit associated with the release with `v1.0.0` or `v1.0.1`,
+for example.
+
+You can list the tags present in your repository with:
+
 ```{.bash}
 $ git tag
+```
+
+You can create a tag with:
+
+```{.bash}
+$ git tag 1.0.0
+```
+
+You can have a tag point at a specific commit:
+
+```{.bash}
+$ git tag 1.0.1 3de49cc
+```
+
+To delete a tag:
+
+```{.bash}
+$ git tag -d 1.0.1
 ```
 
 ## Working with remote repositories
