@@ -642,6 +642,8 @@ You can also create a branch and check it out in a single command:
 $ git checkout -b feature-branch
 ```
 
+### Merging branches
+
 When you are ready to merge `feature-branch` to `main` branch, you
 will do:
 
