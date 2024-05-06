@@ -923,7 +923,9 @@ your changes as email attachments, if you want.
 - [Git cheat sheet][cheat-sheet]
 - [Version Control][missing-vcs] module of The Missing Semester of
   Your CS Education.
+- [About Git][github-about-git] section of GitHub documentation.
 
 [pro-git]: https://git-scm.com/book/en/v2
 [cheat-sheet]: https://education.github.com/git-cheat-sheet-education.pdf
 [missing-vcs]: https://missing.csail.mit.edu/2020/version-control/
+[github-about-git]: https://docs.github.com/en/get-started/using-git/about-git
