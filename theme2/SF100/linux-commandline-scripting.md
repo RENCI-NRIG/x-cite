@@ -107,24 +107,37 @@ distracted and just commit to `bash` for now.
 
 ## Using the shell prompt
 
-- up/down keys
-- `history`
-- {{<kbd Ctrl-R>}}
+After entering the first few characters of a command, you can use the
+{{<kbd tab>}} key for auto-completing commands.
+
+```{.bash}
+$ ssh<tab>
+ssh          ssh-agent    sshd         sshfs        ssh-keyscan  
+ssh-add      ssh-copy-id  sshd-keygen  ssh-keygen   sshpass   
+$ condor_<tab>
+Display all 119 possibilities? (y or n)
+```
+
+Bash offers some helpful methods for editing and navigating the
+history of commands you have previously executed.
+
+- You can use up/down arrow keys to navigate history.
+- `history` command will print a list of recently used commands.
+- You can use {{<kbd Ctrl-R>}} to search command history.
+- {{<kbd Ctrl-A>}} will make the cursor to the beginning of the line.
+- {{<kbd Ctrl-E>}} will go to the end of the line.
+- {{<kbd Ctrl-K>}} will "kill" (cut) text from current position to end
+  of line to a buffer called the "kill-ring".
+- {{<kbd Ctrl-Y>}} will "yank" (paste) most recently killed text from
+  the kill ring to current cursor position.
+- {{<kbd Alt-Y>}} will cycle through the kill-ring.
 
 
-<!-- TODO -->
+To exit the shell, you can use `exit` command or {{<kbd Ctrl-D>}}.  
 
-## Command completion
-
-<!-- TODO -->
-
-- Using the {{<kbd tab>}} key
-
-
-## Exiting a shell
-
-- `exit`
-- `Control + D`
+If you are using ssh to connect to `lnx201`, exiting the shell will
+end your ssh session.  If you had opened a terminal window, exiting
+the shell will close the window.
 
 
 # Environment variables
