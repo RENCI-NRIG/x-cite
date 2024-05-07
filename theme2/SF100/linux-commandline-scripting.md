@@ -143,9 +143,8 @@ the shell will close the window.
 # Environment variables
 
 During a session, the shell maintains some information in what is
-known as _environment variables_.  They are pairs of key and value:
-programs can look up values by keys, and change their behavior
-accordingly.
+known as _environment variables_.  They are key-value pairs: programs
+can look up values by keys, and use that information.
 
 To list the environment variables present in your session, use
 `printenv` command:
@@ -166,8 +165,7 @@ LANG=en_US.UTF-8
 HOME=/home/ssasidharan
 ```
 
-I'm omitting a whole bunch of stuff here for the sake of brevity, but
-you get the idea.
+This omits some lines for the sake of brevity, but you get the idea.
 
 Some of these environment variables are worth knowing:
 
@@ -176,20 +174,69 @@ Some of these environment variables are worth knowing:
 - `SHELL` is the shell you use currently.
 - `PATH` is a list of directory names, separated by `:` (colon)
   character.  When you enter a command on the shell prompt, the shell
-  will use `PATH` to locate the program that it needs to run.
+  will search directories in `PATH` to locate the program that it
+  needs to run.
+
+To print an individual environment variable, use [echo] command:
+
+```{.bash}
+$ echo $PATH
+/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/home/ssasidharan/bin
+```
+
+The `$` prefix tells `echo` that `PATH` is an environment variable.
+Without the `$` prefix, `echo PATH` will simply print the string
+`PATH`.
+
+[echo]: https://www.man7.org/linux/man-pages/man1/echo.1.html
 
 
-## How bash sets up the environment
+## How does bash set up the environment?
 
-- login shells, non-login shells
-- /etc/profile, ~/.bash_profile
-- /etc/bashrc, ~/.bashrc
+There are two kinds of shell sessions: login and non-login.  login
+session starts when you enter a username and password, such as when
+using `ssh`. A non-login session starts when you open a terminal
+window from a desktop.
 
+Depending on how the session was started, a few shell scripts are read
+and executed when starting a shell.
+
+For login shells these will be:
+
+- `/etc/profile` is a global script that applies to all users.  
+- `~/.bash_profile` is a script in your home directory, and it is
+applied when you start a shell.
+- If `~/.bash_profile` was not found, bash will attempt to read
+  `~/.bash_login` and `~/.profile` in order.
+
+For non-login shells:
+
+- `/etc/bashrc` is the script that applies to everyone.
+- `~/.bashrc` is the script that applies to you.
+
+Non-login shells also inherit the environment from their parent
+process, which is usually a login shell.
+
+Systems vary on how they are set up. You should look around `lnx201`
+to find out how this is done there. These files are some examples of
+shell scripts, which is a topic we'll visit later in these notes.
 
 ## Changing environment variables
 
-- `export` command
-- `echo $HOME` command
+You can also use `export` command to overwrite existing environment
+variables, or add new ones.  For example:
+
+```{.bash}
+$ export HISTSIZE=2000
+$ echo $HISTSIZE
+2000
+```
+
+Note that this change in `HISTSIZE` applies only to the current shell.
+It will be forgotten when you exit the shell.  
+
+In order to make the change permanent, you will need to add the line
+`export HISTSIZE=2000` to your `~/.bash_profile` file.
 
 
 # Directory navigation
