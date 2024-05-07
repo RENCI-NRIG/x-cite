@@ -30,17 +30,18 @@ You probably know all this already, so let us skip ahead.
 
 To perform certain kinds of tasks, using the command line is often
 quicker and more efficient.  You can "chain" or compose separate
-programs that do different things together.  You can also save fairly
-complicated tasks in the form of scripts for later use, and share them
-with your colleagues.
+programs together, each of them specializing in doing different
+things.  You can save longer tasks in the form of scripts for later
+use, and share them with your colleagues.
 
-For example, you will find documentation for the software installed on
-`lnx201` in the directory `/usr/share/doc`.  Many of those are named
-`README`, or `README.md`, or `README.rst`, or `readme.txt`, or some
-such variation. How many such files are there in `/usr/share/doc`?
+Here's a quick example. You will find documentation for the software
+installed on `lnx201` in the directory `/usr/share/doc`.  Many of
+those are named `README`, or `README.md`, or `README.rst`, or
+`readme.txt`, or some such variation. How many such files are there in
+`/usr/share/doc`?
 
-We can find that out by using [find] (a program for finding files) and
-[wc] (a word count program):
+We can find that out by using [find] (a program for searching for
+files under a directory tree) and [wc] (a word count program):
 
 ```{.bash}
 [ssasidharan@lnx201 ~]$ find /usr/share/doc/ -iname "readme*" | wc -l
@@ -49,6 +50,8 @@ We can find that out by using [find] (a program for finding files) and
 
 Many of the files in `/usr/share/doc` mention the word "license" or
 "LICENSE" or some variation thereof.  How many such lines are there?
+In order to find that out, we can use [grep] (a program that matches
+patterns), and `wc` together:
 
 ```{.bash}
 [ssasidharan@lnx201 ~]$ grep -ir license /usr/share/doc/ | wc -l
@@ -60,6 +63,7 @@ hands.
 
 [find]: https://www.man7.org/linux/man-pages/man1/find.1.html
 [wc]: https://man7.org/linux/man-pages/man1/wc.1.html
+[grep]: https://www.man7.org/linux/man-pages/man1/grep.1.html
 
 # The shell
 
