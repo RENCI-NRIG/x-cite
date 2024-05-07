@@ -74,6 +74,10 @@ In the shell, you type a command, hit enter, and the command gets
 executed.  Shell is the program that is responsible for accepting your
 commands, executing them, and printing the results on a console.
 
+Nearly all Linux distributions ship a shell named [bash].  In the
+`lnx201` environment that you access, `bash` is the default shell. You
+will be staring at a bash prompt when you ssh to `lnx201`.
+
 The screenshots below shows a how this works in practice.
 
 Using a terminal program, I'm using `ssh` command to access `lnx201`,
@@ -92,14 +96,11 @@ with a web browser.  You can launch a terminal from the desktop menu:
 
 ![](./nomachine.png)
 
-Nearly all Linux distributions ship a shell named `bash`.  In the
-`lnx201` environment that you access, `bash` is the default shell. You
-will be staring at a bash prompt when you ssh to `lnx201`.
-
 Although `bash` is the most popular shell, many other shells exist
 too: `csh`, `ksh`, `dash`, `zsh`, and so on.  But let us not get
 distracted and just commit to `bash` for now.
 
+[bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
 [JupyerLab]: https://jupyter01.classe.cornell.edu/
 [NoMachine]: https://wiki.classe.cornell.edu/Computing/NoMachine
 [NoMachine-web]: https://nomachine.classe.cornell.edu/
