@@ -1115,6 +1115,15 @@ try to run `hello.sh` without the `./` prefix, `bash` will complain:
 bash: hello.sh: command not found
 ```
 
+Since the `bin/` directory in your home directory is in your `$PATH`,
+if you place your scripts there, `bash` will be able to find them.
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ mv hello.sh bin/
+[ssasidharan@lnx201 ~]$ hello.sh 
+Hello world!
+```
+
 Bash provides some useful constructs such as loops and functions.
 
 - loops
