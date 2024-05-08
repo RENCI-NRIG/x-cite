@@ -1124,12 +1124,16 @@ if you place your scripts there, `bash` will be able to find them.
 Hello world!
 ```
 
-Bash provides some useful constructs such as loops and functions.
+When writing shell-scripts, you are not restricted to straight-line
+flow.  You can write more elaborate scripts using constructs such as
+variables, control flow (with `if` and `case` expressions), loops
+(with `while` and `until` and `for` expressions), and functions.  You
+can read input with `read`, pass parameters to scripts, evaluate
+arithmetic expressions, use arrays and array operations; and so on.
+This is a longer discussion.
 
-- loops
-- functions
-- seq
-- ~/.local/bin or $HOME/bin maybe?
+You can find more information in `info bash` and the references listed
+at the end.
 
 
 # Nifty: terminal multiplexers
