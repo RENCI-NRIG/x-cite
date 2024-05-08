@@ -1091,9 +1091,37 @@ program,
 
 # Nifty: terminal multiplexers
 
-- `tmux`
-- `screen`
+Terminal multiplexers are programs that allow you to run multiple
+shell sessions in a single window.  [GNU screen][gnu-screen] and
+[tmux] are two popular options, with the latter being a little newer
+and perhaps friendlier at first.  
 
+The screenshot below shows `tmux` in action:
+
+![](tmux.png)
+
+You manage `tmux` windows with {{<kbd Ctrl-b>}} followed by another
+key.  Here are some often-used `tmux` command keys:
+
+- {{<kbd Ctrl-b-?>}} - list keyboard shortcuts ({{<kbd Esc>}} to
+  close the list.)
+- {{<kbd Ctrl-b-%>}} - split window vertically into two panes
+- {{<kbd Ctrl-b-\">}} - split window horizontally into two panes
+- {{<kbd Ctrl-b-o>}} - next pane
+- {{<kbd Ctrl-b-c>}} - create a new window
+- {{<kbd Ctrl-b-n>}} - switch to next window
+- {{<kbd Ctrl-b-p>}} - switch to previous window
+- {{<kbd Ctrl-b-1>}} - switch to window numbered 1
+- {{<kbd Ctrl-b-2>}} - switch to window numbered 2
+- {{<kbd Ctrl-b-d>}} - detach tmux session
+
+When you're ready to leave, you can "detach" `tmux` from your current
+session with {{<kbd Ctrl-b d>}}, and reattach to it in a different
+session with `tmux attach` command.  Programs that you launched in
+`tmux` continue running in between.  This is nifty!
+
+[gnu-screen]: https://www.gnu.org/software/screen/
+[tmux]: https://github.com/tmux/tmux/wiki
 
 # Further reading
 
