@@ -30,17 +30,18 @@ You probably know all this already, so let us skip ahead.
 
 To perform certain kinds of tasks, using the command line is often
 quicker and more efficient.  You can "chain" or compose separate
-programs that do different things together.  You can also save fairly
-complicated tasks in the form of scripts for later use, and share them
-with your colleagues.
+programs together, each of them specializing in doing different
+things.  You can save longer tasks in the form of scripts for later
+use, and share them with your colleagues.
 
-For example, you will find documentation for the software installed on
-`lnx201` in the directory `/usr/share/doc`.  Many of those are named
-`README`, or `README.md`, or `README.rst`, or `readme.txt`, or some
-such variation. How many such files are there in `/usr/share/doc`?
+Here's a quick example. You will find documentation for the software
+installed on `lnx201` in the directory `/usr/share/doc`.  Many of
+those are named `README`, or `README.md`, or `README.rst`, or
+`readme.txt`, or some such variation. How many such files are there in
+`/usr/share/doc`?
 
-We can find that out by using [find] (a program for finding files) and
-[wc] (a word count program):
+We can find that out by using [find] (a program for searching for
+files under a directory tree) and [wc] (a word count program):
 
 ```{.bash}
 [ssasidharan@lnx201 ~]$ find /usr/share/doc/ -iname "readme*" | wc -l
@@ -49,6 +50,8 @@ We can find that out by using [find] (a program for finding files) and
 
 Many of the files in `/usr/share/doc` mention the word "license" or
 "LICENSE" or some variation thereof.  How many such lines are there?
+In order to find that out, we can use [grep] (a program that matches
+patterns), and `wc` together:
 
 ```{.bash}
 [ssasidharan@lnx201 ~]$ grep -ir license /usr/share/doc/ | wc -l
@@ -60,6 +63,8 @@ hands.
 
 [find]: https://www.man7.org/linux/man-pages/man1/find.1.html
 [wc]: https://man7.org/linux/man-pages/man1/wc.1.html
+[grep]: https://www.man7.org/linux/man-pages/man1/grep.1.html
+
 
 # The shell
 
@@ -69,6 +74,10 @@ those commands to the operating systems to execute.
 In the shell, you type a command, hit enter, and the command gets
 executed.  Shell is the program that is responsible for accepting your
 commands, executing them, and printing the results on a console.
+
+Nearly all Linux distributions ship a shell named [bash].  In the
+`lnx201` environment that you access, `bash` is the default shell. You
+will be staring at a bash prompt when you ssh to `lnx201`.
 
 The screenshots below shows a how this works in practice.
 
@@ -88,46 +97,118 @@ with a web browser.  You can launch a terminal from the desktop menu:
 
 ![](./nomachine.png)
 
-Nearly all Linux distributions ship a shell named `bash`.  In the
-`lnx201` environment that you access, `bash` is the default shell. You
-will be staring at a bash prompt when you ssh to `lnx201`.
-
 Although `bash` is the most popular shell, many other shells exist
 too: `csh`, `ksh`, `dash`, `zsh`, and so on.  But let us not get
 distracted and just commit to `bash` for now.
 
+[bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
 [JupyerLab]: https://jupyter01.classe.cornell.edu/
 [NoMachine]: https://wiki.classe.cornell.edu/Computing/NoMachine
 [NoMachine-web]: https://nomachine.classe.cornell.edu/
 
 ## Using the shell prompt
 
-- up/down keys
-- `history`
-- {{<kbd Ctrl-R>}}
+The `[ssasidharan@lnx201 ~]$ ` thing with a blinking cursor at the end
+is called a _shell prompt_.  You type commands at the shell prompt,
+hit enter, and then something happens in response to that.
+
+The examples in these notes are _my_ shell prompt: it contains my
+username on `lnx201`, followed by `@` character, followed by the name
+of the computer (or "hostname"), followed by the current directory.
+Your prompt will be different, because it will contain your username.
+
+After entering the first few characters of a command, you can use the
+{{<kbd tab>}} key for auto-completing commands.
+
+```{.bash}
+[ssasidharan@lnx201 /]$ ssh<tab>
+ssh          ssh-agent    sshd         sshfs        ssh-keyscan  
+ssh-add      ssh-copy-id  sshd-keygen  ssh-keygen   sshpass   
+[ssasidharan@lnx201 /]$ condor_<tab>
+Display all 119 possibilities? (y or n)
+```
+
+Bash offers some helpful methods for editing and navigating the
+history of commands you have previously executed.
+
+- You can use up/down arrow keys to navigate history.
+- `history` command will print a list of recently used commands.
+- You can use {{<kbd Ctrl-R>}} to search command history.
+- {{<kbd Ctrl-A>}} will make the cursor to the beginning of the line.
+- {{<kbd Ctrl-E>}} will go to the end of the line.
+- {{<kbd Ctrl-K>}} will "kill" (cut) text from current position to end
+  of line to a buffer called the "kill-ring".
+- {{<kbd Ctrl-Y>}} will "yank" (paste) most recently killed text from
+  the kill ring to current cursor position.
+- {{<kbd Alt-Y>}} will cycle through the kill-ring.
 
 
-<!-- TODO -->
+To exit the shell, you can use `exit` command or {{<kbd Ctrl-D>}}.  
 
-## Command completion
+If you are using ssh to connect to `lnx201`, exiting the shell will
+end your ssh session.  If you had opened a terminal window, exiting
+the shell will close the window.
 
-<!-- TODO -->
+# Finding help
 
-- Using the {{<kbd tab>}} key
+On the topics covered here in these notes, there is a wealth of
+information out there: in the form of books, articles, videos,
+courses, and so on.
 
+You can also find some built-in documentation in the system itself.
 
-## Exiting a shell
+Often you can find help for the programs that you run by passing
+`--help` argument to them.  For example:
 
-- `exit`
-- `Control + D`
+```{.bash}
+[ssasidharan@lnx201 ~]$ whoami --help
+Usage: whoami [OPTION]...
+Print the user name associated with the current effective user ID.
+Same as id -un.
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+For complete documentation, run: info coreutils 'whoami invocation'
+```
+
+As the above text suggests, another way to find manuals is by running
+the command `info`.  Below is the result of running `info coreutils
+'whoami invocation'` as the above example suggests:
+
+![](info.png)
+
+The `info` program runs a text-based documentation browser.  You can
+move the cursor using tab or arrow keys, and use enter key to follow
+the links.  A lot of the essential software on Linux, including
+`bash`, is made by [GNU project][gnu], and info is their choice of
+documenting software.
+
+[gnu]: http://gnu.org/
+
+A lot of the other software has Unix roots, and their documentation
+tend to be in the form of `man` (short for "manual") pages.  You can
+run `man <program-name>` to read those.  Running `man ssh` will
+display `ssh` program's `man` page.
+
+Man pages are divided into several sections: try running `man man` to
+find out what they are.
+
+You can run `man -k <pattern>` or `apropos <pattern>` to search man
+pages, and it will print a list of manual pages that contains the
+matching pattern.
+
+Yet another place to look for documentation is the folder
+`/usr/share/doc`, where some additional documentation for software
+packages installed in the system are available.
 
 
 # Environment variables
 
 During a session, the shell maintains some information in what is
-known as _environment variables_.  They are pairs of key and value:
-programs can look up values by keys, and change their behavior
-accordingly.
+known as _environment variables_.  They are key-value pairs: programs
+can look up values by keys, and use that information.
 
 To list the environment variables present in your session, use
 `printenv` command:
@@ -148,8 +229,7 @@ LANG=en_US.UTF-8
 HOME=/home/ssasidharan
 ```
 
-I'm omitting a whole bunch of stuff here for the sake of brevity, but
-you get the idea.
+This omits some lines for the sake of brevity, but you get the idea.
 
 Some of these environment variables are worth knowing:
 
@@ -158,31 +238,75 @@ Some of these environment variables are worth knowing:
 - `SHELL` is the shell you use currently.
 - `PATH` is a list of directory names, separated by `:` (colon)
   character.  When you enter a command on the shell prompt, the shell
-  will use `PATH` to locate the program that it needs to run.
+  will search directories in `PATH` to locate the program that it
+  needs to run.
+
+To print an individual environment variable, use [echo] command:
+
+```{.bash}
+[ssasidharan@lnx201 /]$ echo $PATH
+/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/home/ssasidharan/bin
+```
+
+The `$` prefix tells `echo` that `PATH` is an environment variable.
+Without the `$` prefix, `echo PATH` will simply print the string
+`PATH`.
+
+[echo]: https://www.man7.org/linux/man-pages/man1/echo.1.html
 
 
-## How bash sets up the environment
+## How does bash set up the environment?
 
-- login shells, non-login shells
-- /etc/profile, ~/.bash_profile
-- /etc/bashrc, ~/.bashrc
+There are two kinds of shell sessions: login and non-login.  login
+session starts when you enter a username and password, such as when
+using `ssh`. A non-login session starts when you open a terminal
+window from a desktop.
 
+Depending on how the session was started, a few shell scripts are read
+and executed when starting a shell.
+
+For login shells these will be:
+
+- `/etc/profile` is a global script that applies to all users.  
+- `~/.bash_profile` is a script in your home directory, and it is
+applied when you start a shell.
+- If `~/.bash_profile` was not found, bash will attempt to read
+  `~/.bash_login` and `~/.profile` in order.
+
+For non-login shells:
+
+- `/etc/bashrc` is the script that applies to everyone.
+- `~/.bashrc` is the script that applies to you.
+
+Non-login shells also inherit the environment from their parent
+process, which is usually a login shell.
+
+Systems vary on how they are set up. You should look around `lnx201`
+to find out how this is done there. These files are some examples of
+shell scripts, which is a topic we'll visit later in these notes.
 
 ## Changing environment variables
 
-- `export` command
-- `echo $HOME` command
+You can also use `export` command to overwrite existing environment
+variables, or add new ones.  For example:
+
+```{.bash}
+[ssasidharan@lnx201 /]$ export HISTSIZE=2000
+[ssasidharan@lnx201 /]$ echo $HISTSIZE
+2000
+```
+
+Note that this change in `HISTSIZE` applies only to the current shell.
+It will be forgotten when you exit the shell.  
+
+In order to make the change permanent, you will need to add the line
+`export HISTSIZE=2000` to your `~/.bash_profile` file.
 
 
 # Directory navigation
 
 Linux organizes directories and files in a _hierarchical directory
 structure_, meaning, they are organized in a tree-like pattern.
-
-
-- TODO: files, directories
-
-## Directory structure
 
 The first, or top-level directory of this tree is a special directory,
 called the "root directory", or `/`.  All other directories are under
@@ -197,26 +321,84 @@ boot  cifs  dev    home  lib64  misc   net  null  proc  run   srv   tmp  var
 
 It is useful to know about some of these directories:
 
-- `home` is where user home directories are.
-  - `root` is the home directory for `root` user, aka superuser.
-- `bin` and `sbib` are for programs.
-- `lib` and `lib64` are for libraries.
-- `etc` is for configuration files.
-- `tmp` is for temporary files
-- `proc` provides an interface with processes.
-
+- `/home` is where user home directories are.
+- `/root` is the home directory for `root` user, aka superuser.
+- `/bin` is for programs that are available to everyone.
+- `/sbin` is for programs available to the `root` user.
+- `/lib` and `/lib64` are for libraries.
+- `/etc` is for configuration files.
+- `/tmp` is for temporary files.
+- `/proc` provides an interface with processes.
+- `/usr` has been, historically, for "Unix System Resources", and
+  contains several sub-directories:
+  - `/usr/bin` and `/usr/sbin` are for programs.
+  - `/usr/lib` is for libraries, typically used by programs in
+    `/usr/bin` and `/usr/sbin`.
+  - `/usr/include` is for C and C++ header files.
+  - `/usr/share` contains data files used by programs, including
+    documentation in `/usr/share/doc`.
+  - Some Python programs are globally installed, and the Python
+    library packages they use are in `/usr/lib/python{version}`.
+  - `/usr/local` is for programs that are "locally" installed by a
+    system administrator. (Meaning, it is for software that wasn't
+    packaged by the operating system vendor.)
 
 ## Absolute and relative paths
 
-<!-- TODO -->
+Paths can be specified in two ways: absolute or relative.  An absolute
+pathname begins with the root directory, `/`, and contains every
+directory name, branch by branch.
 
+Absolute path to the `Desktop` directory in my home directory on
+`lnx201` is `/home/ssasidharan/Desktop/`.
 
-## Wildcard operator
+In comparison, a relative pathname starts from the working directory.
+When I'm in my home directory, I can simply use the relative pathname,
+`Desktop`.
 
-<!-- TODO -->
+Every directory contains two special directory names, `.` and `..`, in
+which `.` refers to the current directory, and `..`  refers to the
+parent directory of the current directory.
 
-- `*`
-- use `*` carefully with `rm`
+```{.bash}
+[ssasidharan@lnx201 ~]$ pwd
+/home/ssasidharan
+[ssasidharan@lnx201 ~]$ cd .
+[ssasidharan@lnx201 ~]$ pwd
+/home/ssasidharan
+[ssasidharan@lnx201 ~]$ cd ..
+[ssasidharan@lnx201 home]$ pwd
+/home
+[ssasidharan@lnx201 home]$ cd ..
+[ssasidharan@lnx201 /]$ pwd
+/
+```
+
+## Wildcards
+
+The shell gives special treatment to some characters, known as
+_wildcards_.  Using wildcard characters, we can quickly specify groups
+of files.
+
+The wildcard character `*` stands for any set of characters.  For
+example, you can list the names of all programs in `/usr/bin` that
+start with `ab` with `ls /usr/bin/ab*`:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ls /usr/bin/ab*
+/usr/bin/ab  /usr/bin/abs2rel
+```
+
+The wildcard character `?` stands for any single character.  So if you
+want to list the filenames in `/usr/bin` that starts with any
+character, followed by `abc`, followed by any characters:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ls /usr/bin/?abc*
+/usr/bin/kabc2mutt  /usr/bin/kabcclient
+```
+
+<!-- - use `*` carefully with `rm` -->
 
 
 ## The current working directory
@@ -243,9 +425,36 @@ The below commands are useful:
 - `rm <name of directory>` will _not_ remove a directory; you have to
   remove it _recursively_, like so: `rm -r <name of directory>`.
 
-
 `cd -` is useful: it will switch you to the directory that you were
-  previously in.
+  previously in:
+  
+```{.bash}
+[ssasidharan@lnx201 /]$ cd /usr/
+[ssasidharan@lnx201 usr]$ pwd
+/usr
+[ssasidharan@lnx201 usr]$ cd share/
+[ssasidharan@lnx201 share]$ pwd
+/usr/share
+[ssasidharan@lnx201 share]$ cd -
+/usr
+[ssasidharan@lnx201 usr]$ pwd
+/usr
+```
+  
+Running `cd ~` (or simply `cd`) will drop you back in your home
+directory:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ cd /usr/share/doc/
+[ssasidharan@lnx201 doc]$ pwd
+/usr/share/doc
+[ssasidharan@lnx201 doc]$ cd ~
+[ssasidharan@lnx201 ~]$ pwd
+/home/ssasidharan
+```
+
+It is worth noting that the shell will substitute `~` for your home
+directory.
 
 `.` and `..` are special directory names: `.` means the current
 directory, and `..` means its parent directory, or the directory above
@@ -254,7 +463,27 @@ it in the directory hierarchy.
 `touch` command is used to change file timestamps.  You can also use
 `touch` to create an empty file, like so: `touch test.txt`.
 
-- TODO: directory navigation: ls, cd, mkdir, rm, ln, pwd, touch
+### Symbolic links
+
+On my home directory on `lnx201`, when I do an `ls -l` (which is for
+`ls` with long file listing format), I would see something like this:
+
+```{.bash}
+lrwxrwxrwx  1 ssasidharan chess   31 Mar 26 15:21 Downloads -> /cdat/tem/ssasidharan/Downloads
+```
+
+The first letter of the listing is `l` and the entry kind of suggests
+that my `Downloads` directory is a reference to another directory,
+`/cdat/tem/ssasidharan/Downloads`.  The `Downloads` directory in my
+home directory is what is called a symbolic link, which also known as
+a soft link or "symlink".
+
+With symbolic links, we can have shortcuts to other files or
+directories.
+
+<!-- ### Creating empty files -->
+
+<!-- touch -->
 
 
 ## Users and groups
@@ -423,10 +652,6 @@ that with `chown` and `chgrp`.  This probably is not immediately
 useful; it is enough to know that these commands exist.)
 
 
-## Symbolic links
-
-TODO
-
 ## Noteworthy facts about file names
 
 - File/folder names that begin with a `.` (period character) are
@@ -454,7 +679,7 @@ also accept input.
 
 Following the Unix tradition of "everything is a file", programs send
 their output to special files called _standard output_ or _standard
-error_`, and they read input from _standard input_.  They are also
+error_, and they read input from _standard input_.  They are also
 known as `stdout`, `stderr`, and `stdin`, respectively.
 
 
@@ -518,7 +743,7 @@ Shall I compare thee to a summer’s day?
 Shall I compare thee to a summer’s day?
 ```
 
-(TODO: explain the above: `echo` and the different usage of `cat`.)
+<!-- (TODO: explain the above: `echo` and the different usage of `cat`.) -->
 
 
 ## Pipes
@@ -697,7 +922,7 @@ sleep: no process found
 ```
 
 In the above example, you are not running a `sleep` process, but some
-other users are, but you are not allowed to terminate them.
+other users are, and you are not allowed to terminate them.
 
 
 ## Signals
@@ -740,92 +965,95 @@ Here are some common signals:
 Run the command `man 7 signal` to read `signal` command's manual page.
 
 
-# Useful commands
+# A list of (hopefully) useful commands
 
-## A cheat sheet
-
-
-| Command    | Description |
-|------------|-------------|
-| `echo`     |             |
-| `cat`      |             |
-| `head`     |             |
-| `tail`     |             |
-| `more`     |             |
-| `less`     |             |
-|            |             |
-| `ls`       |             |
-| `mkdir`    |             |
-| `cd`       |             |
-| `cp`       |             |
-| `rm`       |             |
-|            |             |
-|            |             |
-| `sed`      |             |
-| `awk`      |             |
-| `grep`     |             |
-| `sleep`    |             |
-|            |             |
-| `tree`     |             |
-| `find`     |             |
-|            |             |
-| `du`       |             |
-|            |             |
-| `gzip`     |             |
-| `tar`      |             |
-|            |             |
-| `ps`       |             |
-| `top`      |             |
-| `htop`     |             |
-| `kill`     |             |
-| `killall`  |             |
-|            |             |
-| `ping`     |             |
-| `netstat`  |             |
-|            |             |
-| `ifconfig` |             |
-| `ip`       |             |
-|            |             |
-| `hostname` |             |
-| `uname`    |             |
-|            |             |
-| `date`     |             |
-| `cal`      |             |
-|            |             |
-| `clear`    |             |
-| `history`  |             |
-|            |             |
-| `ssh`      |             |
-| `scp`      |             |
-| `sftp`     |             |
-| `ftp`      |             |
-| `wget`     |             |
-| `curl`     |             |
+| Command         | Description                                        |
+|-----------------|----------------------------------------------------|
+| `echo`          | display a line of text                             |
+| `cat`           | concatenate files and print on the standard output |
+| `head`          | output the first part of files                     |
+| `tail`          | output the last part of files                      |
+| `more`          | a "pager", for printing text one screen at a time  |
+| `less`          | a pager similar to `more`, but nicer               |
+|                 |                                                    |
+| `ls`            | list directory contents                            |
+| `mkdir`         | make directories                                   |
+| `cd`            | change the shell working directory                 |
+| `cp`            | copy files and directories                         |
+| `rm`            | remove files or directories                        |
+|                 |                                                    |
+| `grep`          | print lines that match patterns                    |
+| `sed`           | stream editor for filtering and transforming text  |
+| `awk`           | pattern scanning and processing language           |
+|                 |                                                    |
+| `sleep`         | delay for a specified amount of time               |
+|                 |                                                    |
+| `tree`          | list contents of directories in a tree-like format |
+| `find`          | search for files in a directory hierarchy          |
+|                 |                                                    |
+| `du`            | estimate file space usage                          |
+|                 |                                                    |
+| `gzip`/`gunzip` | compress or expand files                           |
+| `tar`           | an archiving utility                               |
+|                 |                                                    |
+| `ps`            | report currently running processes                 |
+| `top`           | display processes                                  |
+| `htop`          | a nicer alternative to `top`                       |
+| `kill`          | send a signal to a process                         |
+| `killall`       | kill processes by name                             |
+|                 |                                                    |
+| `ping`          | send echo requests to remote hosts                 |
+| `hostname`      | show the system's host name                        |
+| `uname`         | print system information                           |
+|                 |                                                    |
+| `date`          | print the system date and time                     |
+| `cal`           | display a calendar                                 |
+|                 |                                                    |
+| `clear`         | clear the terminal screen                          |
+| `history`       | display the command history list                   |
+|                 |                                                    |
+| `ssh`           | remote login program                               |
+| `scp`           | remote file copy program                           |
+| `sftp`          | secure file transfer program                       |
+|                 |                                                    |
+| `wget`          | a tool to download of files from the Web           |
+| `curl`          | another tool to download files from the Web        |
 
 
+<!-- ## Shell builtins -->
 
-## Shell builtins
-
-- `type`
-- `which`
-
-
-## Aliases
+<!-- - `type` -->
+<!-- - `which` -->
 
 
-# Regular expressions
+<!-- ## Aliases -->
 
-- grep
-- awk
-- sed
+
+<!-- # Regular expressions -->
+
+<!-- - grep -->
+<!-- - awk -->
+<!-- - sed -->
 
 
 
-# Editors
+# Text Editors
 
-- `nano`
-- `vim`
-- `emacs`
+Several terminal-based full-screen text editors are available on
+`lnx201`, and they vary in power and ease of use.  Try these ones and
+pick one that works for you.
+
+- [`nano`][nano]
+- [`vim`][vim]
+- [`emacs`][emacs]
+
+[nano]: https://www.nano-editor.org/
+[vim]: https://www.vim.org/
+[emacs]: https://www.gnu.org/software/emacs/
+
+If you use [JupyerLab][jupyerlab], use the editor there.  If you use
+[NoMachine][nomachine], use the menu system to find an editor that
+works for you.
 
 
 # Writing shell scripts
@@ -839,18 +1067,43 @@ commands often.
 
 Here is a simple shell script:
 
-```{.bash filename=hello.sh}
-#! /usr/bin/env bash
+```{.bash filename=hello.sh code-line-numbers="true"}
+#! /bin/bash
 
 # A simple script.
 
 echo "Hello world!"
 ```
 
+Line number 1 contains a [shebang]: it tells the shell to how to run
+the script, or which program should interpret the script.  Scripts
+could be written in other languages and interpreted by programs
+associated with those languages (such as `/bin/python`, `/bin/perl`,
+or `/bin/ruby`.), so the shell has to know what to do here.
+
+[shebang]: https://en.wikipedia.org/wiki/Shebang_%28Unix%29
+
+::: {.callout-note}
+
+- The line `#! /bin/bash` could as well be `#! /usr/bin/env bash`,
+since it is not a good idea to assume that bash will be always in
+`/bin/`.
+
+- To make scripts more portable across various kinds of systems, `#!
+/bin/sh` shebang also is often used.  On Linux, `/bin/sh` is often a
+symbolic link to `/bin/bash`.
+
+:::
+
+Line 2 contains a comment.  When shell encounters a `#` character,
+everything following it on that line is ignored.
+
+Line 5 contains the command to be executed.
+
 <!-- TODO: describe shebang, comments, commands -->
 
-Assuming we name the script `hello.sh`, we can make it executable with
-`chmod`, and run `hello.sh`:
+Assuming we've named the script `hello.sh`, we should make it
+executable with `chmod`, and run `hello.sh`:
 
 
 ```{.bash}
@@ -859,33 +1112,91 @@ Assuming we name the script `hello.sh`, we can make it executable with
 Hello world!
 ```
 
-Bash provides some useful constructs such as loops and functions.
+Remember that `$PATH` environment variable contains a list of
+directory names separated by `:` character, and when you run a
+program, the shell looks in these directories to find the program.
 
-- loops
-- functions
-- seq
-- ~/.local/bin or $HOME/bin maybe?
+Your current directory (represented by `.`) is not in `$PATH`, and it
+is for a good reason: you do not want to accidentally run any
+undesirable programs.  That why you run the script with `./hello.sh`:
+it tells shell to find the script in the current directory.  If you
+try to run `hello.sh` without the `./` prefix, `bash` will complain:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ hello.sh
+bash: hello.sh: command not found
+```
+
+Since the `bin/` directory in your home directory is in your `$PATH`,
+if you place your scripts there, `bash` will be able to find them.
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ mv hello.sh bin/
+[ssasidharan@lnx201 ~]$ hello.sh 
+Hello world!
+```
+
+When writing shell-scripts, you are not restricted to straight-line
+flow.  You can write more elaborate scripts using constructs such as
+variables, control flow (with `if` and `case` expressions), loops
+(with `while` and `until` and `for` expressions), and functions.  You
+can read input with `read`, pass parameters to scripts, evaluate
+arithmetic expressions, use arrays and array operations; and so on.
+This is a longer discussion.
+
+You can find more information in `info bash` and the references listed
+at the end.
 
 
 # Nifty: terminal multiplexers
 
-- `tmux`
-- `screen`
+Terminal multiplexers are programs that allow you to run multiple
+shell sessions in a single window.  [GNU screen][gnu-screen] and
+[tmux] are two popular options, with the latter being a little newer
+and perhaps friendlier at first.  
 
+The screenshot below shows `tmux` in action. I have split a `tmux`
+window vertically into two panes using {{<kbd Ctrl-b-%>}} key, and run
+`emacs` text editor in one.  I can use {{<kbd Ctrl-b-o>}} to switch
+between the two panes.
 
-# Finding help and documentation
+![](tmux.png)
 
-- finding help: man, info, the web
+You manage `tmux` windows with {{<kbd Ctrl-b>}} followed by another
+key.  Here are some often-used `tmux` command keys:
 
+- {{<kbd Ctrl-b-?>}} - list keyboard shortcuts ({{<kbd Esc>}} to
+  close the list.)
+- {{<kbd Ctrl-b-%>}} - split window vertically into two panes
+- {{<kbd Ctrl-b-\">}} - split window horizontally into two panes
+- {{<kbd Ctrl-b-o>}} - next pane
+- {{<kbd Ctrl-b-c>}} - create a new window
+- {{<kbd Ctrl-b-n>}} - switch to next window
+- {{<kbd Ctrl-b-p>}} - switch to previous window
+- {{<kbd Ctrl-b-1>}} - switch to window numbered 1
+- {{<kbd Ctrl-b-2>}} - switch to window numbered 2
+- {{<kbd Ctrl-b-d>}} - detach tmux session
+
+When you're ready to leave, you can "detach" `tmux` from your current
+session with {{<kbd Ctrl-b d>}}, and reattach to it in a different
+session with `tmux attach` command.  Programs that you launched in
+`tmux` continue running in between.  This is nifty!
+
+[gnu-screen]: https://www.gnu.org/software/screen/
+[tmux]: https://github.com/tmux/tmux/wiki
 
 # Further reading
 
 - [Shell Tools and Scripting][missing] module of MIT "The Missing
   Semester of Your CS Education" class.
 - [The Linux Command Line, A Complete Introduction][tlcl] by William
-E. Shotts, Jr.
+  E. Shotts, Jr.  The book is freely available under a Creative
+  Commons license, and contains a good discussion about shell
+  scripting.
 - [The Unix Programming Environment][tupe] by Brian W. Kernighan and
-  Rob Pike.
+  Rob Pike.  This book is an old classic, and still useful.  Since
+  Linux is considered a descendant of Unix, this book will help place
+  things in a historical context.
 
 [missing]: https://missing.csail.mit.edu/2020/shell-tools/
 [tlcl]: http://linuxcommand.org/tlcl.php
