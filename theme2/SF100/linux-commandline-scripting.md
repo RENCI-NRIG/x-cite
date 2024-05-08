@@ -922,7 +922,7 @@ sleep: no process found
 ```
 
 In the above example, you are not running a `sleep` process, but some
-other users are, but you are not allowed to terminate them.
+other users are, and you are not allowed to terminate them.
 
 
 ## Signals
