@@ -310,12 +310,31 @@ parent directory of the current directory.
 /
 ```
 
-## Wildcard operator
+## Wildcards
 
-<!-- TODO -->
+The shell gives special treatment to some characters, known as
+_wildcards_.  Using wildcard characters, we can quickly specify groups
+of files.
 
-- `*`
-- use `*` carefully with `rm`
+The wildcard character `*` stands for any set of characters.  For
+example, you can list the names of all programs in `/usr/bin` that
+start with `ab` with `ls /usr/bin/ab*`:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ls /usr/bin/ab*
+/usr/bin/ab  /usr/bin/abs2rel
+```
+
+The wildcard character `?` stands for any single character.  So if you
+want to list the filenames in `/usr/bin` that starts with any
+character, followed by `abc`, followed by any characters:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ls /usr/bin/?abc*
+/usr/bin/kabc2mutt  /usr/bin/kabcclient
+```
+
+<!-- - use `*` carefully with `rm` -->
 
 
 ## The current working directory
