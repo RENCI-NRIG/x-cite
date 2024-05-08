@@ -588,10 +588,6 @@ that with `chown` and `chgrp`.  This probably is not immediately
 useful; it is enough to know that these commands exist.)
 
 
-## Symbolic links
-
-TODO
-
 ## Noteworthy facts about file names
 
 - File/folder names that begin with a `.` (period character) are
