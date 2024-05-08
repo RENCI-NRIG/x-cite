@@ -1094,11 +1094,6 @@ program,
 - `screen`
 
 
-# Finding help and documentation
-
-- finding help: man, info, the web
-
-
 # Further reading
 
 - [Shell Tools and Scripting][missing] module of MIT "The Missing
