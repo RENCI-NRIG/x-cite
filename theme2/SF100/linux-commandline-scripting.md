@@ -964,68 +964,59 @@ Here are some common signals:
 Run the command `man 7 signal` to read `signal` command's manual page.
 
 
-# Useful commands
+# A list of (hopefully) useful commands
 
-## A cheat sheet
-
-
-| Command    | Description |
-|------------|-------------|
-| `echo`     |             |
-| `cat`      |             |
-| `head`     |             |
-| `tail`     |             |
-| `more`     |             |
-| `less`     |             |
-|            |             |
-| `ls`       |             |
-| `mkdir`    |             |
-| `cd`       |             |
-| `cp`       |             |
-| `rm`       |             |
-|            |             |
-|            |             |
-| `sed`      |             |
-| `awk`      |             |
-| `grep`     |             |
-| `sleep`    |             |
-|            |             |
-| `tree`     |             |
-| `find`     |             |
-|            |             |
-| `du`       |             |
-|            |             |
-| `gzip`     |             |
-| `tar`      |             |
-|            |             |
-| `ps`       |             |
-| `top`      |             |
-| `htop`     |             |
-| `kill`     |             |
-| `killall`  |             |
-|            |             |
-| `ping`     |             |
-| `netstat`  |             |
-|            |             |
-| `ifconfig` |             |
-| `ip`       |             |
-|            |             |
-| `hostname` |             |
-| `uname`    |             |
-|            |             |
-| `date`     |             |
-| `cal`      |             |
-|            |             |
-| `clear`    |             |
-| `history`  |             |
-|            |             |
-| `ssh`      |             |
-| `scp`      |             |
-| `sftp`     |             |
-| `ftp`      |             |
-| `wget`     |             |
-| `curl`     |             |
-
+| Command         | Description                                        |
+|-----------------|----------------------------------------------------|
+| `echo`          | display a line of text                             |
+| `cat`           | concatenate files and print on the standard output |
+| `head`          | output the first part of files                     |
+| `tail`          | output the last part of files                      |
+| `more`          | a "pager", for printing text one screen at a time  |
+| `less`          | a pager similar to `more`, but nicer               |
+|                 |                                                    |
+| `ls`            | list directory contents                            |
+| `mkdir`         | make directories                                   |
+| `cd`            | change the shell working directory                 |
+| `cp`            | copy files and directories                         |
+| `rm`            | remove files or directories                        |
+|                 |                                                    |
+| `grep`          | print lines that match patterns                    |
+| `sed`           | stream editor for filtering and transforming text  |
+| `awk`           | pattern scanning and processing language           |
+|                 |                                                    |
+| `sleep`         | delay for a specified amount of time               |
+|                 |                                                    |
+| `tree`          | list contents of directories in a tree-like format |
+| `find`          | search for files in a directory hierarchy          |
+|                 |                                                    |
+| `du`            | estimate file space usage                          |
+|                 |                                                    |
+| `gzip`/`gunzip` | compress or expand files                           |
+| `tar`           | an archiving utility                               |
+|                 |                                                    |
+| `ps`            | report currently running processes                 |
+| `top`           | display processes                                  |
+| `htop`          | a nicer alternative to `top`                       |
+| `kill`          | send a signal to a process                         |
+| `killall`       | kill processes by name                             |
+|                 |                                                    |
+| `ping`          | send echo requests to remote hosts                 |
+| `hostname`      | show the system's host name                        |
+| `uname`         | print system information                           |
+|                 |                                                    |
+| `date`          | print the system date and time                     |
+| `cal`           | display a calendar                                 |
+|                 |                                                    |
+| `clear`         | clear the terminal screen                          |
+| `history`       | display the command history list                   |
+|                 |                                                    |
+| `ssh`           | remote login program                               |
+| `scp`           | remote file copy program                           |
+| `sftp`          | secure file transfer program                       |
+|                 |                                                    |
+| `wget`          | a tool to download of files from the Web           |
+| `curl`          | another tool to download files from the Web        |
 
 
 ## Shell builtins
