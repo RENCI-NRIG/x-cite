@@ -679,7 +679,7 @@ Shall I compare thee to a summer’s day?
 Shall I compare thee to a summer’s day?
 ```
 
-(TODO: explain the above: `echo` and the different usage of `cat`.)
+<!-- (TODO: explain the above: `echo` and the different usage of `cat`.) -->
 
 
 ## Pipes
@@ -1021,6 +1021,12 @@ Hello world!
 ```
 
 Bash provides some useful constructs such as loops and functions.
+
+Remember that `$PATH` environment variable contains a list of
+directory names separated by `:` character, and when you run a
+program, 
+
+
 
 - loops
 - functions
