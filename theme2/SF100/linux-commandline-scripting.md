@@ -244,11 +244,6 @@ In order to make the change permanent, you will need to add the line
 Linux organizes directories and files in a _hierarchical directory
 structure_, meaning, they are organized in a tree-like pattern.
 
-
-- TODO: files, directories
-
-## Directory structure
-
 The first, or top-level directory of this tree is a special directory,
 called the "root directory", or `/`.  All other directories are under
 the root directory.  You can list things under `/` with the command
@@ -262,13 +257,48 @@ boot  cifs  dev    home  lib64  misc   net  null  proc  run   srv   tmp  var
 
 It is useful to know about some of these directories:
 
-- `home` is where user home directories are.
-  - `root` is the home directory for `root` user, aka superuser.
-- `bin` and `sbib` are for programs.
-- `lib` and `lib64` are for libraries.
-- `etc` is for configuration files.
-- `tmp` is for temporary files
-- `proc` provides an interface with processes.
+- `/home` is where user home directories are.
+- `/root` is the home directory for `root` user, aka superuser.
+- `/bin` is for programs that are available to everyone.
+- `/sbin` is for programs available to the `root` user.
+- `/lib` and `/lib64` are for libraries.
+- `/etc` is for configuration files.
+- `/tmp` is for temporary files.
+- `/proc` provides an interface with processes.
+- `/usr` has been, historically, for "Unix System Resources", and
+  contains several sub-directories:
+  - `/usr/bin` and `/usr/sbin` are for programs.
+  - `/usr/lib` is for libraries, typically used by programs in
+    `/usr/bin` and `/usr/sbin`.
+  - `/usr/include` is for C and C++ header files.
+  - `/usr/share` contains data files used by programs, including
+    documentation in `/usr/share/doc`.
+  - Some Python programs are globally installed, and the Python
+    library packages they use are in `/usr/lib/python{version}`.
+  - `/usr/local` is for programs that are "locally" installed by a
+    system administrator. (Meaning, it is for software that wasn't
+    packaged by the operating system vendor.)
+
+You can use `cd` (change directory) command to, well, change to these
+directories:
+
+```{.bash}
+$ cd /usr/share/doc/
+$ pwd
+/usr/share/doc/
+```
+
+Running `cd ~` (or simply `cd`) will drop you back in your home
+directory:
+
+```{.bash}
+$ cd ~
+$ pwd
+/home/ssasidharan
+```
+
+It is worth noting that the shell will substitute `~` for your home
+directory.
 
 
 ## Absolute and relative paths
