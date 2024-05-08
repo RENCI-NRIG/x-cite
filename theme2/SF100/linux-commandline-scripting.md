@@ -679,7 +679,7 @@ also accept input.
 
 Following the Unix tradition of "everything is a file", programs send
 their output to special files called _standard output_ or _standard
-error_`, and they read input from _standard input_.  They are also
+error_, and they read input from _standard input_.  They are also
 known as `stdout`, `stderr`, and `stdin`, respectively.
 
 
