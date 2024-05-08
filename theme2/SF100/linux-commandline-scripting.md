@@ -1055,18 +1055,43 @@ commands often.
 
 Here is a simple shell script:
 
-```{.bash filename=hello.sh}
-#! /usr/bin/env bash
+```{.bash filename=hello.sh code-line-numbers="true"}
+#! /bin/bash
 
 # A simple script.
 
 echo "Hello world!"
 ```
 
+Line number 1 contains a [shebang]: it tells the shell to how to run
+the script, or which program should interpret the script.  Scripts
+could be written in other languages and interpreted by programs
+associated with those languages (such as `/bin/python`, `/bin/perl`,
+or `/bin/ruby`.), so the shell has to know what to do here.
+
+[shebang]: https://en.wikipedia.org/wiki/Shebang_%28Unix%29
+
+::: {.callout-note}
+
+- The line `#! /bin/bash` could as well be `#! /usr/bin/env bash`,
+since it is not a good idea to assume that bash will be always in
+`/bin/`.
+
+- To make scripts more portable across various kinds of systems, `#!
+/bin/sh` shebang also is often used.  On Linux, `/bin/sh` is often a
+symbolic link to `/bin/bash`.
+
+:::
+
+Line 2 contains a comment.  When shell encounters a `#` character,
+everything following it on that line is ignored.
+
+Line 5 contains the command to be executed.
+
 <!-- TODO: describe shebang, comments, commands -->
 
-Assuming we name the script `hello.sh`, we can make it executable with
-`chmod`, and run `hello.sh`:
+Assuming we've named the script `hello.sh`, we should make it
+executable with `chmod`, and run `hello.sh`:
 
 
 ```{.bash}
@@ -1082,8 +1107,13 @@ program, the shell looks in these directories to find the program.
 Your current directory (represented by `.`) is not in `$PATH`, and it
 is for a good reason: you do not want to accidentally run any
 undesirable programs.  That why you run the script with `./hello.sh`:
-it tells shell to find the script in the current directory.
+it tells shell to find the script in the current directory.  If you
+try to run `hello.sh` without the `./` prefix, `bash` will complain:
 
+```{.bash}
+[ssasidharan@lnx201 ~]$ hello.sh
+bash: hello.sh: command not found
+```
 
 Bash provides some useful constructs such as loops and functions.
 
