@@ -1075,13 +1075,17 @@ Assuming we name the script `hello.sh`, we can make it executable with
 Hello world!
 ```
 
-Bash provides some useful constructs such as loops and functions.
-
 Remember that `$PATH` environment variable contains a list of
 directory names separated by `:` character, and when you run a
-program, 
+program, the shell looks in these directories to find the program.
+
+Your current directory (represented by `.`) is not in `$PATH`, and it
+is for a good reason: you do not want to accidentally run any
+undesirable programs.  That why you run the script with `./hello.sh`:
+it tells shell to find the script in the current directory.
 
 
+Bash provides some useful constructs such as loops and functions.
 
 - loops
 - functions
