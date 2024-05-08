@@ -1037,11 +1037,23 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 
 
 
-<!-- # Editors -->
+# Text Editors
 
-<!-- - `nano` -->
-<!-- - `vim` -->
-<!-- - `emacs` -->
+Several terminal-based full-screen text editors are available on
+`lnx201`, and they vary in power and ease of use.  Try these ones and
+pick one that works for you.
+
+- [`nano`][nano]
+- [`vim`][vim]
+- [`emacs`][emacs]
+
+[nano]: https://www.nano-editor.org/
+[vim]: https://www.vim.org/
+[emacs]: https://www.gnu.org/software/emacs/
+
+If you use [JupyerLab][jupyerlab], use the editor there.  If you use
+[NoMachine][nomachine], use the menu system to find an editor that
+works for you.
 
 
 # Writing shell scripts
