@@ -380,7 +380,27 @@ it in the directory hierarchy.
 `touch` command is used to change file timestamps.  You can also use
 `touch` to create an empty file, like so: `touch test.txt`.
 
-- TODO: ln, touch
+### Symbolic links
+
+On my home directory on `lnx201`, when I do an `ls -l` (which is for
+`ls` with long file listing format), I would see something like this:
+
+```{.bash}
+lrwxrwxrwx  1 ssasidharan chess   31 Mar 26 15:21 Downloads -> /cdat/tem/ssasidharan/Downloads
+```
+
+The first letter of the listing is `l` and the entry kind of suggests
+that my `Downloads` directory is a reference to another directory,
+`/cdat/tem/ssasidharan/Downloads`.  The `Downloads` directory in my
+home directory is what is called a symbolic link, which also known as
+a soft link or "symlink".
+
+With symbolic links, we can have shortcuts to other files or
+directories.
+
+<!-- ### Creating empty files -->
+
+<!-- touch -->
 
 
 ## Users and groups
