@@ -111,10 +111,10 @@ After entering the first few characters of a command, you can use the
 {{<kbd tab>}} key for auto-completing commands.
 
 ```{.bash}
-$ ssh<tab>
+[ssasidharan@lnx201 /]$ ssh<tab>
 ssh          ssh-agent    sshd         sshfs        ssh-keyscan  
 ssh-add      ssh-copy-id  sshd-keygen  ssh-keygen   sshpass   
-$ condor_<tab>
+[ssasidharan@lnx201 /]$ condor_<tab>
 Display all 119 possibilities? (y or n)
 ```
 
@@ -180,7 +180,7 @@ Some of these environment variables are worth knowing:
 To print an individual environment variable, use [echo] command:
 
 ```{.bash}
-$ echo $PATH
+[ssasidharan@lnx201 /]$ echo $PATH
 /usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/home/ssasidharan/bin
 ```
 
@@ -227,8 +227,8 @@ You can also use `export` command to overwrite existing environment
 variables, or add new ones.  For example:
 
 ```{.bash}
-$ export HISTSIZE=2000
-$ echo $HISTSIZE
+[ssasidharan@lnx201 /]$ export HISTSIZE=2000
+[ssasidharan@lnx201 /]$ echo $HISTSIZE
 2000
 ```
 
@@ -346,14 +346,15 @@ The below commands are useful:
   previously in:
   
 ```{.bash}
-$ cd /usr/
-$ pwd
+[ssasidharan@lnx201 /]$ cd /usr/
+[ssasidharan@lnx201 usr]$ pwd
 /usr
-$ cd share
-$ pwd
+[ssasidharan@lnx201 usr]$ cd share/
+[ssasidharan@lnx201 share]$ pwd
 /usr/share
-$ cd -
-$ pwd
+[ssasidharan@lnx201 share]$ cd -
+/usr
+[ssasidharan@lnx201 usr]$ pwd
 /usr
 ```
   
@@ -361,11 +362,11 @@ Running `cd ~` (or simply `cd`) will drop you back in your home
 directory:
 
 ```{.bash}
-$ cd /usr/share/doc
-$ pwd
+[ssasidharan@lnx201 ~]$ cd /usr/share/doc/
+[ssasidharan@lnx201 doc]$ pwd
 /usr/share/doc
-$ cd ~
-$ pwd
+[ssasidharan@lnx201 doc]$ cd ~
+[ssasidharan@lnx201 ~]$ pwd
 /home/ssasidharan
 ```
 
