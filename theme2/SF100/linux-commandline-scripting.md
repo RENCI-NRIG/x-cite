@@ -107,6 +107,15 @@ distracted and just commit to `bash` for now.
 
 ## Using the shell prompt
 
+The `[ssasidharan@lnx201 ~]$ ` thing with a blinking cursor at the end
+is called a _shell prompt_.  You type commands at the shell prompt,
+hit enter, and then something happens in response to that.
+
+The examples in these notes are _my_ shell prompt: it contains my
+username on `lnx201`, followed by `@` character, followed by the name
+of the computer (or "hostname"), followed by the current directory.
+Your prompt will be different, because it will contain your username.
+
 After entering the first few characters of a command, you can use the
 {{<kbd tab>}} key for auto-completing commands.
 
