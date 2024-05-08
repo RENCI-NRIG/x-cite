@@ -1155,7 +1155,10 @@ shell sessions in a single window.  [GNU screen][gnu-screen] and
 [tmux] are two popular options, with the latter being a little newer
 and perhaps friendlier at first.  
 
-The screenshot below shows `tmux` in action:
+The screenshot below shows `tmux` in action. I have split a `tmux`
+window vertically into two panes using {{<kbd Ctrl-b-%>}} key, and run
+`emacs` text editor in one.  I can use {{<kbd Ctrl-b-o>}} to switch
+between the two panes.
 
 ![](tmux.png)
 
