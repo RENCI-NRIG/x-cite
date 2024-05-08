@@ -281,8 +281,34 @@ It is useful to know about some of these directories:
 
 ## Absolute and relative paths
 
-<!-- TODO -->
+Paths can be specified in two ways: absolute or relative.  An absolute
+pathname begins with the root directory, `/`, and contains every
+directory name, branch by branch.
 
+Absolute path to the `Desktop` directory in my home directory on
+`lnx201` is `/home/ssasidharan/Desktop/`.
+
+In comparison, a relative pathname starts from the working directory.
+When I'm in my home directory, I can simply use the relative pathname,
+`Desktop`.
+
+Every directory contains two special directory names, `.` and `..`, in
+which `.` refers to the current directory, and `..`  refers to the
+parent directory of the current directory.
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ pwd
+/home/ssasidharan
+[ssasidharan@lnx201 ~]$ cd .
+[ssasidharan@lnx201 ~]$ pwd
+/home/ssasidharan
+[ssasidharan@lnx201 ~]$ cd ..
+[ssasidharan@lnx201 home]$ pwd
+/home
+[ssasidharan@lnx201 home]$ cd ..
+[ssasidharan@lnx201 /]$ pwd
+/
+```
 
 ## Wildcard operator
 
