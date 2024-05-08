@@ -65,6 +65,7 @@ hands.
 [wc]: https://man7.org/linux/man-pages/man1/wc.1.html
 [grep]: https://www.man7.org/linux/man-pages/man1/grep.1.html
 
+
 # The shell
 
 A shell is an interactive program that accepts commands and passes
@@ -147,6 +148,59 @@ To exit the shell, you can use `exit` command or {{<kbd Ctrl-D>}}.
 If you are using ssh to connect to `lnx201`, exiting the shell will
 end your ssh session.  If you had opened a terminal window, exiting
 the shell will close the window.
+
+# Finding help
+
+On the topics covered here in these notes, there is a wealth of
+information out there: in the form of books, articles, videos,
+courses, and so on.
+
+You can also find some built-in documentation in the system itself.
+
+Often you can find help for the programs that you run by passing
+`--help` argument to them.  For example:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ whoami --help
+Usage: whoami [OPTION]...
+Print the user name associated with the current effective user ID.
+Same as id -un.
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+For complete documentation, run: info coreutils 'whoami invocation'
+```
+
+As the above text suggests, another way to find manuals is by running
+the command `info`.  Below is the result of running `info coreutils
+'whoami invocation'` as the above example suggests:
+
+![](info.png)
+
+The `info` program runs a text-based documentation browser.  You can
+move the cursor using tab or arrow keys, and use enter key to follow
+the links.  A lot of the essential software on Linux is made by [GNU
+project][gnu], and info is their choice of documenting software.
+
+[gnu]: http://gnu.org/
+
+A lot of the other software has Unix roots, and their documentation
+tend to be in the form of `man` (short for "manual") pages.  You can
+run `man <program-name>` to read those.  Running `man ssh` will
+display `ssh` program's `man` page.
+
+Man pages are divided into several sections: try running `man man` to
+find out what they are.
+
+You can run `man -k <pattern>` or `apropos <pattern>` to search man
+pages, and it will print a list of manual pages that contains the
+matching pattern.
+
+Yet another place to look for documentation is the folder
+`/usr/share/doc`, where some additional documentation for software
+packages installed in the system are available.
 
 
 # Environment variables
