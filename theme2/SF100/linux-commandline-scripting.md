@@ -1019,28 +1019,28 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 | `curl`          | another tool to download files from the Web        |
 
 
-## Shell builtins
+<!-- ## Shell builtins -->
 
-- `type`
-- `which`
-
-
-## Aliases
+<!-- - `type` -->
+<!-- - `which` -->
 
 
-# Regular expressions
-
-- grep
-- awk
-- sed
+<!-- ## Aliases -->
 
 
+<!-- # Regular expressions -->
 
-# Editors
+<!-- - grep -->
+<!-- - awk -->
+<!-- - sed -->
 
-- `nano`
-- `vim`
-- `emacs`
+
+
+<!-- # Editors -->
+
+<!-- - `nano` -->
+<!-- - `vim` -->
+<!-- - `emacs` -->
 
 
 # Writing shell scripts
