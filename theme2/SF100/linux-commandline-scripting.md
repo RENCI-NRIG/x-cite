@@ -1190,9 +1190,13 @@ session with `tmux attach` command.  Programs that you launched in
 - [Shell Tools and Scripting][missing] module of MIT "The Missing
   Semester of Your CS Education" class.
 - [The Linux Command Line, A Complete Introduction][tlcl] by William
-E. Shotts, Jr.
+  E. Shotts, Jr.  The book is freely available under a Creative
+  Commons license, and contains a good discussion about shell
+  scripting.
 - [The Unix Programming Environment][tupe] by Brian W. Kernighan and
-  Rob Pike.
+  Rob Pike.  This book is an old classic, and still useful.  Since
+  Linux is considered a descendant of Unix, this book will help place
+  things in a historical context.
 
 [missing]: https://missing.csail.mit.edu/2020/shell-tools/
 [tlcl]: http://linuxcommand.org/tlcl.php
