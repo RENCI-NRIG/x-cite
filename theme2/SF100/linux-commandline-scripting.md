@@ -279,28 +279,6 @@ It is useful to know about some of these directories:
     system administrator. (Meaning, it is for software that wasn't
     packaged by the operating system vendor.)
 
-You can use `cd` (change directory) command to, well, change to these
-directories:
-
-```{.bash}
-$ cd /usr/share/doc/
-$ pwd
-/usr/share/doc/
-```
-
-Running `cd ~` (or simply `cd`) will drop you back in your home
-directory:
-
-```{.bash}
-$ cd ~
-$ pwd
-/home/ssasidharan
-```
-
-It is worth noting that the shell will substitute `~` for your home
-directory.
-
-
 ## Absolute and relative paths
 
 <!-- TODO -->
@@ -338,9 +316,35 @@ The below commands are useful:
 - `rm <name of directory>` will _not_ remove a directory; you have to
   remove it _recursively_, like so: `rm -r <name of directory>`.
 
-
 `cd -` is useful: it will switch you to the directory that you were
-  previously in.
+  previously in:
+  
+```{.bash}
+$ cd /usr/
+$ pwd
+/usr
+$ cd share
+$ pwd
+/usr/share
+$ cd -
+$ pwd
+/usr
+```
+  
+Running `cd ~` (or simply `cd`) will drop you back in your home
+directory:
+
+```{.bash}
+$ cd /usr/share/doc
+$ pwd
+/usr/share/doc
+$ cd ~
+$ pwd
+/home/ssasidharan
+```
+
+It is worth noting that the shell will substitute `~` for your home
+directory.
 
 `.` and `..` are special directory names: `.` means the current
 directory, and `..` means its parent directory, or the directory above
@@ -349,7 +353,7 @@ it in the directory hierarchy.
 `touch` command is used to change file timestamps.  You can also use
 `touch` to create an empty file, like so: `touch test.txt`.
 
-- TODO: directory navigation: ls, cd, mkdir, rm, ln, pwd, touch
+- TODO: ln, touch
 
 
 ## Users and groups
