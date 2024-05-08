@@ -181,8 +181,9 @@ the command `info`.  Below is the result of running `info coreutils
 
 The `info` program runs a text-based documentation browser.  You can
 move the cursor using tab or arrow keys, and use enter key to follow
-the links.  A lot of the essential software on Linux is made by [GNU
-project][gnu], and info is their choice of documenting software.
+the links.  A lot of the essential software on Linux, including
+`bash`, is made by [GNU project][gnu], and info is their choice of
+documenting software.
 
 [gnu]: http://gnu.org/
 
