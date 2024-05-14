@@ -3,11 +3,11 @@ title: "Commmandline and Scripting"
 # author: "Sajith Sasidharan"
 date: last-modified
 format:
-  revealjs:
-    theme: default
+  # revealjs:
+  #   theme: default
   beamer:
-    aspectratio: 32
-    navigation: horizontal
+    # aspectratio: 32
+    # navigation: horizontal
     theme: default
 ---
 
