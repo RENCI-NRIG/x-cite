@@ -1,8 +1,4 @@
----
-title: Linux, Command Line, and Scripting
-# author: Sajith Sasidharan
-date: last-modified
----
+# Linux, Command Line, and Scripting
 
 The following notes assume that you are all set up to use your
 accounts on the CLASSE Linux systems.
