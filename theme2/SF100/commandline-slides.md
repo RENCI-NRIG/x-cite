@@ -5,7 +5,7 @@ date: last-modified
 format:
   revealjs:
     theme: default
-    output-file: commandline-slides.html
+    output-file: commandline-slides-revealjs.html
   beamer:
     # aspectratio: 32
     # navigation: horizontal
