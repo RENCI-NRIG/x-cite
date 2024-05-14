@@ -1,15 +1,4 @@
----
-title: Linux, Command Line, and Scripting
-# author: Sajith Sasidharan
-date: last-modified
-
-format: 
-  html: default
-  revealjs: 
-    output-file: slides.html
-  pdf:
-    output-file: slides.pdf
----
+# Linux, Command Line, and Scripting
 
 The following notes assume that you are all set up to use your
 accounts on the CLASSE Linux systems.
@@ -26,6 +15,16 @@ good idea to make such assumptions right off the bat, let us see what
 you might need to know to in order to become a proficient user of the
 systems.
 
+
+::: {.callout-note}
+
+Slides accompanying these notes are available in [HTML][html-slides]
+and [PDF][pdf-slides] formats.
+
+[html-slides]: commandline-slides-revealjs.html
+[pdf-slides]: commandline-slides.pdf
+
+:::
 
 ## Linux
 

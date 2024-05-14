@@ -24,7 +24,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tinytex: true
-          version: 1.4.552
 
       - name: Print Quarto version
         run: quarto --version
