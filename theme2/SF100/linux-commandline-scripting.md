@@ -1,4 +1,15 @@
-# Linux, Command Line, and Scripting
+---
+title: Linux, Command Line, and Scripting
+# author: Sajith Sasidharan
+date: last-modified
+
+format: 
+  html: default
+  revealjs: 
+    output-file: slides.html
+  pdf:
+    output-file: slides.pdf
+---
 
 The following notes assume that you are all set up to use your
 accounts on the CLASSE Linux systems.
