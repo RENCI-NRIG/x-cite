@@ -16,6 +16,22 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tinytex: true
+
+      # - name: Set up TeXLive
+      #   uses: teatimeguest/setup-texlive-action@v3
+
+      # - name: Check `tlmgr` version
+      #   run: tlmgr --version
+
+      - name: Check quarto version
+        run: quarto --version
+
+      - name: Print Quarto tools
+        run: quarto tools
 
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
