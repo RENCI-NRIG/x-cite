@@ -30,5 +30,8 @@ jobs:
       - name: Check quarto version
         run: quarto --version
 
+      - name: Print Quarto tools
+        run: quarto tools
+
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
