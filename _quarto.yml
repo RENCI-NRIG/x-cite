@@ -31,6 +31,10 @@ format:
   html:
     css: styles.css
     toc: true
+  revealjs:
+    theme: default
+  beamer:
+    theme: default
 
 theme:
   light: simplex
