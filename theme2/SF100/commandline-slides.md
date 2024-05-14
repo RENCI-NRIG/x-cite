@@ -3,8 +3,9 @@ title: "Commmandline and Scripting"
 # author: "Sajith Sasidharan"
 date: last-modified
 format:
-  # revealjs:
-  #   theme: default
+  revealjs:
+    theme: default
+    output-file: commandline-slides.html
   beamer:
     # aspectratio: 32
     # navigation: horizontal
