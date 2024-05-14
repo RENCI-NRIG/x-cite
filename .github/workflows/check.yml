@@ -24,5 +24,11 @@ jobs:
       - name: Set up TeXLive
         uses: teatimeguest/setup-texlive-action@v3
 
+      - name: Check `tlmgr` version
+        run: tlmgr --version
+
+      - name: Check quarto version
+        run: quarto --version
+
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
