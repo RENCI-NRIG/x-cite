@@ -25,6 +25,12 @@ jobs:
         with:
           tinytex: true
 
+      - name: Print Quarto version
+        run: quarto --version
+
+      - name: Print Quarto tools
+        run: quarto tools
+
       # Publish on Netlify (https://xcitecourse.org/ and
       # x-cite-course.netlify.app).
       - name: Render and Publish on netlify
