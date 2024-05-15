@@ -16,9 +16,38 @@ format:
     logo: ../../images/x-cite-logo-2.png
 ---
 
-# Linux
+# Getting in
+
+## SSH
+
+![](lnx201.png)
+
+## NoMachine
+
+![](nomachine.png)
+
+## JupyterLab
+
+![](jupyter01.png)
+
+## Linux
+
+- A fairly popular operating system.
+  - (Actually an OS kernel, plus userland from various other projects.
+    But those are details...)
+- The one we'll be using on `lnx201`.
+- and other compute farm nodes...
+
 
 ## The command line
+
+![](lnx201.png)
+
+- You type commands in a text user interface, hint enter, and the
+commands do something.
+
+- (As opposed to clicking on a GUI widgets.)
+
 
 # The shell
 
