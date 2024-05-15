@@ -19,31 +19,37 @@ This is the training overview:
 ## Theme 2: Systems Fundamentals
 
 - SF 100: [Intro to Linux, commandline, and scripting][sf100]
-- SF 101: [Containers and virtualization][sf101]
-- SF 200: [Parallel computing concepts][sf200]
+- SF 101: [Containers and virtualization][sf101] (in progress)
+- SF 200: [Parallel computing concepts][sf200] (in progress)
 - SF 201: [Batch systems and compute farms with CHESS example][sf201]
 
 ## Theme 3: Distributed Computing and the CI Ecosystem
 
-- DC 100: [Distributed computing concepts][dc100]
-- DC 101: [Scientific workflow management][dc101]
+- DC 100: [Distributed computing concepts][dc100] (in progress)
+- DC 101: [Scientific workflow management][dc101] (in progress)
 - DC 102: [Using science gateways with Open OnDemand example][dc102]
-- DC 200: [Computing with CI ecosystem - ACCESS, PATh, Campus, Cloud][dc200]
+  (in progress)
+- DC 200: [Computing with CI ecosystem - ACCESS, PATh, Campus,
+  Cloud][dc200] (in progress)
 
 ## Theme 4: X-Ray Science S&E Software
 
-- XS 100: [Data collection, preparing input parameters, SPEC and CLI][xs100]
+- XS 100: [Data collection, preparing input parameters, SPEC and
+  CLI][xs100] (in progress)
 - XS 101: [Basic / on-the-fly data analysis, viewing detector images][xs101]
 - XS 102: [Large-scale data analysis: from images to science
-  parameters to interpretation][xs102]
+  parameters to interpretation][xs102] (in progress)
 - XS 200: [Metadata for data fidelity and systematic checks][xs200]
+  (in progress)
 
 ## Theme 5: Data Curation and FAIR
 
-- CF 100: [Intro to domain metadata standards, formats and repositories][cf100]
-- CF 101: [Best practices for developing DMP][cf101]
-- CF 102: [Metadata annotation and DOI][cf102]
+- CF 100: [Intro to domain metadata standards, formats and
+  repositories][cf100] (in progress)
+- CF 101: [Best practices for developing DMP][cf101] (in progress)
+- CF 102: [Metadata annotation and DOI][cf102] (in progress)
 - CF 200: [Curating data, code, workflows, and publishing][cf200]
+  (in progress)
 
 <!-- References -->
 
