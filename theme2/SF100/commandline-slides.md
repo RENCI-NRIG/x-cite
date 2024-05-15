@@ -1,5 +1,6 @@
 ---
 title: "Commmandline and Scripting"
+subtitle: "X-CITE 2024 workshop"
 # author: "Sajith Sasidharan"
 date: last-modified
 format:
