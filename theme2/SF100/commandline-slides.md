@@ -7,6 +7,7 @@ format:
   revealjs:
     theme: default
     output-file: commandline-slides-revealjs.html
+    footer: https://xcitecourse.org/
     logo: ../../images/x-cite-logo-2.png
   beamer:
     # aspectratio: 32
