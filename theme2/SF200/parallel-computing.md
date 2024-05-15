@@ -1,5 +1,5 @@
 ---
-title: Parallel Computing Concepts
+title: "Parallel Computing Concepts"
 author: ""
 date: ""
 ---

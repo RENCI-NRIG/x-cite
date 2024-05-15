@@ -1,5 +1,5 @@
 ---
-title: Metadata for Data Fidelity and Systematic Checks
+title: "Metadata for Data Fidelity and Systematic Checks"
 author: ""
 date: ""
 ---
