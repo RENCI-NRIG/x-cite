@@ -1,5 +1,5 @@
 ---
-title: "X-CITE course materials"
+title: "X-CITE training materials"
 toc: false
 ---
 
