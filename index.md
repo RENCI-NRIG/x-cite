@@ -34,8 +34,7 @@ This is the training overview:
 
 - XS 100: [Data collection, preparing input parameters, SPEC and CLI][xs100]
 - XS 101: [Basic / on-the-fly data analysis, viewing detector images][xs101]
-- XS 102: [Large-scale data analysis: from images to science
-  parameters to interpretation][xs102]
+- XS 102: [Large-scale data analysis: from images to science parameters to interpretation][xs102]
 - XS 200: [Metadata for data fidelity and systematic checks][xs200]
 
 ## Theme 5: Data Curation and FAIR
