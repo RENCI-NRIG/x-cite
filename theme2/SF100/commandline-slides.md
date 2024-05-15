@@ -88,8 +88,21 @@ commands do something.
 
 ## Signals
 
-# Text editors
-
 # Shell Scripting
 
-# Terminal multiplexers
+# Other tools of the trade
+
+## Text editors
+
+Many choices! Use:
+
+- Emacs
+- Vim
+- Nano
+- JupyterLab
+
+
+## Terminal multiplexers
+
+![](tmux.png)
+
