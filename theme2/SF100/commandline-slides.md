@@ -7,7 +7,15 @@ format:
   revealjs:
     theme: default
     output-file: commandline-slides-revealjs.html
-    footer: https://xcitecourse.org/
+    footer: |
+      <https://xcitecourse.org/>
+
+      Supported by the NSF awards
+      [OAC-2320373](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320373),
+      [OAC-2320374](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320374),
+      and
+      [OAC-2320375](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320375).
+
     logo: ../../images/x-cite-logo-2.png
   beamer:
     # aspectratio: 32
