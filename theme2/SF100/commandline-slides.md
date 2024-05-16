@@ -24,38 +24,78 @@ format:
     logo: ../../images/x-cite-logo-2.png
 ---
 
-# Getting in
+# Preliminaries
 
-## SSH
+Getting into CLASSE Linux systems
+
+## Assumptions
+
+- You have your CLASSE accounts set up.
+- Talk to staff if do not have a CLASSE account.
+
+- Options:
+
+  - Use ssh
+  - Use NoMachine
+  - Use JupyterLab
+
+
+## Use SSH
 
 ![](lnx201.png)
 
-## NoMachine
+`ssh ${username}@lnx201.classe.cornell.edu`
+
+
+## Use NoMachine
 
 ![](nomachine.png)
 
-## JupyterLab
+<https://wiki.classe.cornell.edu/Computing/NoMachine>
+
+
+## Use JupyterLab
 
 ![](jupyter01.png)
+
+<https://jupyter01.classe.cornell.edu/>
+
+
+# Linux, command line, etc.
 
 ## Linux
 
 - A fairly popular operating system.
   - (Actually an OS kernel, plus userland from various other projects.
     But those are details...)
-- The one we'll be using on `lnx201`.
-- and other compute farm nodes...
+- Unix-like, therefore has accumulated quirks.
+  - Expect "hysterical raisins".
+
+## `lnx201`
+
+- The Linux host we'll be using is `lnx201.classe.cornell.edu`.
+- Runs a _distribution_ called Scientific Linux.
+- Good enough for general use.
+- Do not run anything resource heavy on `lnx201`.
 
 
 ## The command line
 
 ![](lnx201.png)
 
-- You type commands in a text user interface, hint enter, and the
-commands do something.
+- You will type _commands_ in a _shell_ (text user interface), hint
+  {{<kbd enter>}} key, and then things happen.
 
-- (As opposed to clicking on a GUI widgets.)
+- (As opposed to clicking on GUI widgets.)
 
+## Commands
+
+- Commands are either programs or shell builtins.
+- Use one of these commands to get some documentation:
+
+  - `man ${command}`
+  - `info ${command}`
+  - or `${command} --help` (sometimes!)
 
 # The shell
 
@@ -113,4 +153,3 @@ Many choices! Use:
 ## Terminal multiplexers
 
 ![](tmux.png)
-
