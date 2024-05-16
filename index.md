@@ -14,7 +14,8 @@ This is the training overview:
 - PE 100: [Python Programming and Jupyter notebooks][pe100]
 - PE 101: [Using Python packages & libraries, Conda][pe101]  🚧
 - PE 102: [Numerical data analysis with Python][pe102]  🚧
-- PE 103: [Software version control, testing and debugging][pe103]
+- PE 103: [Software version control][pe103-vcs],
+  [testing][pe103-testing] and [debugging][pe103-debugging] 
 
 ## Theme 2: Systems Fundamentals
 
@@ -55,6 +56,10 @@ This is the training overview:
 [pe101]: ./theme1/PE101/python-packages-conda.ipynb
 [pe102]: ./theme1/PE102/numerical-data-analysis.ipynb
 [pe103]: ./theme1/PE103/vcs-testing-debugging.md
+
+[pe103-vcs]: ./theme1/PE103//vcs.qmd
+[pe103-testing]: ./theme1/PE103/testing.md
+[pe103-debugging]: ./theme1/PE103/debugging.md
 
 [sf100]: ./theme2/SF100/linux-commandline-scripting.md
 [sf101]: ./theme2/SF101/containers-and-virtualization.md
