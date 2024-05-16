@@ -15,7 +15,7 @@ This is the training overview:
 - PE 101: [Using Python packages & libraries, Conda][pe101]  🚧
 - PE 102: [Numerical data analysis with Python][pe102]  🚧
 - PE 103: [Software version control][pe103-vcs],
-  [testing][pe103-testing] and [debugging][pe103-debugging] 
+  [testing][pe103-testing], and [debugging][pe103-debugging] 
 
 ## Theme 2: Systems Fundamentals
 
