@@ -211,3 +211,35 @@ Many choices! Use:
 ## Terminal multiplexers
 
 ![](tmux.png)
+
+
+# Shell scripts
+
+## Hello world!
+
+```{.bash filename=hello.sh code-line-numbers="true"}
+#! /bin/bash
+
+# A simple script.
+
+echo "Hello $USER!"
+```
+
+- Make the thing executable with `chmod +x hello.sh`
+- Run the thing with `./hello.sh`
+
+## Other things
+
+Bash supports a programming language with:
+
+- Conditionals (with `if` statements)
+- Loops (with `for` and `while` statements)
+- Et cetera
+- Take a peek at `/etc/bashrc` for a taste
+
+BUT
+
+- This is another topic, not really in scope of this presentation
+- We're likely out of time anyway
+
+
