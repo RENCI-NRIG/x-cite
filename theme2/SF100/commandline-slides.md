@@ -120,13 +120,56 @@ Getting into CLASSE Linux systems
 
 # Files and directories
 
+Everything is a file!
+
+
 ## Directory navigation
 
-## Wildcards
+```{.bash}
+[ssasidharan@lnx201 ~]$ tree -d -L 1 /
+/
+├── bin -> usr/bin
+├── boot
+├── cdat
+├── cifs
+├── cvmfs
+├── dev
+├── etc
+├── home
+├── lib -> usr/lib
+├── lib64 -> usr/lib64
+├── media
+├── misc
+├── mnt
+├── net
+├── nfs
+├── opt
+├── proc
+├── root
+├── run
+├── sbin -> usr/sbin
+├── srv
+├── sys
+├── tmp
+├── usr
+└── var
+
+25 directories
+```
+
+## Your home directory
+
+- You have a "home" directory.
+- Usually `/home/$USER`
+   - Also `$HOME`
+- You can write your files and create directories here.
+
 
 ## The current working directory
 
 ## Fun facts about file names
+
+## Wildcards
 
 ## Standard input, output, and error
 
