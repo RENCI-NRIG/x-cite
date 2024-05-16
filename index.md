@@ -1,5 +1,5 @@
 ---
-title: "X-CITE course materials"
+title: "X-CITE training materials"
 toc: false
 ---
 
@@ -7,7 +7,7 @@ X-CITE course is geared toward the community of scientists and
 researchers using the [CHESS] synchrotron X-ray facility and similar
 light sources.
 
-This is the course outline:
+This is the training overview:
 
 ## Theme 1: Programming Fundamentals
 

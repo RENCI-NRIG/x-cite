@@ -16,6 +16,16 @@ you might need to know to in order to become a proficient user of the
 systems.
 
 
+::: {.callout-note}
+
+Slides accompanying these notes are available in [HTML][html-slides]
+and [PDF][pdf-slides] formats.
+
+[html-slides]: commandline-slides-revealjs.html
+[pdf-slides]: commandline-slides.pdf
+
+:::
+
 ## Linux
 
 Linux is a free and open source operating system known for stability,
