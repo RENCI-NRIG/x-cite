@@ -1,5 +1,5 @@
 ---
-title: "Commmand-line and Scripting"
+title: "The commmand-line"
 subtitle: "X-CITE 2024 workshop"
 # author: "Sajith Sasidharan"
 date: last-modified
@@ -31,7 +31,7 @@ Getting into CLASSE Linux systems
 ## Assumptions
 
 - You have your CLASSE accounts set up.
-- Talk to staff if do not have a CLASSE account.
+  - Talk to CLASSE staff otherwise!
 
 - Options:
 
@@ -68,7 +68,8 @@ Getting into CLASSE Linux systems
 - A fairly popular operating system.
   - (Actually an OS kernel, plus userland from various other projects.
     But those are details...)
-- Unix-like, therefore has accumulated quirks.
+- Unix-like, which traces back to 1969, therefore has accumulated
+  quirks.
   - Expect "hysterical raisins".
 
 ## `lnx201`
@@ -97,9 +98,23 @@ Getting into CLASSE Linux systems
   - `info ${command}`
   - or `${command} --help` (sometimes!)
 
-# The shell
+## The shell
+
+- A program that accepts commands 
+- Shell passes commands to the OS to execute
+- A popular shell is `bash`, which is the default on `lnx201`.
+
 
 ## Bash
+
+- "Bourne-again shell" 
+  - (Based on the earlier Bourne shell)
+  - from the [GNU project][gnu]
+  - `/bin/bash` is the program
+- For documentation: `info bash` or `man bash`.
+
+[gnu]: http://gnu.org/
+
 
 ## Environment variables
 
