@@ -22,7 +22,7 @@ format:
     theme: default
     slide-level: 2
     reference-doc: ../../assets/reference.pptx
-    
+
   beamer:
     # aspectratio: 32
     # navigation: horizontal
