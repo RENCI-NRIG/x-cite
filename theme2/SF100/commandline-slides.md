@@ -18,6 +18,11 @@ format:
 
     logo: ../../images/x-cite-logo-2.png
 
+    template-partials:
+      - title-slide.html
+    css:
+      - slides.css
+
   pptx:
     theme: default
     slide-level: 2
