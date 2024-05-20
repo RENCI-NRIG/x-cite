@@ -27,8 +27,8 @@ systems.
 Slides accompanying these notes are available in [HTML][html-slides]
 and [PDF][pdf-slides] formats.
 
-[html-slides]: commandline-slides.html
-[pdf-slides]: commandline-slides.pdf
+[html-slides]: slides.html
+[pdf-slides]: slides.pdf
 
 :::
 
