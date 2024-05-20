@@ -2,6 +2,8 @@
 title: "Linux, Command Line, and Scripting"
 date: 2024-05-20
 date-modified: 2024-05-20
+aliases:
+  - "/theme2/SF100/"
 ---
 
 The following notes assume that you are all set up to use your
