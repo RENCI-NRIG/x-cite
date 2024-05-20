@@ -21,6 +21,7 @@ format:
     # aspectratio: 32
     # navigation: horizontal
     theme: default
+    slide-level: 2
     logo: ../../images/x-cite-logo-2.png
 ---
 
