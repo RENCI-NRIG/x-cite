@@ -22,7 +22,7 @@ format:
     # navigation: horizontal
     theme: default
     slide-level: 2
-    logo: ../../images/x-cite-logo-2.png
+    # logo: ../../images/x-cite-logo-2.png
 ---
 
 # Preliminaries
