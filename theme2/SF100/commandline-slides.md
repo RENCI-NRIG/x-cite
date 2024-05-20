@@ -17,6 +17,11 @@ format:
       [OAC-2320375](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320375).
 
     logo: ../../images/x-cite-logo-2.png
+
+  pptx:
+    theme: default
+    slide-level: 2
+    
   beamer:
     # aspectratio: 32
     # navigation: horizontal
