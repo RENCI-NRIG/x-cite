@@ -1,4 +1,8 @@
-# Linux, Command Line, and Scripting
+---
+title: "Linux, Command Line, and Scripting"
+date: 2024-05-20
+date-modified: 2024-05-20
+---
 
 The following notes assume that you are all set up to use your
 accounts on the CLASSE Linux systems.
