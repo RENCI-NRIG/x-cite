@@ -98,7 +98,7 @@ Getting into CLASSE Linux systems
 
 - You will type **commands** in a **shell**, hint
   {{<kbd enter>}} key, and then things happen.
-  
+
   <!-- - All of this is a text user interface. -->
   <!-- - As opposed to clicking on GUI widgets. -->
 
@@ -120,7 +120,7 @@ Getting into CLASSE Linux systems
 
 ## Bash
 
-- "Bourne-again shell" 
+- "Bourne-again shell"
   - Based on an earlier Bourne shell, thus the "again".
   - Developed by the [GNU project][gnu].
   - On `lnx201`, `/bin/bash` is the program.
@@ -193,10 +193,10 @@ TODO: double check with werner
 "Wherever you go, there you are"
 
 - At any time in the shell, you are "inside" a single directory,
-  called the **current working directory**. 
+  called the **current working directory**.
 - When you log in, your current work will be `/home/${username}`.
 - You will use `cd` (change directory) to move around.
-- Use the command `pwd` to find where you are.  
+- Use the command `pwd` to find where you are.
 
 
 ## Fun facts about file names
@@ -298,7 +298,7 @@ Your account belongs to several groups:
 ```{.bash}
 [ssasidharan@lnx201 ~]$ id
 uid=63499(ssasidharan) gid=262(chess) groups=262(chess),750(classeuser)
-[ssasidharan@lnx201 ~]$ groups 
+[ssasidharan@lnx201 ~]$ groups
 chess classeuser
 ```
 
@@ -326,16 +326,78 @@ What do those characters mean?
 
 ## Changing permissions
 
+- Use `chmod` command to change file mode bits (the first column in
+  the previous listing).
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ chmod +x test.sh
+[ssasidharan@lnx201 ~]$ ls -l test.sh
+-rwxr-xr-x 1 ssasidharan chess 0 Mar 28 13:39 test.sh
+[ssasidharan@lnx201 ~]$ chmod -x test.sh
+[ssasidharan@lnx201 ~]$ ls -l test.sh
+-rw-r--r-- 1 ssasidharan chess 0 Mar 28 13:39 test.sh
+```
+
+- Use `chown` and `chgrp` commands to change owner and group (the
+  third and fourth columns in the previous listing).
+  - Probably not immediately useful; just know that they exist.
+
 
 # Processes
 
+## Listing processes
+
+- List running processes using `ps` command:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ps
+    PID TTY          TIME CMD
+ 694411 pts/81   00:00:00 ps
+3479688 pts/81   00:00:00 bash
+```
+
+The four columns:
+
+- `PID` is process id.
+- `TTY` is the terminal associated with the process.
+- `TIME` is the elapsed CPU time for the process.
+- `CMD` is the command that created the process.
+
+
+(Also see: `top` and `htop`.)
+
 ## Background and foreground processes
 
+- Some processes run in the foreground:
+   - They read input, write output, etc.
+   - Attached to a terminal.
+- Background processes, well, run in the background.  Send things to
+  the background with `&`:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ sleep 100 &
+[1] 949751
+```
+
+- Bring a background process to foreground using `fg` command, and
+terminate it using {{<kbd Ctrl-C>}}:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ fg 2
+sleep 100
+^C
+```
+
 ## Terminating processes
+
+- `kill PID` command to end one process.
+- `killall` command to end many processes
+
 
 ## Signals
 
 # Shell Scripting
+
 
 # Other tools of the trade
 
@@ -385,5 +447,3 @@ BUT
 
 
 # Some resources
-
-
