@@ -1,7 +1,7 @@
 ---
 title: "Linux, Command Line, and Scripting"
 date: "2024-05-08"
-date-modified: "2024-05-20"
+date-modified: last-modified
 aliases:
   - "/theme2/SF100/"
 ---

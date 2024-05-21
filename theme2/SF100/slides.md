@@ -457,6 +457,13 @@ BUT
 
 # Some resources
 
+# A cheat sheet
+
+[![](cheat-sheet.png){height=600}](cheat-sheet.png)
+
+
+# Resources elsewhere
+
 - [Shell Tools and Scripting][missing] module of MIT "The Missing
   Semester of Your CS Education" class.
 - [The Linux Command Line, A Complete Introduction][tlcl] by William
