@@ -282,6 +282,10 @@ one programs output is another programs input:
 
 ## Symbolic links
 
+- Special files that point to other files/folders.
+  - Kind of like shortcuts
+
+
 # Users and Groups
 
 ## Permissions and ownership
