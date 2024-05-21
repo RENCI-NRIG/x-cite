@@ -739,7 +739,7 @@ What if you want to discard `stdout` completely?  You can redirect it
 to the special file `/dev/null`:
 
 ```{.bash}
-[ssasidharan@lnx201 ~]$ ls -l >> ls-output.txt
+[ssasidharan@lnx201 ~]$ ls -l > /dev/null
 ```
 
 If you want to append `stdout` to a file instead of overwriting it,
