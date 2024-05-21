@@ -129,7 +129,7 @@ Getting into CLASSE Linux systems
 [gnu]: http://gnu.org/
 
 
-## Environment variables
+<!-- ## Environment variables -->
 
 # Files and directories
 
