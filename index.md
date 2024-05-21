@@ -52,7 +52,7 @@ This is the training overview:
 
 [CHESS]: https://www.chess.cornell.edu/
 
-[pe100]: ./theme1/PE100/python-and-jupyter.qmd
+[pe100]: ./theme1/PE100/PE100-01Introduction.ipynb
 [pe101]: ./theme1/PE101/python-packages-conda.ipynb
 [pe102]: ./theme1/PE102/numerical-data-analysis.ipynb
 [pe103]: ./theme1/PE103/vcs-testing-debugging.md
