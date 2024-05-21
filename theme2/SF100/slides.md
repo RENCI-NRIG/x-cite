@@ -265,6 +265,21 @@ Shall I compare thee to a summer’s day?
 
 ## Pipes
 
+- Using the `|` ("pipe") operator, you can "chain" programs such that
+one programs output is another programs input:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ls -l /bin/ | less
+```
+
+- You can create longer pipes:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ls /bin /sbin | sort | uniq | wc
+   4289    4288   46820
+```
+
+
 ## Symbolic links
 
 # Users and Groups
