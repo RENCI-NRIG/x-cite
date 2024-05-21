@@ -190,7 +190,24 @@ TODO: double check with werner
 
 ## The current working directory
 
+"Wherever you go, there you are"
+
+- At any time in the shell, you are "inside" a single directory,
+  called the **current working directory**. 
+- When you log in, your current work will be `/home/${username}`.
+- You will use `cd` (change directory) to move around.
+- Use the command `pwd` to find where you are.  
+
+
 ## Fun facts about file names
+
+- Names that begin with "." are "hidden".
+  - Omitted from directory listing when you do `ls`.
+- File and directory names are case sensitive.
+  - (Depends on filesystem, but that is a detail.)
+- Better to avoid spaces in file names, because they are a hassle.
+  - Use `_` (underscore character) instead (example: `file_name`), or
+    CamelCase (example: `FileName`).
 
 ## Wildcards
 
