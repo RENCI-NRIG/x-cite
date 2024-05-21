@@ -177,6 +177,16 @@ Unix slogan: Everything is a file!
    - Also `$HOME`
 - You can write your files and create directories here.
 
+<!--
+
+   - Don't write too much when on `lnx201` though...
+
+TODO: double check with werner
+
+## your home directory on `lnx201`
+
+-->
+
 
 ## The current working directory
 
