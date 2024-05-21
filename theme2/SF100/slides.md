@@ -1,8 +1,10 @@
 ---
-title: "The commmand-line"
-subtitle: "X-CITE 2024 workshop"
+title: "Systems Fundamentals"
+subtitle: "Linux, command line, scripting"
+# author: "X-CITE 2024 workshop"
+# subtitle: "X-CITE 2024 workshop"
 # author: "Sajith Sasidharan"
-date: last-modified
+date: 2024-06-05
 format:
   revealjs:
     theme: default
