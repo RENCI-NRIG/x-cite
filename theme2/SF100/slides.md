@@ -291,7 +291,38 @@ one programs output is another programs input:
 
 # Users and Groups
 
+## You belong (to groups)
+
+Your account belongs to several groups:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ id
+uid=63499(ssasidharan) gid=262(chess) groups=262(chess),750(classeuser)
+[ssasidharan@lnx201 ~]$ groups 
+chess classeuser
+```
+
 ## Permissions and ownership
+
+Do a "long" file listing (with `ls -l`) and behold:
+
+```{.bash}
+$ ls -l
+total 8
+drwxr-xr-x  2 ssasidharan chess   44 May  8 10:42 bin
+drwxr-xr-x  2 ssasidharan chess  144 Mar 12 00:27 CLASSE_shortcuts
+drwxr-xr-x  2 ssasidharan chess   52 Apr  2 00:27 Desktop
+drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Documents
+lrwxrwxrwx  1 ssasidharan chess   31 Mar 26 15:21 Downloads -> /cdat/tem/ssasidharan/Downloads
+drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Music
+drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Pictures
+drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Public
+drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Templates
+drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Videos
+```
+
+What do those characters mean?
+
 
 ## Changing permissions
 
