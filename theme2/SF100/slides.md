@@ -279,11 +279,14 @@ one programs output is another programs input:
    4289    4288   46820
 ```
 
+<!--
 
 ## Symbolic links
 
 - Special files that point to other files/folders.
   - Kind of like shortcuts
+
+-->
 
 
 # Users and Groups
