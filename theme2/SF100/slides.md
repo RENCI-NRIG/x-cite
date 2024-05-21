@@ -199,6 +199,15 @@ TODO: double check with werner
 - Use the command `pwd` to find where you are.
 
 
+## Absolute and relative paths
+
+- **Absolute path names** begin with the root directory, `/`.
+   - Example: `/home/ssasidharan/Documents/hello.txt`
+
+- **Relative paths** start with the working directory.
+   - Example: `./Documents/hello.txt` (or just `Documents/hello.txt`)
+     when I'm in my home directory.
+
 ## Fun facts about file names
 
 - Names that begin with "." are "hidden".
