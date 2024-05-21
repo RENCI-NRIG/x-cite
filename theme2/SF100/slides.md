@@ -212,6 +212,14 @@ TODO: double check with werner
 
 - Names that begin with "." are "hidden".
   - Omitted from directory listing when you do `ls`.
+
+- `.` and `..` are special directory names.
+  - `.` stands for the current directory.
+  - `..` stands for the directory above the current directory.
+  
+  
+## More fun facts about file names
+  
 - File and directory names are case sensitive.
   - (Depends on filesystem, but that is a detail.)
 - Better to avoid spaces in file names, because they are a hassle.
