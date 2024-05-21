@@ -393,11 +393,11 @@ sleep 100
 - `kill PID` command to end one process.
 - `killall` command to end many processes
 
+<!--
 
 ## Signals
 
-# Shell Scripting
-
+-->
 
 # Other tools of the trade
 
