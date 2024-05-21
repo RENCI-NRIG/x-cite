@@ -211,6 +211,24 @@ TODO: double check with werner
 
 ## Wildcards
 
+Some characters are given special treatment:
+
+- `*` matches any set of characters.
+
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ls /usr/bin/ab*
+/usr/bin/ab  /usr/bin/abs2rel
+```
+
+- `?` matches any one character.
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ls /usr/bin/?abc*
+/usr/bin/kabc2mutt  /usr/bin/kabcclient
+```
+
+
 ## Standard input, output, and error
 
 ## I/O redirection
