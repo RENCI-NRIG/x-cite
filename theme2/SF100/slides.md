@@ -87,7 +87,7 @@ Getting into CLASSE Linux systems
 ## `lnx201`
 
 - The Linux host we'll be using is `lnx201.classe.cornell.edu`.
-- Runs a distribution_ called Scientific Linux.
+- Runs a **distribution** called Scientific Linux.
 - Good enough for general use.
 - Do not run anything resource heavy on `lnx201`.
 
@@ -96,15 +96,16 @@ Getting into CLASSE Linux systems
 
 ![](lnx201.png)
 
-- You will type _commands_ in a _shell_ (text user interface), hint
+- You will type **commands** in a **shell**, hint
   {{<kbd enter>}} key, and then things happen.
-
-- (As opposed to clicking on GUI widgets.)
+  
+  <!-- - All of this is a text user interface. -->
+  <!-- - As opposed to clicking on GUI widgets. -->
 
 ## Commands
 
-- Commands are either programs or shell builtins.
-- Use one of these commands to get some documentation:
+- Commands are either **programs** or **shell builtins**.
+- Use one of these commands to read documentation:
 
   - `man ${command}`
   - `info ${command}`
@@ -112,17 +113,17 @@ Getting into CLASSE Linux systems
 
 ## The shell
 
-- A program that accepts commands 
-- Shell passes commands to the OS to execute
+- A program that accepts commands, and passes those commands to the OS
+  to execute.
 - A popular shell is `bash`, which is the default on `lnx201`.
 
 
 ## Bash
 
 - "Bourne-again shell" 
-  - (Based on the earlier Bourne shell)
-  - from the [GNU project][gnu]
-  - `/bin/bash` is the program
+  - Based on an earlier Bourne shell, thus the "again".
+  - Developed by the [GNU project][gnu].
+  - On `lnx201`, `/bin/bash` is the program.
 - For documentation: `info bash` or `man bash`.
 
 [gnu]: http://gnu.org/
