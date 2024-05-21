@@ -231,7 +231,37 @@ Some characters are given special treatment:
 
 ## Standard input, output, and error
 
+- Input is read from **standard input** (or `stdin`).
+- Output is written to **standard output** (or `stdout`).
+- Error messages are written to **standard error** (or `stderr`).
+
+::: {.callout-note}
+
+They are files too: `/dev/stdin`, `/dev/stdout`, and `/dev/stderr`.
+
+:::
+
 ## I/O redirection
+
+You can redirect `stdout` to a file with `>` operator:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ls -l > ls-output.txt
+```
+
+Or append with `>>`:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ ls -l >> ls-output.txt
+```
+
+To direct a file to a programs input, use `<` operator:
+
+```{.bash}
+[ssasidharan@lnx201 ~]$ cat < sonnet18.txt
+Shall I compare thee to a summer’s day?
+```
+
 
 ## Pipes
 
