@@ -77,7 +77,7 @@ Getting into CLASSE Linux systems
 
 ## Linux
 
-- A fairly popular operating system.
+- A popular operating system.
   - (Actually an OS kernel, plus userland from various other projects.
     But those are details...)
 - Unix-like, which traces back to 1969, therefore has accumulated
@@ -87,7 +87,7 @@ Getting into CLASSE Linux systems
 ## `lnx201`
 
 - The Linux host we'll be using is `lnx201.classe.cornell.edu`.
-- Runs a _distribution_ called Scientific Linux.
+- Runs a distribution_ called Scientific Linux.
 - Good enough for general use.
 - Do not run anything resource heavy on `lnx201`.
 
