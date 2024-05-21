@@ -133,7 +133,7 @@ Getting into CLASSE Linux systems
 
 # Files and directories
 
-Everything is a file!
+Unix slogan: Everything is a file!
 
 
 ## Directory navigation
