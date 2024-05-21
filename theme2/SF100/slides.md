@@ -447,3 +447,20 @@ BUT
 
 
 # Some resources
+
+- [Shell Tools and Scripting][missing] module of MIT "The Missing
+  Semester of Your CS Education" class.
+- [The Linux Command Line, A Complete Introduction][tlcl] by William
+  E. Shotts, Jr.  The book is freely available under a Creative
+  Commons license, and contains a good discussion about shell
+  scripting.
+- [The Unix Programming Environment][tupe] by Brian W. Kernighan and
+  Rob Pike.  Good old classic, still useful.  Places things in a
+  historical context.
+
+
+# Fin!
+
+[missing]: https://missing.csail.mit.edu/2020/shell-tools/
+[tlcl]: http://linuxcommand.org/tlcl.php
+[tupe]: https://archive.org/details/UNIXProgrammingEnvironment
