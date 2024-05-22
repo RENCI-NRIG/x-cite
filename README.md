@@ -33,6 +33,14 @@ Once content is in the `main` branch of this GitHub repository, the
 [publish] workflow should take care of the building and publishing the
 site.
 
+## License
+
+The content in this repository is available under [Creative Commons
+Attribution-ShareAlike 4.0 International][cc-by-sa] license.  Code
+snippets may be used under [CC0 1.0 Universal][cc-zero] license.
+
+Copyrights for logos are owned by the respective organizations.
+
 <!-- References -->
 
 [publish-workflow]: https://github.com/RENCI-NRIG/X-CITE/actions/workflows/publish.yml
@@ -44,3 +52,6 @@ site.
 
 [Quarto]: https://quarto.org/
 [x-cite]: https://xcitecourse.org/
+
+[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
+[cc-zero] https://creativecommons.org/publicdomain/zero/1.0/
