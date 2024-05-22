@@ -54,7 +54,7 @@ This is the training overview:
 
 [pe100]: ./theme1/PE100/PE100-01Introduction.ipynb
 [pe101]: ./theme1/PE101/python-packages-conda.ipynb
-[pe102]: ./theme1/PE102/numerical-data-analysis.ipynb
+[pe102]: ./theme1/PE102/PE102-02NumPy.ipynb
 [pe103]: ./theme1/PE103/vcs-testing-debugging.md
 
 [pe103-vcs]: ./theme1/PE103//vcs.qmd
