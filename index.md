@@ -3,9 +3,10 @@ title: "X-CITE training materials"
 toc: false
 ---
 
-X-CITE course is geared toward the community of scientists and
-researchers using the [CHESS] synchrotron X-ray facility and similar
-light sources.
+X-CITE (CyberInfrastructure Training and Education for Synchrotron
+X-Ray Science) develops training materials for the community of
+scientists and researchers using the [CHESS] synchrotron X-ray
+facility and similar light sources.
 
 This is the training overview:
 
