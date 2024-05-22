@@ -3,9 +3,10 @@ title: "X-CITE training materials"
 toc: false
 ---
 
-X-CITE course is geared toward the community of scientists and
-researchers using the [CHESS] synchrotron X-ray facility and similar
-light sources.
+X-CITE (CyberInfrastructure Training and Education for Synchrotron
+X-Ray Science) develops training materials for the community of
+scientists and researchers using the [CHESS] synchrotron X-ray
+facility and similar light sources.
 
 This is the training overview:
 
@@ -14,45 +15,52 @@ This is the training overview:
 - PE 100: [Python Programming and Jupyter notebooks][pe100]
 - PE 101: [Using Python packages & libraries, Conda][pe101]
 - PE 102: [Numerical data analysis with Python][pe102]
-- PE 103: [Software version control, testing and debugging][pe103]
+- PE 103: [Software version control][pe103-vcs],
+  [testing][pe103-testing], and [debugging][pe103-debugging] 
 
 ## Theme 2: Systems Fundamentals
 
 - SF 100: [Intro to Linux, commandline, and scripting][sf100]
-- SF 101: [Containers and virtualization][sf101]
-- SF 200: [Parallel computing concepts][sf200]
-- SF 201: [Batch systems and compute farms with CHESS example][sf201]
+- SF 101: [Containers and virtualization][sf101] 🚧
+- SF 200: [Parallel computing concepts][sf200] 🚧 
+- SF 201: [Batch systems and compute farms with CHESS example][sf201] 🚧
 
 ## Theme 3: Distributed Computing and the CI Ecosystem
 
-- DC 100: [Distributed computing concepts][dc100]
-- DC 101: [Scientific workflow management][dc101]
-- DC 102: [Using science gateways with Open OnDemand example][dc102]
-- DC 200: [Computing with CI ecosystem - ACCESS, PATh, Campus, Cloud][dc200]
+- DC 100: [Distributed computing concepts][dc100] 🚧
+- DC 101: [Scientific workflow management][dc101] 🚧
+- DC 102: [Using science gateways with Open OnDemand example][dc102] 🚧
+- DC 200: [Computing with CI ecosystem - ACCESS, PATh, Campus,
+  Cloud][dc200] 🚧
 
 ## Theme 4: X-Ray Science S&E Software
 
-- XS 100: [Data collection, preparing input parameters, SPEC and CLI][xs100]
+- XS 100: [Data collection, preparing input parameters, SPEC and
+  CLI][xs100] 🚧
 - XS 101: [Basic / on-the-fly data analysis, viewing detector images][xs101]
 - XS 102: [Large-scale data analysis: from images to science
-  parameters to interpretation][xs102]
-- XS 200: [Metadata for data fidelity and systematic checks][xs200]
+  parameters to interpretation][xs102] 🚧
+- XS 200: [Metadata for data fidelity and systematic checks][xs200]  🚧
 
 ## Theme 5: Data Curation and FAIR
 
-- CF 100: [Intro to domain metadata standards, formats and repositories][cf100]
-- CF 101: [Best practices for developing DMP][cf101]
-- CF 102: [Metadata annotation and DOI][cf102]
-- CF 200: [Curating data, code, workflows, and publishing][cf200]
+- CF 100: [Intro to domain metadata standards, formats and repositories][cf100] 🚧
+- CF 101: [Best practices for developing DMP][cf101] 🚧
+- CF 102: [Metadata annotation and DOI][cf102] 🚧
+- CF 200: [Curating data, code, workflows, and publishing][cf200] 🚧
 
 <!-- References -->
 
 [CHESS]: https://www.chess.cornell.edu/
 
-[pe100]: ./theme1/PE100/python-and-jupyter.qmd
-[pe101]: ./theme1/PE101/python-packages-conda.ipynb
-[pe102]: ./theme1/PE102/numerical-data-analysis.ipynb
+[pe100]: ./theme1/PE100/PE100-01Introduction.ipynb
+[pe101]: ./theme1/PE101/PE101-01Packages.ipynb
+[pe102]: ./theme1/PE102/PE102-02NumPy.ipynb
 [pe103]: ./theme1/PE103/vcs-testing-debugging.md
+
+[pe103-vcs]: ./theme1/PE103//vcs.qmd
+[pe103-testing]: ./theme1/PE103/testing.md
+[pe103-debugging]: ./theme1/PE103/debugging.md
 
 [sf100]: ./theme2/SF100/linux-commandline-scripting.md
 [sf101]: ./theme2/SF101/containers-and-virtualization.md

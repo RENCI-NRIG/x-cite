@@ -1,0 +1,15 @@
+#org-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    margin: 0 auto;
+}
+
+#org-logos img {
+    float: left;
+    width: 33%;
+    object-fit: cover;
+    display: inline-block;
+    margin: 0 20px 0 0;
+}

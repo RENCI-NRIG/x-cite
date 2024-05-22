@@ -1,4 +1,10 @@
-# Linux, Command Line, and Scripting
+---
+title: "Linux, Command Line, and Scripting"
+date: "2024-05-08"
+date-modified: last-modified
+aliases:
+  - "/theme2/SF100/"
+---
 
 The following notes assume that you are all set up to use your
 accounts on the CLASSE Linux systems.
@@ -21,8 +27,8 @@ systems.
 Slides accompanying these notes are available in [HTML][html-slides]
 and [PDF][pdf-slides] formats.
 
-[html-slides]: commandline-slides-revealjs.html
-[pdf-slides]: commandline-slides.pdf
+[html-slides]: slides.html
+[pdf-slides]: slides.pdf
 
 :::
 
@@ -733,7 +739,7 @@ What if you want to discard `stdout` completely?  You can redirect it
 to the special file `/dev/null`:
 
 ```{.bash}
-[ssasidharan@lnx201 ~]$ ls -l >> ls-output.txt
+[ssasidharan@lnx201 ~]$ ls -l > /dev/null
 ```
 
 If you want to append `stdout` to a file instead of overwriting it,
