@@ -13,7 +13,7 @@ The Cornell High Energy Synchrotron Source (CHESS) is currently home to 7 experi
 
 What is the users responsibility to record and what is CHESS's responsibility. 
 
-![stationcomputer](./xs100-figures/xcite-overview-computer.png)
+<img src="./xs100-figures/xcite-overview-computer.png" alt="stationcomputer" width="500"/>
 
 *insert image of "station computer" connected to "controls racks" connected to "experimental hutch" connected to DAQ and File system and Compute Farm* 
 
@@ -39,7 +39,8 @@ Every beamline will have a unique version of this computer - some techniques eve
 
 This section will discuss the hardware connections, motor configurations, and overall connectivity of signals being tracked in the beamline. 
 
-![controls](./xs100-figures/xcite-overview-controls.png)
+<img src="./xs100-figures/xcite-overview-controls.png" alt="controls" width="500"/>
+
 
 *insert image of "station computer" connected to "controls racks" connected to "experimental hutch" connected to DAQ and File system and Compute Farm - this time the image is highlighting the connections to the hardware pieces* 
 
@@ -80,7 +81,7 @@ You may have specific other software: Python scripts (link to python tutorial), 
 
 ## Networks and File Systems
 
-![network](./xs100-figures/xcite-overview-connections.png)
+<img src="./xs100-figures/xcite-overview-connections.png" alt="network" width="500"/>
 
 *insert image of "station computer" connected to "controls racks" connected to "experimental hutch" connected to DAQ and File system and Compute Farm - this time the image is highlighting the connection to the DAQ* 
 
@@ -100,14 +101,14 @@ The DAQ network is the location of all your saved data. If you are in an approve
 CHESS filesystem overview and where data is saved. 
 
 #### Detectors and Data Handling
+<img src="./xs100-figures/xcite-overview-expstation.png" alt="expstation" width="500"/>
 
-![experimental station](./xs100-figures/xcite-overview-expstation.png)
 
 If you wish to move any data from the CHESS filesystem to another location, the preferred way of doing so is through Globus. Please see here (LINK CHESS computing) for directions on ways to transfer data from the CHESS filesystem. 
 
 Your beamline may be producing very large quantities of data. Due to it's size, you may not be able to take your data home or transfer it home via globus. your data in raw may only stay in hot storage for a short amount of time (6 months). Your experimental station will have best practices for how to compress or reduce this data so that it is small enough to take home or live in a different part of our filesystem. 
 
-![storage](./xs100-figures/xcite-overview-datastorage.png)
+<img src="./xs100-figures/xcite-overview-datastorage.png" alt="datastorage" width="500"/>
 
 All data is currently saved at CHESS. The data that is living in cold storage can be restored to hot storage if needed - the process for this is located here (LINK CHESS Computing). 
 
@@ -128,7 +129,7 @@ Some beamlines are doing in-line processing > include firmware, software etc. Yo
 
 #### Data Reduction and Analysis 
 
-![computefarm](./xs100-figures/xcite-overview-computefarm.png)
+<img src="./xs100-figures/xcite-overview-computefarm.png" alt="computefarm" width="500"/>
 
 **Compute Farm**
 
