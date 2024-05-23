@@ -54,4 +54,4 @@ Copyrights for logos are owned by the respective organizations.
 [x-cite]: https://xcitecourse.org/
 
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
-[cc-zero] https://creativecommons.org/publicdomain/zero/1.0/
+[cc-zero]: https://creativecommons.org/publicdomain/zero/1.0/
