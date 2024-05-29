@@ -1,9 +1,10 @@
 # Data Collection, Preparing Input Parameters, SPEC and CLI
-# Cyber Infrastructure for Data Collection
+
+# Cyberinfrastructure for Data Collection
 
 ## CHESS Experimental Stations
 
-A complex controls, software, hardware, and cyber infrastructure eco system supports data collection at each experimental station at CHESS. Having a basic understanding of this system and some relevant computing and software literacy will help prepare you for your beamtime. Historically, we have performed these trainings on the day of arrival, but preparation ahead of the beamtime will allow you to be more engaged with decisions on *your experiment* and focus on producing the highest quality experiment with your allocated beamtime. 
+Data collection at all the CHESS experimental stations is supported by a complex controls, software, hardware, and cyberinfrastructure ecosystem. Having a basic understanding of this system and some relevant computing and software literacy will help prepare you for your beamtime. Historically, we have performed these trainings on the day of arrival, but preparation ahead of the beamtime will allow you to be more engaged with decisions on *your experiment* and focus on producing the highest quality experiment with your allocated beamtime. 
 
 The Cornell High Energy Synchrotron Source (CHESS) is currently home to 7 experimental stations spanning 3 sub-facilities. The diverse science, techniques, and missions of each beamline program leads to heterogeneous landscape of data collection experiences and computing literacy needed for each user. This training will cover the commonalities of CHESS data collection and resources to leverage, as well as where to expect to expect differences across beamlines and what questions to ask. 
 
@@ -79,24 +80,23 @@ Many important metadata signals can also be tracked using "EPICS PVs." While man
 
 You may have specific other software: Python scripts (link to python tutorial), other UI’s for instrumentation, that you should receive training from your beamline scientist. See Python module if that is important.
 
-## Networks and File Systems
+## Networks and Filesystems
 
 <img src="./xs100-figures/xcite-overview-connections.png" alt="network" width="500"/>
 
 *insert image of "station computer" connected to "controls racks" connected to "experimental hutch" connected to DAQ and File system and Compute Farm - this time the image is highlighting the connection to the DAQ* 
 
-To protect the communication signals between the station computer, experimental station equipment, and other local systems, each experimental station has an isolated network with direct connections. 
-
-Detectors often have direct fiber optic / high speed data lines to inline computing resources and/or the CHESS DAQ. 
-
-The main types of networks at the station are:
-
+The primary networks at the experimental stations are:
+- CHESS-DAQ Network
 - Isolated Station Network
-- DAQ Network
 - CHESS Public 
 - CLASSE Public
 
-The DAQ network is the location of all your saved data. If you are in an approved situation to bring your own device to CHESS and it needs access to *read* the DAQ, please see the following guidelines and fill out this form on the CLASSE Computing Website (LINK to LNS Protected). 
+During data collection, raw data is written directly to the **CHESS-DAQ** filesystems. The CHESS-DAQ consists of approximately 2 petabytes of dedicated online storage arrays connected to the CHESS experimental stations through a high-speed 10Gb data collection network.
+
+To protect the communication signals between the station computer, experimental station equipment, and other local systems, each experimental station has an isolated network with direct connections. 
+
+Detectors often have direct fiber optic / high speed data lines to inline computing resources and/or the CHESS-DAQ. 
 
 CHESS filesystem overview and where data is saved. 
 
@@ -112,9 +112,11 @@ Your beamline may be producing very large quantities of data. Due to it's size, 
 
 All data is currently saved at CHESS. The data that is living in cold storage can be restored to hot storage if needed - the process for this is located here (LINK CHESS Computing). 
 
-#### BYOD Bring Your Own Device
+#### Bring Your Own Device (BYOD)
 
-BYOD - Instructions on bringing your own device, considerations, and how to integrate the devices into the experiment. Example with Thompson/VanDover or Controls computers for instruments being used in the moment. 
+Because the CHESS-DAQ filesystems are a critical resource for data collection, *write access* is only granted to registered devices on the CHESS-DAQ network. If you wish to bring your own device to write data to the CHESS-DAQ, please discuss your needs with your staff scientist at least one month before your beamtime. Before your device can be registered on the CHESS-DAQ, it must undergo a cybersecurity evaluation by CLASSE-IT.
+
+*Read access* to the CHESS-DAQ filesystem may be obtained by registering your device for the LNS Protected network using [this request form](https://wiki.classe.cornell.edu/Computing/LaptopRegistration).
 
 #### MetaData Handling
 
@@ -122,7 +124,8 @@ Metadata Considerations:
 There will be many parallel datastreams being collected - critical to interpreting your data. These may be located in many different locations. Introduce EPICS IOCs, spec.logs, other files. These will be critical to your data reduction. 
 
 
-#### On-the-fly Data Processing & Visualization: 
+#### On-the-fly Data Processing & Visualization
+
 Need to be looking at your data as it is coming off for data fidelity. Few ways this is facilitated : Introduce programs that are commonly used
 Small plug for NSDF and on the fly monitoring efforts
 Some beamlines are doing in-line processing > include firmware, software etc. Your data is being processed on the fly - it is important to understand what is being done and why on your behalf. This is heterogeneous across the beamlines. Overtime we will build out station specific training on these, for now it is the responsibility of the user to work with their beamline scientist and read any requisite materials they provide. 
@@ -133,7 +136,24 @@ Some beamlines are doing in-line processing > include firmware, software etc. Yo
 
 **Compute Farm**
 
-**CHAP**
+The CLASSE Compute Farm is a central resource consisting of approximately 60 enterprise-class Linux nodes (with around 400 cores), with a front-end queueing system (Son of Grid Engine, or SGE) that distributes jobs across the Compute Farm nodes. SGE supports interactive, batch, parallel, and GPU jobs, and it ensures equitable access to the Compute Farm for all users.
+
+Data on the CHESS-DAQ filesystems can be directly accessed using the Compute Farm, and instructions for job submission are [available here](https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro).
+
+**CHESS Analysis Pipeline (CHAP)**
+
+The CHESS Analysis Pipeline (CHAP) is an object-oriented framework for organizing data analysis code into reusable modules. The most basic pipeline consists of the following modules:
+- Reader: takes an input file or data source and converts it into a standard data structure
+- Processor: takes a data structure from a Reader, executes a data processing algorithm, and writes an output data structure
+- Writer: takes a data structure from a Processor and converts it to a specific file format
+
+<img src="./xs100-figures/xcite-chap-1.png" alt="network" width="500"/>
+
+An example of a concrete CHAP implementation is shown below. Here, the Processor accepts inputs from multiple Readers that provide both raw data and metadata.
+
+<img src="./xs100-figures/xcite-chap-2.png" alt="network" width="500"/>
+
+CHAP pipelines can be executed from a Linux command line or from the Galaxy science gateway. A third method called CHAPBook is currently under development, which presents a notebook-like coding interface for non-expert users.
 
 **Technique/Beamline Specific Software**
 
