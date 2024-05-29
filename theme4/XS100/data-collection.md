@@ -124,7 +124,8 @@ Metadata Considerations:
 There will be many parallel datastreams being collected - critical to interpreting your data. These may be located in many different locations. Introduce EPICS IOCs, spec.logs, other files. These will be critical to your data reduction. 
 
 
-#### On-the-fly Data Processing & Visualization: 
+#### On-the-fly Data Processing & Visualization
+
 Need to be looking at your data as it is coming off for data fidelity. Few ways this is facilitated : Introduce programs that are commonly used
 Small plug for NSDF and on the fly monitoring efforts
 Some beamlines are doing in-line processing > include firmware, software etc. Your data is being processed on the fly - it is important to understand what is being done and why on your behalf. This is heterogeneous across the beamlines. Overtime we will build out station specific training on these, for now it is the responsibility of the user to work with their beamline scientist and read any requisite materials they provide. 
@@ -134,11 +135,13 @@ Some beamlines are doing in-line processing > include firmware, software etc. Yo
 <img src="./xs100-figures/xcite-overview-computefarm.png" alt="computefarm" width="500"/>
 
 **Compute Farm**
+
 The CLASSE Compute Farm is a central resource consisting of approximately 60 enterprise-class Linux nodes (with around 400 cores), with a front-end queueing system (Son of Grid Engine, or SGE) that distributes jobs across the Compute Farm nodes. SGE supports interactive, batch, parallel, and GPU jobs, and it ensures equitable access to the Compute Farm for all users.
 
 Data on the CHESS-DAQ filesystems can be directly accessed using the Compute Farm, and instructions for job submission are [available here](https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro).
 
 **CHESS Analysis Pipeline (CHAP)**
+
 The CHESS Analysis Pipeline (CHAP) is an object-oriented framework for organizing data analysis code into reusable modules. The most basic pipeline consists of the following modules:
 - Reader: takes an input file or data source and converts it into a standard data structure
 - Processor: takes a data structure from a Reader, executes a data processing algorithm, and writes an output data structure
