@@ -28,7 +28,7 @@ format:
   pptx:
     theme: default
     slide-level: 2
-    reference-doc: ../../assets/reference.pptx
+    # reference-doc: ../../assets/reference.pptx
 ---
 
 # Preliminaries
