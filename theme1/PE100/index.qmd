@@ -1,0 +1,15 @@
+---
+format:
+  html: default
+---
+
+{{< embed PE100-01Introduction.ipynb  >}}
+{{< embed PE100-02TypesVarsAndOperators.ipynb  >}}
+{{< embed PE100-03DecisionStructures.ipynb  >}}
+{{< embed PE100-04Repetition.ipynb  >}}
+{{< embed PE100-05Functions.ipynb  >}}
+{{< embed PE100-06Files.ipynb  >}}
+{{< embed PE100-07Exceptions.ipynb  >}}
+{{< embed PE100-08Lists.ipynb  >}}
+{{< embed PE100-09Strings.ipynb  >}}
+{{< embed PE100-10Dictionaries.ipynb  >}}
