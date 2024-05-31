@@ -4,6 +4,9 @@ date: "2024-05-08"
 date-modified: last-modified
 aliases:
   - "/theme2/SF100/"
+
+resources:
+  - cheat-sheet.pdf
 ---
 
 The following notes assume that you are all set up to use your
@@ -981,6 +984,9 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 
 
 # A list of (hopefully) useful commands
+
+<!-- [![](cheat-sheet.png){height=600}](cheat-sheet.pdf) -->
+
 
 | Command         | Description                                        |
 |-----------------|----------------------------------------------------|
