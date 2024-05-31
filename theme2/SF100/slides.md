@@ -462,7 +462,7 @@ BUT
 
 # A cheat sheet
 
-[![](cheat-sheet.png){height=600}](cheat-sheet.png)
+[![](cheat-sheet.png){height=600}](cheat-sheet.pdf)
 
 
 # Resources elsewhere
