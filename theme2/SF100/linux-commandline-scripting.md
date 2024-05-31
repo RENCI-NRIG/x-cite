@@ -25,10 +25,9 @@ systems.
 ::: {.callout-note}
 
 Slides accompanying these notes are available in [HTML][html-slides]
-and [PDF][pdf-slides] formats.
+format.
 
 [html-slides]: slides.html
-[pdf-slides]: slides.pdf
 
 :::
 
