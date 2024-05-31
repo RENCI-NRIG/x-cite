@@ -53,7 +53,7 @@ This is the training overview:
 
 [CHESS]: https://www.chess.cornell.edu/
 
-[pe100]: ./theme1/PE100/PE100-01Introduction.ipynb
+[pe100]: ./theme1/PE100/index.qmd
 [pe101]: ./theme1/PE101/index.qmd
 [pe102]: ./theme1/PE102/index.qmd
 [pe103]: ./theme1/PE103/vcs-testing-debugging.md

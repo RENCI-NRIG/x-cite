@@ -1,0 +1,29 @@
+---
+format:
+  html: default
+---
+
+::: {.callout-note}
+
+The content in this page is written in the form of [Jupyter
+notebooks][jupyter].  You can read the HTML version of the notebooks
+here.  However, you will likely want to open and run the notebooks in
+a JupyterHub instance, such as [CLASSE JupyterHub][classe-jupyterhub].
+See [CLASSE Wiki][classe-wiki-jupyterhub] for details.
+
+[jupyter]: https://en.wikipedia.org/wiki/Project_Jupyter
+[classe-jupyterhub]: https://jupyter01.classe.cornell.edu/
+[classe-wiki-jupyterhub]: https://wiki.classe.cornell.edu/Computing/JupyterHub
+
+:::
+
+{{< embed PE100-01Introduction.ipynb  >}}
+{{< embed PE100-02TypesVarsAndOperators.ipynb  >}}
+{{< embed PE100-03DecisionStructures.ipynb  >}}
+{{< embed PE100-04Repetition.ipynb  >}}
+{{< embed PE100-05Functions.ipynb  >}}
+{{< embed PE100-06Files.ipynb  >}}
+{{< embed PE100-07Exceptions.ipynb  >}}
+{{< embed PE100-08Lists.ipynb  >}}
+{{< embed PE100-09Strings.ipynb  >}}
+{{< embed PE100-10Dictionaries.ipynb  >}}
