@@ -465,6 +465,11 @@ BUT
 [![](cheat-sheet.png){height=600}](cheat-sheet.pdf)
 
 
+(Via [Stephen Turner][cheat-sheet-source].)
+
+[cheat-sheet-source]: https://gettinggeneticsdone.blogspot.com/2009/03/linux-command-line-cheat-sheet.html
+
+
 # Resources elsewhere
 
 - [Shell Tools and Scripting][missing] module of MIT "The Missing
