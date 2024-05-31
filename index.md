@@ -36,7 +36,7 @@ This is the training overview:
 ## Theme 4: X-Ray Science S&E Software
 
 - XS 100: [Data collection, preparing input parameters, SPEC and
-  CLI][xs100] 🚧
+  CLI][xs100]
 - XS 101: [Basic / on-the-fly data analysis, viewing detector images][xs101]
 - XS 102: [Large-scale data analysis: from images to science
   parameters to interpretation][xs102] 🚧
