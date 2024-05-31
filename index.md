@@ -36,7 +36,7 @@ This is the training overview:
 ## Theme 4: X-Ray Science S&E Software
 
 - XS 100: [Data collection, preparing input parameters, SPEC and
-  CLI][xs100] 🚧
+  CLI][xs100]
 - XS 101: [Basic / on-the-fly data analysis, viewing detector images][xs101]
 - XS 102: [Large-scale data analysis: from images to science
   parameters to interpretation][xs102] 🚧
@@ -54,8 +54,8 @@ This is the training overview:
 [CHESS]: https://www.chess.cornell.edu/
 
 [pe100]: ./theme1/PE100/PE100-01Introduction.ipynb
-[pe101]: ./theme1/PE101/PE101-01Packages.ipynb
-[pe102]: ./theme1/PE102/PE102-02NumPy.ipynb
+[pe101]: ./theme1/PE101/index.qmd
+[pe102]: ./theme1/PE102/index.qmd
 [pe103]: ./theme1/PE103/vcs-testing-debugging.md
 
 [pe103-vcs]: ./theme1/PE103//vcs.qmd

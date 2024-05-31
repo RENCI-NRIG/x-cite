@@ -1,0 +1,8 @@
+---
+format:
+  html: default
+---
+
+{{< embed PE101-01Packages.ipynb >}}
+
+{{< embed PE101-02CondaRepos.ipynb >}}
