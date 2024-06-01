@@ -105,11 +105,18 @@ Getting into CLASSE Linux systems
 
 ![](lnx201.png)
 
-- You will type **commands** in a **shell**, hint
-  {{<kbd enter>}} key, and then things happen.
+- You will type **commands** in a **shell**, at the **shell prompt**,
+  hit {{<kbd enter>}} key, and then things happen.
 
-  <!-- - All of this is a text user interface. -->
-  <!-- - As opposed to clicking on GUI widgets. -->
+::: {.notes}
+
+  - All of this is a text user interface.
+  - As opposed to clicking on GUI widgets.
+  
+  - The prompt is that piece of text that begins with `[` and ends
+    with `] $`.  They can look different too.
+  
+:::  
 
 ## Commands
 
@@ -120,11 +127,25 @@ Getting into CLASSE Linux systems
   - `info ${command}`
   - or `${command} --help` (sometimes!)
 
+::: {.notes}
+
+- Programs can be compiled or scripts.
+- They live somewhere in your `$PATH`.
+
+:::
+
 ## The shell
 
 - A program that accepts commands, and passes those commands to the OS
   to execute.
 - A popular shell is `bash`, which is the default on `lnx201`.
+
+::: {.notes}
+
+Of course there are other shells too: zsh (default on newer versions
+of macOS, fish, ksh, etc.
+
+:::
 
 
 ## Bash
@@ -137,6 +158,16 @@ Getting into CLASSE Linux systems
 
 [gnu]: http://gnu.org/
 
+
+::: {.notes}
+
+- GNU people made a lot of the software early on.  
+- Also Unix people, BSD people, X11 people, and a whole bunch of other
+  people.
+- Then the Linux kernel came along, became successful, and people
+  started to call the whole combination of all these things "Linux".  
+
+:::
 
 <!-- ## Environment variables -->
 
@@ -178,6 +209,14 @@ Unix slogan: Everything is a file!
 
 25 directories
 ```
+
+::: {.notes}
+
+- Directories and files are organized in a tree like structure.
+- Well, and inverted tree.
+- At the bottom (or top?), you have the "/" directory.
+
+:::
 
 ## Your home directory
 
