@@ -4,7 +4,7 @@ date: "2024-05-08"
 date-modified: last-modified
 aliases:
   - "/theme2/SF100/"
-
+  - "/theme2/SF100/linux-commandline-scripting.md"
 resources:
   - cheat-sheet.pdf
 ---
