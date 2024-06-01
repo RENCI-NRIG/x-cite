@@ -42,7 +42,7 @@ Getting into CLASSE Linux systems
 
 - Options:
 
-  - Use ssh
+  - Use `ssh`
   - Use NoMachine
   - Use JupyterLab
 
