@@ -53,6 +53,20 @@ Getting into CLASSE Linux systems
 
 `ssh ${username}@lnx201.classe.cornell.edu`
 
+- Use terminal or iTerm on macOS.
+- Use whichever terminal you want on Linux.
+- Use PuTTY (<https://putty.org/>) on Windows.
+
+
+::: {.notes}
+
+- Use terminal or iTerm on macOS.  There are other choices too, but
+  these seem popular.
+- Use whatever terminal you want on Linux.  You know what you are
+  doing, and you know how to figure out stuff.
+- Use PuTTY on Windows.  I am not up to speed on Windows.
+
+:::
 
 ## Use NoMachine
 
