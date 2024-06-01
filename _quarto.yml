@@ -9,7 +9,8 @@ website:
     left:
       - href: index.md
         text: Home
-      - about.md
+      - href: about.md
+        text: About
   page-footer:
     border: true
     center: |-
