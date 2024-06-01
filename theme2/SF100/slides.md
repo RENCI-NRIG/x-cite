@@ -221,20 +221,23 @@ Unix slogan: Everything is a file!
 ## Your home directory
 
 - You have a "home" directory.
-- Usually `/home/$USER`
-   - Also `$HOME`
-- You can write your files and create directories here.
+  - You can write your files and create directories here.
+- Usually, and on `lnx201`, this will be `/home/$USER`
+   - Also known as `$HOME`
 
-<!--
+::: {.notes} 
 
-   - Don't write too much when on `lnx201` though...
+- The stuff that follows `$` are environment variables aka env vars.
+  They are sort of key-value pairs managed by the shell.
+- There are a set of standard env vars such as `$USER`, `$HOME`,
+  `$SHELL` etc.
 
-TODO: double check with werner
+- Don't write too much on your home directory.
+- There are better places top store large amounts of data.
+- I am not the expert here. Ask around, or wait for the next
+  presenter.
 
-## your home directory on `lnx201`
-
--->
-
+:::
 
 ## The current working directory
 
