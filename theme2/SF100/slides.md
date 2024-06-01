@@ -245,7 +245,8 @@ Unix slogan: Everything is a file!
 
 - At any time in the shell, you are "inside" a single directory,
   called the **current working directory**.
-- When you log in, your current work will be `/home/${username}`.
+- When you log in, your current working directory will be your home
+  directory: `/home/$USER` aka `$HOME`.
 - You will use `cd` (change directory) to move around.
 - Use the command `pwd` to find where you are.
 
