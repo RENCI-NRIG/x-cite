@@ -987,6 +987,8 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 
 <!-- [![](cheat-sheet.png){height=600}](cheat-sheet.pdf) -->
 
+[A printable PDF [cheat sheet](cheat-sheet.pdf) of useful commands
+also is available.]{.aside}
 
 | Command         | Description                                        |
 |-----------------|----------------------------------------------------|
