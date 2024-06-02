@@ -279,6 +279,7 @@ Unix slogan: Everything is a file!
 
 - Names that begin with "." are "hidden".
   - Omitted from directory listing when you do `ls`.
+  - Do `ls -a` (or `ls --all`) to list them.
 
 - `.` and `..` are special directory names.
   - `.` stands for the current directory.
@@ -288,10 +289,13 @@ Unix slogan: Everything is a file!
 ## More fun facts about file names
   
 - File and directory names are case sensitive.
-  - (Depends on filesystem, but that is a detail.)
-- Better to avoid spaces in file names, because they are a hassle.
+  - Depends on filesystem, but that is a detail.
+- It is better to avoid spaces in file names, because they are a
+  hassle.
   - Use `_` (underscore character) instead (example: `file_name`), or
     CamelCase (example: `FileName`).
+  - Quote paths within `"` and `"` if they happen to have spaces, or
+    "escape" each space with `\`.
 
 ## Wildcards
 
