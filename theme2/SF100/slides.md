@@ -84,6 +84,13 @@ Getting into CLASSE Linux systems
 
 <https://jupyter01.classe.cornell.edu/>
 
+::: {.notes}
+
+- Use the terminal icon on the launcher.
+- Or use File -> New -> Terminal
+ 
+:::
+
 
 # Linux, command line, etc.
 
