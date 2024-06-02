@@ -242,16 +242,28 @@ Unix slogan: Everything is a file!
 
 :::
 
+## Those `$WHATEVER` things
+
+- What are `$HOME`, `$USER`, `$PATH`, `$SHELL`, etc.?
+- They are called **environment variables**, or **env vars**.
+- Env vars are pieces of information maintained by the shell.
+- Programs can use them during execution.
+- Use `printenv` or `env` command to list them.
+
+
 ## The current working directory
 
 "Wherever you go, there you are"
 
 - At any time in the shell, you are "inside" a single directory,
   called the **current working directory**.
+   - When you do `ls`, files in current working directory will be
+     listed, etc.
 - When you log in, your current working directory will be your home
   directory: `/home/$USER` aka `$HOME`.
 - You will use `cd` (change directory) to move around.
 - Use the command `pwd` to find where you are.
+   - Or `echo $PWD`.
 
 
 ## Absolute and relative paths
