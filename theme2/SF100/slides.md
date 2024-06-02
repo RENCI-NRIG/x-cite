@@ -517,8 +517,18 @@ Many choices! Use:
 
 ## Terminal multiplexers
 
+`screen` and `tmux` are two options.  Here's `tmux`.
+
 ![](tmux.png)
 
+::: {.notes}
+
+- You can "multiplex" your terminal. 
+- Different shells in different "windows".
+- You can split panes vertically or horizontally.
+- You can detach and re-attach, and resume your work.
+
+:::
 
 # Shell scripts
 
