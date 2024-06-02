@@ -386,6 +386,7 @@ drwxr-xr-x  2 ssasidharan chess  144 Mar 12 00:27 CLASSE_shortcuts
 drwxr-xr-x  2 ssasidharan chess   52 Apr  2 00:27 Desktop
 drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Documents
 lrwxrwxrwx  1 ssasidharan chess   31 Mar 26 15:21 Downloads -> /cdat/tem/ssasidharan/Downloads
+-rw-r--r--  1 ssasidharan chess   54 Jun  2 12:38 hello.sh
 drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Music
 drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Pictures
 drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Public
