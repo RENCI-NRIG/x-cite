@@ -568,8 +568,6 @@ BUT
 
 # Resources elsewhere
 
-- [Shell Tools and Scripting][missing] module of MIT "The Missing
-  Semester of Your CS Education" class.
 - [The Linux Command Line, A Complete Introduction][tlcl] by William
   E. Shotts, Jr.  The book is freely available under a Creative
   Commons license, and contains a good discussion about shell
@@ -577,6 +575,8 @@ BUT
 - [The Unix Programming Environment][tupe] by Brian W. Kernighan and
   Rob Pike.  Good old classic, still useful.  Places things in a
   historical context.
+- [Shell Tools and Scripting][missing] module of MIT "The Missing
+  Semester of Your CS Education" class.
 
 
 # Fin!
