@@ -578,9 +578,13 @@ BUT
 - [Shell Tools and Scripting][missing] module of MIT "The Missing
   Semester of Your CS Education" class.
 
-
-# Fin!
-
 [missing]: https://missing.csail.mit.edu/2020/shell-tools/
 [tlcl]: http://linuxcommand.org/tlcl.php
 [tupe]: https://archive.org/details/UNIXProgrammingEnvironment
+
+
+# Fin!
+
+<https://xcitecourse.org/theme2/sf100/>
+
+Contributions are welcome!
