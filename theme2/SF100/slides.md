@@ -290,7 +290,7 @@ Unix slogan: Everything is a file!
    - Example: `./Documents/hello.txt` (or just `Documents/hello.txt`)
      when I'm in my home directory.
 
-## Fun facts about file names
+## Some fun facts about file names
 
 - Names that begin with "." are "hidden".
   - Omitted from directory listing when you do `ls`.
