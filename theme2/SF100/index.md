@@ -3,7 +3,9 @@ title: "Linux, Command Line, and Scripting"
 date: "2024-05-08"
 date-modified: last-modified
 aliases:
-  - "/theme2/SF100/"
+  - "/theme2/SF100/linux-commandline-scripting.md"
+resources:
+  - cheat-sheet.pdf
 ---
 
 The following notes assume that you are all set up to use your
@@ -25,10 +27,9 @@ systems.
 ::: {.callout-note}
 
 Slides accompanying these notes are available in [HTML][html-slides]
-and [PDF][pdf-slides] formats.
+format.
 
 [html-slides]: slides.html
-[pdf-slides]: slides.pdf
 
 :::
 
@@ -982,6 +983,11 @@ Run the command `man 7 signal` to read `signal` command's manual page.
 
 
 # A list of (hopefully) useful commands
+
+<!-- [![](cheat-sheet.png){height=600}](cheat-sheet.pdf) -->
+
+[A printable PDF [cheat sheet](cheat-sheet.pdf) of useful commands
+also is available.]{.aside}
 
 | Command         | Description                                        |
 |-----------------|----------------------------------------------------|

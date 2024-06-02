@@ -62,7 +62,7 @@ This is the training overview:
 [pe103-testing]: ./theme1/PE103/testing.md
 [pe103-debugging]: ./theme1/PE103/debugging.md
 
-[sf100]: ./theme2/SF100/linux-commandline-scripting.md
+[sf100]: ./theme2/SF100/index.md
 [sf101]: ./theme2/SF101/containers-and-virtualization.md
 [sf200]: ./theme2/SF200/parallel-computing.md
 [sf201]: ./theme2/SF201/batch-systems-and-compute-farms.md

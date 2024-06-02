@@ -5,6 +5,9 @@ subtitle: "Linux, command line, scripting"
 # subtitle: "X-CITE 2024 workshop"
 # author: "Sajith Sasidharan"
 date: 2024-06-05
+
+code-annotations: hover
+
 format:
   revealjs:
     theme: default
@@ -28,14 +31,7 @@ format:
   pptx:
     theme: default
     slide-level: 2
-    reference-doc: ../../assets/reference.pptx
-
-  beamer:
-    # aspectratio: 32
-    # navigation: horizontal
-    theme: default
-    slide-level: 2
-    # logo: ../../images/x-cite-logo-2.png
+    # reference-doc: ../../assets/reference.pptx
 ---
 
 # Preliminaries
@@ -49,7 +45,7 @@ Getting into CLASSE Linux systems
 
 - Options:
 
-  - Use ssh
+  - Use `ssh`
   - Use NoMachine
   - Use JupyterLab
 
@@ -60,6 +56,20 @@ Getting into CLASSE Linux systems
 
 `ssh ${username}@lnx201.classe.cornell.edu`
 
+- Use terminal or iTerm on macOS.
+- Use whichever terminal you want on Linux.
+- Use PuTTY (<https://putty.org/>) on Windows.
+
+
+::: {.notes}
+
+- Use terminal or iTerm on macOS.  There are other choices too, but
+  these seem popular.
+- Use whatever terminal you want on Linux.  You know what you are
+  doing, and you know how to figure out stuff.
+- Use PuTTY on Windows.  I am not up to speed on Windows.
+
+:::
 
 ## Use NoMachine
 
@@ -68,11 +78,26 @@ Getting into CLASSE Linux systems
 <https://wiki.classe.cornell.edu/Computing/NoMachine>
 
 
+::: {.notes}
+
+- There is a client that you can install.
+- There is also web access, which I have used a few times. Seemed
+shaky.
+
+:::
+
 ## Use JupyterLab
 
 ![](jupyter01.png)
 
 <https://jupyter01.classe.cornell.edu/>
+
+::: {.notes}
+
+- Use the terminal icon on the launcher.
+- Or use File -> New -> Terminal
+ 
+:::
 
 
 # Linux, command line, etc.
@@ -92,17 +117,36 @@ Getting into CLASSE Linux systems
 - Runs a **distribution** called Scientific Linux.
 - Good enough for general use.
 - Do not run anything resource heavy on `lnx201`.
+  - "Heavy" in terms CPU, memory, network usage etc.
+  - `lnx201` is a shared resource.
+- There is a [Compute Farm] to run heavy things.
 
+
+[Compute Farm]: https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro
+
+::: {.notes}
+
+- I am not the expert on lnx201 or compute farm. I just happen to
+  present today!
+
+:::
 
 ## The command line
 
 ![](lnx201.png)
 
-- You will type **commands** in a **shell**, hint
-  {{<kbd enter>}} key, and then things happen.
+- You will type **commands** in a **shell**, at the **shell prompt**,
+  hit {{<kbd enter>}} key, and then things happen.
 
-  <!-- - All of this is a text user interface. -->
-  <!-- - As opposed to clicking on GUI widgets. -->
+::: {.notes}
+
+  - All of this is a text user interface.
+  - As opposed to clicking on GUI widgets.
+  
+  - The prompt is that piece of text that begins with `[` and ends
+    with `] $`.  They can look different too.
+  
+:::  
 
 ## Commands
 
@@ -113,11 +157,25 @@ Getting into CLASSE Linux systems
   - `info ${command}`
   - or `${command} --help` (sometimes!)
 
+::: {.notes}
+
+- Programs can be compiled or scripts.
+- They live somewhere in your `$PATH`.
+
+:::
+
 ## The shell
 
 - A program that accepts commands, and passes those commands to the OS
   to execute.
 - A popular shell is `bash`, which is the default on `lnx201`.
+
+::: {.notes}
+
+Of course there are other shells too: zsh (default on newer versions
+of macOS, fish, ksh, etc.
+
+:::
 
 
 ## Bash
@@ -130,6 +188,16 @@ Getting into CLASSE Linux systems
 
 [gnu]: http://gnu.org/
 
+
+::: {.notes}
+
+- GNU people made a lot of the software early on.  
+- Also Unix people, BSD people, X11 people, and a whole bunch of other
+  people.
+- Then the Linux kernel came along, became successful, and people
+  started to call the whole combination of all these things "Linux".  
+
+:::
 
 <!-- ## Environment variables -->
 
@@ -172,22 +240,42 @@ Unix slogan: Everything is a file!
 25 directories
 ```
 
+::: {.notes}
+
+- Directories and files are organized in a tree like structure.
+- Well, and inverted tree.
+- At the bottom (or top?), you have the "/" directory.
+
+:::
+
 ## Your home directory
 
 - You have a "home" directory.
-- Usually `/home/$USER`
-   - Also `$HOME`
-- You can write your files and create directories here.
+  - You can write your files and create directories here.
+- Usually, and on `lnx201`, this will be `/home/$USER`
+   - Also known as `$HOME`
 
-<!--
+::: {.notes} 
 
-   - Don't write too much when on `lnx201` though...
+- The stuff that follows `$` are environment variables aka env vars.
+  They are sort of key-value pairs managed by the shell.
+- There are a set of standard env vars such as `$USER`, `$HOME`,
+  `$SHELL` etc.
 
-TODO: double check with werner
+- Don't write too much on your home directory.
+- There are better places top store large amounts of data.
+- I am not the expert here. Ask around, or wait for the next
+  presenter.
 
-## your home directory on `lnx201`
+:::
 
--->
+## Those `$WHATEVER` things
+
+- What are `$HOME`, `$USER`, `$PATH`, `$SHELL`, etc.?
+- They are called **environment variables**, or **env vars**.
+- Env vars are pieces of information maintained by the shell.
+- Programs can use them during execution.
+- Use `printenv` or `env` command to list them.
 
 
 ## The current working directory
@@ -196,9 +284,13 @@ TODO: double check with werner
 
 - At any time in the shell, you are "inside" a single directory,
   called the **current working directory**.
-- When you log in, your current work will be `/home/${username}`.
+   - When you do `ls`, files in current working directory will be
+     listed, etc.
+- When you log in, your current working directory will be your home
+  directory: `/home/$USER` aka `$HOME`.
 - You will use `cd` (change directory) to move around.
 - Use the command `pwd` to find where you are.
+   - Or `echo $PWD`.
 
 
 ## Absolute and relative paths
@@ -210,10 +302,11 @@ TODO: double check with werner
    - Example: `./Documents/hello.txt` (or just `Documents/hello.txt`)
      when I'm in my home directory.
 
-## Fun facts about file names
+## Some fun facts about file names
 
 - Names that begin with "." are "hidden".
   - Omitted from directory listing when you do `ls`.
+  - Do `ls -a` (or `ls --all`) to list them.
 
 - `.` and `..` are special directory names.
   - `.` stands for the current directory.
@@ -223,10 +316,13 @@ TODO: double check with werner
 ## More fun facts about file names
   
 - File and directory names are case sensitive.
-  - (Depends on filesystem, but that is a detail.)
-- Better to avoid spaces in file names, because they are a hassle.
+  - Depends on filesystem, but that is a detail.
+- It is better to avoid spaces in file names, because they are a
+  hassle.
   - Use `_` (underscore character) instead (example: `file_name`), or
     CamelCase (example: `FileName`).
+  - Quote paths within `"` and `"` if they happen to have spaces, or
+    "escape" each space with `\`.
 
 ## Wildcards
 
@@ -333,6 +429,7 @@ drwxr-xr-x  2 ssasidharan chess  144 Mar 12 00:27 CLASSE_shortcuts
 drwxr-xr-x  2 ssasidharan chess   52 Apr  2 00:27 Desktop
 drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Documents
 lrwxrwxrwx  1 ssasidharan chess   31 Mar 26 15:21 Downloads -> /cdat/tem/ssasidharan/Downloads
+-rw-r--r--  1 ssasidharan chess   54 Jun  2 12:38 hello.sh
 drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Music
 drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Pictures
 drwxr-xr-x  2 ssasidharan chess   28 Apr  2 00:27 Public
@@ -432,20 +529,34 @@ Many choices! Use:
 
 ## Terminal multiplexers
 
+`screen` and `tmux` are two options.  Here's `tmux`.
+
 ![](tmux.png)
 
+::: {.notes}
+
+- You can "multiplex" your terminal. 
+- Different shells in different "windows".
+- You can split panes vertically or horizontally.
+- You can detach and re-attach, and resume your work.
+
+:::
 
 # Shell scripts
 
 ## Hello world!
 
 ```{.bash filename=hello.sh code-line-numbers="true"}
-#! /bin/bash
+#! /bin/bash          # <1>
 
-# A simple script.
+# A simple script.    # <2>
 
-echo "Hello $USER!"
+echo "Hello $USER!"   # <3>
 ```
+
+1. The "shebang"
+2. A comment.
+3. An actual line of code.
 
 - Make the thing executable with `chmod +x hello.sh`
 - Run the thing with `./hello.sh`
@@ -465,17 +576,29 @@ BUT
 - We're likely out of time anyway
 
 
+## Demo maybe? {visibility="hidden"}
+
+- `ssh`
+- `tmux`
+- that shell script
+- `chmod`
+- run the shell script
+
+
 # Some resources
 
 # A cheat sheet
 
-[![](cheat-sheet.png){height=600}](cheat-sheet.png)
+[![](cheat-sheet.png){height=600}](cheat-sheet.pdf)
+
+
+(Via [Stephen Turner][cheat-sheet-source].)
+
+[cheat-sheet-source]: https://gettinggeneticsdone.blogspot.com/2009/03/linux-command-line-cheat-sheet.html
 
 
 # Resources elsewhere
 
-- [Shell Tools and Scripting][missing] module of MIT "The Missing
-  Semester of Your CS Education" class.
 - [The Linux Command Line, A Complete Introduction][tlcl] by William
   E. Shotts, Jr.  The book is freely available under a Creative
   Commons license, and contains a good discussion about shell
@@ -483,10 +606,16 @@ BUT
 - [The Unix Programming Environment][tupe] by Brian W. Kernighan and
   Rob Pike.  Good old classic, still useful.  Places things in a
   historical context.
-
-
-# Fin!
+- [Shell Tools and Scripting][missing] module of MIT "The Missing
+  Semester of Your CS Education" class.
 
 [missing]: https://missing.csail.mit.edu/2020/shell-tools/
 [tlcl]: http://linuxcommand.org/tlcl.php
 [tupe]: https://archive.org/details/UNIXProgrammingEnvironment
+
+
+# Fin!
+
+<https://xcitecourse.org/theme2/sf100/>
+
+Contributions are welcome!
