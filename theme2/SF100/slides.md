@@ -117,7 +117,19 @@ shaky.
 - Runs a **distribution** called Scientific Linux.
 - Good enough for general use.
 - Do not run anything resource heavy on `lnx201`.
+  - "Heavy" in terms CPU, memory, network usage etc.
+  - `lnx201` is a shared resource.
+- There is a [Compute Farm] to run heavy things.
 
+
+[Compute Farm]: https://wiki.classe.cornell.edu/Computing/ComputeFarmIntro
+
+::: {.notes}
+
+- I am not the expert on lnx201 or compute farm. I just happen to
+  present today!
+
+:::
 
 ## The command line
 
