@@ -58,7 +58,7 @@ This is the training overview:
 [pe102]: ./theme1/PE102/index.qmd
 [pe103]: ./theme1/PE103/vcs-testing-debugging.md
 
-[pe103-vcs]: ./theme1/PE103//vcs.qmd
+[pe103-vcs]: ./theme1/PE103/vcs.qmd
 [pe103-testing]: ./theme1/PE103/testing.md
 [pe103-debugging]: ./theme1/PE103/debugging.md
 
