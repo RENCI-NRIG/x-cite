@@ -5,6 +5,9 @@ subtitle: "Linux, command line, scripting"
 # subtitle: "X-CITE 2024 workshop"
 # author: "Sajith Sasidharan"
 date: 2024-06-05
+
+code-annotations: hover
+
 format:
   revealjs:
     theme: default
@@ -490,12 +493,16 @@ Many choices! Use:
 ## Hello world!
 
 ```{.bash filename=hello.sh code-line-numbers="true"}
-#! /bin/bash
+#! /bin/bash          # <1>
 
-# A simple script.
+# A simple script.    # <2>
 
-echo "Hello $USER!"
+echo "Hello $USER!"   # <3>
 ```
+
+1. The "shebang"
+2. A comment.
+3. An actual line of code.
 
 - Make the thing executable with `chmod +x hello.sh`
 - Run the thing with `./hello.sh`
