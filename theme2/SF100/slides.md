@@ -78,6 +78,14 @@ Getting into CLASSE Linux systems
 <https://wiki.classe.cornell.edu/Computing/NoMachine>
 
 
+::: {.notes}
+
+- There is a client that you can install.
+- There is also web access, which I have used a few times. Seemed
+shaky.
+
+:::
+
 ## Use JupyterLab
 
 ![](jupyter01.png)
