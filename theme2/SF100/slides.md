@@ -564,6 +564,15 @@ BUT
 - We're likely out of time anyway
 
 
+## Demo maybe? {visibility="hidden"}
+
+- `ssh`
+- `tmux`
+- that shell script
+- `chmod`
+- run the shell script
+
+
 # Some resources
 
 # A cheat sheet
