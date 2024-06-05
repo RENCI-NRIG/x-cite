@@ -524,14 +524,17 @@ The four columns:
 - `TIME` is the elapsed CPU time for the process.
 - `CMD` is the command that created the process.
 
+::: {.notes}
 
 (Also see: `top` and `htop`.)
+
+:::
 
 ## Background and foreground processes
 
 - Some processes run in the foreground:
    - They read input, write output, etc.
-   - Attached to a terminal.
+   - They are "attached" to a terminal.
 - Background processes, well, run in the background.  Send things to
   the background with `&`:
 
