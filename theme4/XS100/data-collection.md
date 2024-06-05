@@ -54,13 +54,13 @@ Every experimental station has a **station computer** that acts as controls cent
 
 - The station computer has many special permissions, for instance it is able to *write* to the the CHESS DAQ (**raw** directory). When saving files such as beamtime notes, it is important to save these in the directories prescribed by your beamline scientist. (link to later section on CHESS file system and directories)
 
-<img src="./xs100-figures/AnnotatedStationComputer.png" alt="annotatedstationcomputer" width="1000"/> 
+<img src="./xs100-figures/AnnotatedStationComputer.png" alt="annotatedstationcomputer" width="700"/> 
 
 This is an example of a station computer screen shot with many processes. There are 4 desktops on the station computer, each with windows spanning 4 screens. This image is of the first desktop and shows a main controls terminal (SPEC), controls screens (MEDM screens), a data reduction GUI (HEXRD). There will typically be even more processes running than this. 
 
 Every beamline will have a unique version of this computer - some techniques even may be executed exclusively through a GUI. 
 
-#### Controls Hardware, Software, and Signal Monitoring
+###1 Controls Hardware, Software, and Signal Monitoring
 
 This section will discuss the hardware connections, motor configurations, and overall connectivity of signals being tracked in the beamline. 
 
@@ -149,7 +149,7 @@ The data is still saved, but to transfer or perform analysis on the files you wi
 <img src="./xs100-figures/xcite-overview-datastorage.png" alt="datastorage" width="500"/>
 
 
-#### Bring Your Own Device (BYOD)
+### Bring Your Own Device (BYOD)
 
 Users may need to bring their own devices to be beamline - either physically in the lab or remotely connected to the CHESS networks 
 
@@ -163,7 +163,7 @@ Because the CHESS-DAQ filesystems are a critical resource for data collection, *
 
 *Read access* to the CHESS-DAQ filesystem may be obtained by registering your device for the LNS Protected network using [this request form](https://wiki.classe.cornell.edu/Computing/LaptopRegistration).
 
-#### MetaData Handling
+### MetaData Handling
 
 Ideally, all the data necessary to **fully reproduce your results** are recorded and disseminated in a manner that others can interpret after your experiment. Ideally the provenance remains unbroken from experiment planning.
 
@@ -174,7 +174,7 @@ The **metadata service** (https://wiki.classe.cornell.edu/bin/viewauth/CHESS/Pri
 <img src="./xs100-figures/MetadataService.png" width="700"/>
 
 
-#### On-the-fly Data Processing & Visualization
+### On-the-fly Data Processing & Visualization
 
 Need to be looking at your data as it is coming off for data fidelity. At some beamlines, you will need to interact manually with a GUI to render your images and make sure the data quality is what you are expecting. At some beamlines, the new NSDF (National Data Science Fabric) Dashboard has been deployed for some datatypes which allows interactive visualization of data as it is coming off the beamline. An example can be found here:  https://services.nationalsciencedatafabric.org/chess/. 
 
@@ -182,7 +182,7 @@ Many beamlines have an initial “data reduction” procedure that reduces the s
 
 Some of these processes are software procedures performed on the data after it is written to the raw directory, while other beamlines utilize inline data processing/compression prior to writing their files to the raw directory. Overtime we will build out station specific training on these, for now it is the responsibility of the user to work with their beamline scientist and read any requisite materials they provide. 
 
-#### Data Reduction and Analysis 
+### Data Reduction and Analysis 
 
 <img src="./xs100-figures/xcite-overview-computefarm.png" alt="computefarm" width="500"/>
 
@@ -209,4 +209,5 @@ CHAP pipelines can be executed from a Linux command line or from the Galaxy scie
 
 **Technique/Beamline Specific Software**
 
-
+CHESS has many common X-ray software packages available on the system. 
+Speak with your beamline scientist for the preferred software package for your experiment.
