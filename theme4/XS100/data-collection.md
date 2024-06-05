@@ -111,24 +111,53 @@ To protect the communication signals between the station computer, experimental 
 
 Detectors often have direct fiber optic / high speed data lines to inline computing resources and/or the CHESS-DAQ. 
 
+<img src="./xs100-figures/CHESSFileSystem.png" alt="filesystem"/>
 
-<img src="./xs100-figures/CHESSFileSystem.png" alt="filesystem" />
+The CHESS filesystem has different locations for storing raw data, reduced data, etc. These different locations have different backup schedules and total storage amounts. Typically best practice is as follows: 
+1. Raw Data that cannot be reproduced is located in RAW/DAQ
+2. Reduced Data that *can* be reproduced from Raw Data/Other Protected Data is in REDUCED DATA
+3. Metadata that is small and not reproducible should be saved in METADATA (backed up nightly)
+4. Data that is being produced and does not need to be backed up and could be processed again should be done in SCRATCH. This is a good location for testing code before performing Data Reduction. 
+5. For Data NOT associated with a particular beamtime, USER is an appropriate place for these projects. 
 
+### Protected Data: Intellectual Property (IP) and Export Control
 
+Some data needs to be protected, e.g. data covered under Intellectual Property or Export Control agreements
+
+All such data must be declared and all agreements signed before ANY data is on CHESS/Cornell computing systems (including preparatory material that falls under IP or Export Control categories). 
+
+Data Collection, Storage, and Analysis can be customized to comply with data agreements, including: 
+- Modifying isolated networks
+- Mounting encrypted drives
+- Configuring encrypted computers
+- Modifying permissions on filesystem locations
+- Securing the experimental station with an entry password
+- Disconnecting streaming video to the experimental station
 
 ### Detectors and Data Handling
 <img src="./xs100-figures/xcite-overview-expstation.png" alt="expstation" width="500"/>
 
-
-If you wish to move any data from the CHESS filesystem to another location, the preferred way of doing so is through Globus. Please see here (LINK CHESS computing) for directions on ways to transfer data from the CHESS filesystem. 
+If you wish to move any data from the CHESS filesystem to another location, the preferred way of doing so is through Globus. Please see here (https://wiki.classe.cornell.edu/Computing/GlobusDataTransfer) for directions on ways to transfer data from the CHESS filesystem. 
 
 Your beamline may be producing very large quantities of data. Due to it's size, you may not be able to take your data home or transfer it home via globus. your data in raw may only stay in hot storage for a short amount of time (6 months). Your experimental station will have best practices for how to compress or reduce this data so that it is small enough to take home or live in a different part of our filesystem. 
 
+<img src="./xs100-figures/HotWarmColdStorage.png>
+
+The data is still saved, but to transfer or perform analysis on the files you will need to arrange to have it rolled back into “hot storage” - AKA take out an IT ticket: https://wiki.classe.cornell.edu/Computing/ServiceRequestTips  
+
+
 <img src="./xs100-figures/xcite-overview-datastorage.png" alt="datastorage" width="500"/>
 
-All data is currently saved at CHESS. The data that is living in cold storage can be restored to hot storage if needed - the process for this is located here (LINK CHESS Computing). 
 
 #### Bring Your Own Device (BYOD)
+
+Users may need to bring their own devices to be beamline - either physically in the lab or remotely connected to the CHESS networks 
+
+Examples include:
+- Controls computer for equipment they have integrated for an experiment
+- Analysis computer for on-the-fly analysis
+
+All devices must be approved at least two weeks in advance. It may not be possible to consider integration on a shorter time period.
 
 Because the CHESS-DAQ filesystems are a critical resource for data collection, *write access* is only granted to registered devices on the CHESS-DAQ network. If you wish to bring your own device to write data to the CHESS-DAQ, please discuss your needs with your staff scientist at least one month before your beamtime. Before your device can be registered on the CHESS-DAQ, it must undergo a cybersecurity evaluation by CLASSE-IT.
 
@@ -136,8 +165,13 @@ Because the CHESS-DAQ filesystems are a critical resource for data collection, *
 
 #### MetaData Handling
 
-Metadata Considerations: 
-There will be many parallel datastreams being collected - critical to interpreting your data. These may be located in many different locations. Introduce EPICS IOCs, spec.logs, other files. These will be critical to your data reduction. 
+Ideally, all the data necessary to **fully reproduce your results** are recorded and disseminated in a manner that others can interpret after your experiment. Ideally the provenance remains unbroken from experiment planning.
+
+Metadata and parallel data streams are generated at every stage of your experiment. CHESS is continuing to develop and implement services to help with this creation. From programs like Galaxy, to our Metadata service - 
+
+The **metadata service** (https://wiki.classe.cornell.edu/bin/viewauth/CHESS/Private/CHESSMetadataService) provides tools to record and automatically ingest machine-readable metadata in a systematic way. It includes variables that historically were not recorded via a second data stream (e.g. the material processing parameters).
+
+<img src="./xs100-figures/MetadataService.png"/>
 
 
 #### On-the-fly Data Processing & Visualization
@@ -174,6 +208,3 @@ CHAP pipelines can be executed from a Linux command line or from the Galaxy scie
 **Technique/Beamline Specific Software**
 
 
-
-Example Problem: 
-- End Walk through a version of taking and collecting a dataset that will be done in the hands-on portion in the afternoon. 
