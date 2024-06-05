@@ -4,6 +4,8 @@ project:
 website:
   title: "X-CITE"
   favicon: /images/logo.png
+  site-url: https://xcitecourse.org
+  twitter-card: true
 
   navbar:
     left:

@@ -246,8 +246,14 @@ Unix slogan: Everything is a file!
 | `cp -r` | copy a folder to into another directory                                     | `cp [file.txt] [/tmp/file.txt]` |
 | `mv`    | rename or move a file into another directory                                | `mv [file.txt] [file1.txt]`     |
 | `rm`    | delete a file                                                               | `rm [file.txt]`                 |
-| `mkdir` | create a directory                                                          | `mkdir [dir]`                   |
 | `rm -r` | remove a directory, recursively                                             | `rm -r [dir]`                   |
+| `mkdir` | create a directory                                                          | `mkdir [dir]`                   |
+| `find`  | find a file                                                                 | `find [/tmp] -name [file]`      |
+| `grep`  | search for a text pattern inside a file                                     | `grep [text] [/tmp/file.txt]`   |
+| `less`  | to view the text of a text file, one screen at a time                       | `less [/tmp/file.txt]`          |
+| `exit`  | exit and logout of a Terminal (Terminal-xfce4) session                      | `exit`                          |
+
+Source: <https://wiki.classe.cornell.edu/Computing/SummerStudentOrientation#Linux_Command_Line_40ls_44_cd_44_mv_44_find_44_grep_etc_41>
 
 
 ## Directory navigation
@@ -637,7 +643,7 @@ BUT
 
 # Some resources
 
-# A cheat sheet
+## A cheat sheet
 
 [![](cheat-sheet.png){height=600}](cheat-sheet.pdf)
 
@@ -647,7 +653,7 @@ BUT
 [cheat-sheet-source]: https://gettinggeneticsdone.blogspot.com/2009/03/linux-command-line-cheat-sheet.html
 
 
-# Resources elsewhere
+## Resources elsewhere
 
 - [The Linux Command Line, A Complete Introduction][tlcl] by William
   E. Shotts, Jr.  The book is freely available under a Creative
@@ -664,7 +670,7 @@ BUT
 [tupe]: https://archive.org/details/UNIXProgrammingEnvironment
 
 
-# Other resources 
+## Other resources 
 
 - The Internet is pretty great. Use it.
 - However: DO NOT trust everything you read on the Internet.
