@@ -220,6 +220,16 @@ of macOS, fish, ksh, etc.
 
 :::
 
+## Bash niceties: history and completion
+
+- You do not have to re-type commands that you have used in the past!
+  - Use {{<kbd up>}} and {{<kbd down>}} arrow keys to go back and forth
+  in your command history.
+  - Use {{<kbd Ctrl-R>}} (Control+R) to "search" command history.
+  - Use `history` command to list your shell history.
+- Use {{<kbd tab>}} key for command completion, after typing a few
+  characters.
+
 # Files and directories
 
 Unix slogan: Everything is a file!
