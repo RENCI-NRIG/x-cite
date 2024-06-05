@@ -654,8 +654,8 @@ BUT
   Commons license, and contains a good discussion about shell
   scripting.
 - [The Unix Programming Environment][tupe] by Brian W. Kernighan and
-  Rob Pike.  Good old classic, still useful.  Places things in a
-  historical context.
+  Rob Pike.  Old classic, still useful.  Places things in a historical
+  context.
 - [Shell Tools and Scripting][missing] module of MIT "The Missing
   Semester of Your CS Education" class.
 
@@ -669,3 +669,10 @@ BUT
 <https://xcitecourse.org/theme2/sf100/>
 
 Contributions are welcome!
+
+::: {.notes}
+
+- Report issues!
+- Send your pull requests!
+
+:::
