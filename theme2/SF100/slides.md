@@ -264,7 +264,7 @@ Unix slogan: Everything is a file!
 ::: {.notes}
 
 - Directories and files are organized in a tree like structure.
-- Well, and inverted tree.
+- Well, an inverted tree, maybe.
 - At the bottom (or top?), you have the "/" directory.
 
 :::
@@ -315,6 +315,8 @@ Unix slogan: Everything is a file!
 
 
 ## Absolute and relative paths
+
+File/folder names are also referred to as **paths**.
 
 - **Absolute path names** begin with the root directory, `/`.
    - Example: `/home/ssasidharan/Documents/hello.txt`
