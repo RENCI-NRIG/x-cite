@@ -358,7 +358,7 @@ File/folder names are also referred to as **paths**.
   - `..` stands for the directory above the current directory.
   
   
-## More fun facts about file names
+## Some more fun facts about file names
   
 - File and directory names are case sensitive.
   - Depends on filesystem, but that is a detail.
