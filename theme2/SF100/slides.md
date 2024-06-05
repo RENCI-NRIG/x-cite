@@ -323,7 +323,7 @@ Unix slogan: Everything is a file!
 
 ## The current working directory
 
-"Wherever you go, there you are"
+<!-- "Wherever you go, there you are" -->
 
 - At any time in the shell, you are "inside" a single directory,
   called the **current working directory**.
