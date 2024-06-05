@@ -81,7 +81,7 @@ SPEC commands continued.
 
 Below is a video of a SPEC command window with built-in and custom macros. 
 
-<video controls> <source src="./xs100-figures/XCITE_SPEC.mov" type="video/mp4"></video>
+<video controls> <source src="./xs100-figures/XCITE_SPEC.mp4" type="video/mp4"></video>
 
 **EPICS**
 
@@ -141,7 +141,7 @@ If you wish to move any data from the CHESS filesystem to another location, the 
 
 Your beamline may be producing very large quantities of data. Due to it's size, you may not be able to take your data home or transfer it home via globus. your data in raw may only stay in hot storage for a short amount of time (6 months). Your experimental station will have best practices for how to compress or reduce this data so that it is small enough to take home or live in a different part of our filesystem. 
 
-<img src="./xs100-figures/HotWarmColdStorage.png>
+<img src="./xs100-figures/HotWarmColdStorage.png" alt="hotcoldstorage" width="400"/>
 
 The data is still saved, but to transfer or perform analysis on the files you will need to arrange to have it rolled back into “hot storage” - AKA take out an IT ticket: https://wiki.classe.cornell.edu/Computing/ServiceRequestTips  
 
@@ -176,9 +176,11 @@ The **metadata service** (https://wiki.classe.cornell.edu/bin/viewauth/CHESS/Pri
 
 #### On-the-fly Data Processing & Visualization
 
-Need to be looking at your data as it is coming off for data fidelity. Few ways this is facilitated : Introduce programs that are commonly used
-Small plug for NSDF and on the fly monitoring efforts
-Some beamlines are doing in-line processing > include firmware, software etc. Your data is being processed on the fly - it is important to understand what is being done and why on your behalf. This is heterogeneous across the beamlines. Overtime we will build out station specific training on these, for now it is the responsibility of the user to work with their beamline scientist and read any requisite materials they provide. 
+Need to be looking at your data as it is coming off for data fidelity. At some beamlines, you will need to interact manually with a GUI to render your images and make sure the data quality is what you are expecting. At some beamlines, the new NSDF (National Data Science Fabric) Dashboard has been deployed for some datatypes which allows interactive visualization of data as it is coming off the beamline. An example can be found here:  https://services.nationalsciencedatafabric.org/chess/. 
+
+Many beamlines have an initial “data reduction” procedure that reduces the size of the data through compression or on-the-fly analysis to have smaller file sizes that are more manageable to analyze at your home institution. 
+
+Some of these processes are software procedures performed on the data after it is written to the raw directory, while other beamlines utilize inline data processing/compression prior to writing their files to the raw directory. Overtime we will build out station specific training on these, for now it is the responsibility of the user to work with their beamline scientist and read any requisite materials they provide. 
 
 #### Data Reduction and Analysis 
 
