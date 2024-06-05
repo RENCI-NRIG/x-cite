@@ -643,7 +643,7 @@ BUT
 
 # Some resources
 
-# A cheat sheet
+## A cheat sheet
 
 [![](cheat-sheet.png){height=600}](cheat-sheet.pdf)
 
@@ -653,7 +653,7 @@ BUT
 [cheat-sheet-source]: https://gettinggeneticsdone.blogspot.com/2009/03/linux-command-line-cheat-sheet.html
 
 
-# Resources elsewhere
+## Resources elsewhere
 
 - [The Linux Command Line, A Complete Introduction][tlcl] by William
   E. Shotts, Jr.  The book is freely available under a Creative
@@ -670,7 +670,7 @@ BUT
 [tupe]: https://archive.org/details/UNIXProgrammingEnvironment
 
 
-# Other resources 
+## Other resources 
 
 - The Internet is pretty great. Use it.
 - However: DO NOT trust everything you read on the Internet.
