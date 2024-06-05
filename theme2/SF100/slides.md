@@ -530,7 +530,7 @@ The four columns:
 
 :::
 
-## Background and foreground processes
+## Background and foreground processes {.smaller}
 
 - Some processes run in the foreground:
    - They read input, write output, etc.
@@ -555,7 +555,8 @@ sleep 100
 ## Terminating processes
 
 - `kill PID` command to end one process.
-- `killall` command to end many processes
+- `killall` command to end many processes.
+  - You can't `kill` other user's processes.
 
 <!--
 
