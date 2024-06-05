@@ -103,15 +103,7 @@ You may have specific other software: Python scripts (link to python tutorial), 
 
 ## Networks and Filesystems
 
-<img src="./xs100-figures/xcite-overview-connections.png" alt="network" width="500"/>
-
-*insert image of "station computer" connected to "controls racks" connected to "experimental hutch" connected to DAQ and File system and Compute Farm - this time the image is highlighting the connection to the DAQ* 
-
-The primary networks at the experimental stations are:
-- CHESS-DAQ Network
-- Isolated Station Network
-- CHESS Public 
-- CLASSE Public
+<img src="./xs100-figures/chessNetworks.png" alt="network"/>
 
 During data collection, raw data is written directly to the **CHESS-DAQ** filesystems. The CHESS-DAQ consists of approximately 2 petabytes of dedicated online storage arrays connected to the CHESS experimental stations through a high-speed 10Gb data collection network.
 
@@ -119,9 +111,12 @@ To protect the communication signals between the station computer, experimental 
 
 Detectors often have direct fiber optic / high speed data lines to inline computing resources and/or the CHESS-DAQ. 
 
-CHESS filesystem overview and where data is saved. 
 
-#### Detectors and Data Handling
+<img src="./xs100-figures/CHESSFileSystem.png" alt="filesystem" />
+
+
+
+### Detectors and Data Handling
 <img src="./xs100-figures/xcite-overview-expstation.png" alt="expstation" width="500"/>
 
 
