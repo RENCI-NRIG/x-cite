@@ -13,3 +13,7 @@
     display: inline-block;
     margin: 0 20px 0 0;
 }
+
+#title-slide .author {
+    font-size: x-large;
+}

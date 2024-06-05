@@ -4,7 +4,14 @@ subtitle: "Linux, command line, scripting"
 # author: "X-CITE 2024 workshop"
 # subtitle: "X-CITE 2024 workshop"
 # author: "Sajith Sasidharan"
-date: 2024-06-05
+
+author:
+  - name: Anirban Mandal, Erik Scott, Sajith Sasidharan (RENCI, UNC Chapel Hill)
+  - name: Ewa Deelman, Karan Vahi, Mats Rynge (ISI, USC)
+  - name: Matthew Miller, Werner Sun, Peter Ko, Kelly Nygren, Keara Soloway, Rolf Verberg (CHESS, Cornell)
+  - name: Brandon Sorge (IUPUI)
+
+# date: 2024-06-05
 
 code-annotations: hover
 
@@ -36,7 +43,21 @@ format:
 
 # Preliminaries
 
-Getting into CLASSE Linux systems
+- Who are you people?
+- <https://xcitecourse.org/theme2/sf100/>
+- Getting into CLASSE Linux systems
+
+::: {.notes}
+
+- I do not have a good idea about the audience of this workshop.  What
+  is your background?
+- Do you know how to launch a terminal?
+- Do you know use ssh?
+- Do you use JupyterLab?
+- Do you use command line?  
+- Do you use Windows, macOS, or Linux?
+
+:::
 
 ## Assumptions
 
@@ -199,11 +220,34 @@ of macOS, fish, ksh, etc.
 
 :::
 
-<!-- ## Environment variables -->
+## Bash niceties: history and completion
+
+- You do not have to re-type commands that you have used in the past!
+  - Use {{<kbd up>}} and {{<kbd down>}} arrow keys to go back and forth
+  in your command history.
+  - Use {{<kbd Ctrl-R>}} (Control+R) to "search" command history.
+  - Use `history` command to list your shell history.
+- Use {{<kbd tab>}} key for command completion, after typing a few
+  characters.
 
 # Files and directories
 
 Unix slogan: Everything is a file!
+
+
+## Some helpful commands {.smaller .scrollable}
+
+| Command | Task                                                                        | Example Syntax                  |
+|---------|-----------------------------------------------------------------------------|---------------------------------|
+| `ls`    | list the files in a directory                                               | `ls [/tmp]`                     |
+| `cd`    | move into a directory                                                       | `cd [/tmp]`                     |
+| `pwd`   | show curent working directory                                               | `pwd`                           |
+| `cp`    | copy a file to into another directory, or make a copy with a different name | `cp [file.txt] [/tmp/file.txt]` |
+| `cp -r` | copy a folder to into another directory                                     | `cp [file.txt] [/tmp/file.txt]` |
+| `mv`    | rename or move a file into another directory                                | `mv [file.txt] [file1.txt]`     |
+| `rm`    | delete a file                                                               | `rm [file.txt]`                 |
+| `mkdir` | create a directory                                                          | `mkdir [dir]`                   |
+| `rm -r` | remove a directory, recursively                                             | `rm -r [dir]`                   |
 
 
 ## Directory navigation
@@ -243,7 +287,7 @@ Unix slogan: Everything is a file!
 ::: {.notes}
 
 - Directories and files are organized in a tree like structure.
-- Well, and inverted tree.
+- Well, an inverted tree, maybe.
 - At the bottom (or top?), you have the "/" directory.
 
 :::
@@ -280,7 +324,7 @@ Unix slogan: Everything is a file!
 
 ## The current working directory
 
-"Wherever you go, there you are"
+<!-- "Wherever you go, there you are" -->
 
 - At any time in the shell, you are "inside" a single directory,
   called the **current working directory**.
@@ -295,6 +339,8 @@ Unix slogan: Everything is a file!
 
 ## Absolute and relative paths
 
+File/folder names are also referred to as **paths**.
+
 - **Absolute path names** begin with the root directory, `/`.
    - Example: `/home/ssasidharan/Documents/hello.txt`
 
@@ -305,7 +351,7 @@ Unix slogan: Everything is a file!
 ## Some fun facts about file names
 
 - Names that begin with "." are "hidden".
-  - Omitted from directory listing when you do `ls`.
+  - They are omitted from directory listing when you do `ls`.
   - Do `ls -a` (or `ls --all`) to list them.
 
 - `.` and `..` are special directory names.
@@ -313,7 +359,7 @@ Unix slogan: Everything is a file!
   - `..` stands for the directory above the current directory.
   
   
-## More fun facts about file names
+## Some more fun facts about file names
   
 - File and directory names are case sensitive.
   - Depends on filesystem, but that is a detail.
@@ -479,14 +525,17 @@ The four columns:
 - `TIME` is the elapsed CPU time for the process.
 - `CMD` is the command that created the process.
 
+::: {.notes}
 
 (Also see: `top` and `htop`.)
 
-## Background and foreground processes
+:::
+
+## Background and foreground processes {.smaller}
 
 - Some processes run in the foreground:
    - They read input, write output, etc.
-   - Attached to a terminal.
+   - They are "attached" to a terminal.
 - Background processes, well, run in the background.  Send things to
   the background with `&`:
 
@@ -507,7 +556,8 @@ sleep 100
 ## Terminating processes
 
 - `kill PID` command to end one process.
-- `killall` command to end many processes
+- `killall` command to end many processes.
+  - You can't `kill` other user's processes.
 
 <!--
 
@@ -565,15 +615,15 @@ echo "Hello $USER!"   # <3>
 
 Bash supports a programming language with:
 
-- Conditionals (with `if` statements)
-- Loops (with `for` and `while` statements)
-- Et cetera
-- Take a peek at `/etc/bashrc` for a taste
+- `if` statements
+- `for`, `while`, `until` statements
+- functions
+- et cetera.
+- Take a peek at `/etc/bashrc` and `$HOME/.bashrc` for a taste
 
 BUT
 
-- This is another topic, not really in scope of this presentation
-- We're likely out of time anyway
+- This is not really in scope of this presentation.
 
 
 ## Demo maybe? {visibility="hidden"}
@@ -604,8 +654,8 @@ BUT
   Commons license, and contains a good discussion about shell
   scripting.
 - [The Unix Programming Environment][tupe] by Brian W. Kernighan and
-  Rob Pike.  Good old classic, still useful.  Places things in a
-  historical context.
+  Rob Pike.  Old classic, still useful.  Places things in a historical
+  context.
 - [Shell Tools and Scripting][missing] module of MIT "The Missing
   Semester of Your CS Education" class.
 
@@ -614,8 +664,22 @@ BUT
 [tupe]: https://archive.org/details/UNIXProgrammingEnvironment
 
 
+# Other resources 
+
+- The Internet is pretty great. Use it.
+- However: DO NOT trust everything you read on the Internet.
+  - Do not copy and paste commands from the Internet indiscriminately.
+  - Understand how things work, and then use it.
+
 # Fin!
 
 <https://xcitecourse.org/theme2/sf100/>
 
 Contributions are welcome!
+
+::: {.notes}
+
+- Report issues!
+- Send your pull requests!
+
+:::
