@@ -220,8 +220,6 @@ of macOS, fish, ksh, etc.
 
 :::
 
-<!-- ## Environment variables -->
-
 # Files and directories
 
 Unix slogan: Everything is a file!
