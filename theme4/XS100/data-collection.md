@@ -54,7 +54,7 @@ Every experimental station has a **station computer** that acts as controls cent
 
 - The station computer has many special permissions, for instance it is able to *write* to the the CHESS DAQ (**raw** directory). When saving files such as beamtime notes, it is important to save these in the directories prescribed by your beamline scientist. (link to later section on CHESS file system and directories)
 
-<img src="./xs100-figures/AnnotatedStationComputer.png" alt="annotatedstationcomputer"/> 
+<img src="./xs100-figures/AnnotatedStationComputer.png" alt="annotatedstationcomputer" width="1000"/> 
 
 This is an example of a station computer screen shot with many processes. There are 4 desktops on the station computer, each with windows spanning 4 screens. This image is of the first desktop and shows a main controls terminal (SPEC), controls screens (MEDM screens), a data reduction GUI (HEXRD). There will typically be even more processes running than this. 
 
@@ -81,7 +81,7 @@ SPEC commands continued.
 
 Below is a video of a SPEC command window with built-in and custom macros. 
 
-<video controls> <source src="./xs100-figures/XCITE_SPEC.mp4" type="video/mp4"></video>
+<video width="700" controls> <source src="./xs100-figures/XCITE_SPEC.mp4" type="video/mp4"></video>
 
 **EPICS**
 
@@ -103,7 +103,7 @@ You may have specific other software: Python scripts (link to python tutorial), 
 
 ## Networks and Filesystems
 
-<img src="./xs100-figures/chessNetworks.png" alt="network"/>
+<img src="./xs100-figures/chessNetworks.png" alt="network" width="700"/>
 
 During data collection, raw data is written directly to the **CHESS-DAQ** filesystems. The CHESS-DAQ consists of approximately 2 petabytes of dedicated online storage arrays connected to the CHESS experimental stations through a high-speed 10Gb data collection network.
 
@@ -111,7 +111,7 @@ To protect the communication signals between the station computer, experimental 
 
 Detectors often have direct fiber optic / high speed data lines to inline computing resources and/or the CHESS-DAQ. 
 
-<img src="./xs100-figures/CHESSFileSystem.png" alt="filesystem"/>
+<img src="./xs100-figures/CHESSFileSystem.png" alt="filesystem" width="700"/>
 
 The CHESS filesystem has different locations for storing raw data, reduced data, etc. These different locations have different backup schedules and total storage amounts. Typically best practice is as follows: 
 1. Raw Data that cannot be reproduced is located in RAW/DAQ
@@ -171,7 +171,7 @@ Metadata and parallel data streams are generated at every stage of your experime
 
 The **metadata service** (https://wiki.classe.cornell.edu/bin/viewauth/CHESS/Private/CHESSMetadataService) provides tools to record and automatically ingest machine-readable metadata in a systematic way. It includes variables that historically were not recorded via a second data stream (e.g. the material processing parameters).
 
-<img src="./xs100-figures/MetadataService.png"/>
+<img src="./xs100-figures/MetadataService.png" width="700"/>
 
 
 #### On-the-fly Data Processing & Visualization
