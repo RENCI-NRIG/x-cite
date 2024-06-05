@@ -47,6 +47,17 @@ format:
 - <https://xcitecourse.org/theme2/sf100/>
 - Getting into CLASSE Linux systems
 
+::: {.notes}
+
+- I do not have a good idea about the audience of this workshop.  What
+  is your background?
+- Do you know how to launch a terminal?
+- Do you know use ssh?
+- Do you use JupyterLab?
+- Do you use command line?  
+- Do you use Windows, macOS, or Linux?
+
+:::
 
 ## Assumptions
 
