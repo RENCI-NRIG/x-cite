@@ -4,6 +4,13 @@ subtitle: "Linux, command line, scripting"
 # author: "X-CITE 2024 workshop"
 # subtitle: "X-CITE 2024 workshop"
 # author: "Sajith Sasidharan"
+
+author:
+  - name: Anirban Mandal, Erik Scott, Sajith Sasidharan (RENCI, UNC Chapel Hill)
+  - name: Ewa Deelman, Karan Vahi, Mats Rynge (ISI, USC)
+  - name: Matthew Miller, Werner Sun, Peter Ko, Kelly Nygren, Keara Soloway, Rolf Verberg (CHESS, Cornell)
+  - name: Brandon Sorge (IUPUI)
+
 date: 2024-06-05
 
 code-annotations: hover
