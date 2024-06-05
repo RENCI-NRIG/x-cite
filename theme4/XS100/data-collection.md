@@ -10,17 +10,41 @@ The Cornell High Energy Synchrotron Source (CHESS) is currently home to 7 experi
 
 ## Anatomy of an experiment
 
-*insert experiment timeline* ADD: emphasize some experiments start months before the beamtime, some start at the beamtime, etc. ADD: Section on expectations for planning is beamline/technique specfic. Includes everything from software trainings, input data points, scan strategies, to bringing your device/equipment to the beamtime - record keeping and provenance of data typically starts before the beamtime. 
+<img src="./xs100-figures/ExperimentTimeline.png" alt="exptimeline" width="700"/>
 
-What is the users responsibility to record and what is CHESS's responsibility. 
+Most experiments start well in advance of the awarded beamtime - and so does the computing and cyber-infrastructure needs. 
 
-<img src="./xs100-figures/xcite-overview-computer.png" alt="stationcomputer" width="500"/>
+While CHESS provides state-of-the-art hardware, software, computing resources and trainings, **users are responsible for the integrity of their experiment** through thoughtful planning, experimental execution, and **data handling and analysis**. This includes maintaining best practices in experimental logs, metadata tracking, and recording of researcher decisions. Due to the nature of synchrotron experiments, the data integrity and intepretabilty - even within one research group - will be dependent on the practices adpoted by the research group. 
 
-*insert image of "station computer" connected to "controls racks" connected to "experimental hutch" connected to DAQ and File system and Compute Farm* 
+### Beamtime Notes and Experimental Logbook: 
 
-#### Station Computer : Beamline Control Central
+It is always the responsibility of the experimenter to take **detailed** beamtime notes and a log of the data. Although work is ongoing to integrate metadata and capture requisite information in the data itself, automate workflows, visualizations, etc., it is imperative that experimenter notes are taken and ideally a copy is kept with the data on the CHESS system. 
+
+**Joint Experimenter Notes**
+
+Often you will have a team of researchers taking data together - it is typically best practice to keep a *collaborative* log. In addition to your team - you should share these notes with your beamline scientist - they can often provide useful details you may miss if they observe some important or irregular behavior about the instrument itself that may or may not be obvious from the metadata streams. 
+
+Remember - your beamline scientist is not responsible for memorizing the history of your data collected. They see so many experiments, if you ask 2 years later if they rememeber what *you* did - good luck. 
+
+For recording notes during the beamtime, we recommend using plain text or Markdown language (formatted text file) because it is easy to read in many systems, rather than a Microsoft Word Document which has a proprietary format. Images can be rendered in markdown formats. 
+
+**Co-Locate Your Beamtime Notes with Data**
+
+Save your beamtime notes or a copy of your beamtime notes or (link to your google doc / equivalent) on the CHESS filesystem with your data (your beamline scientist will tell you where the best place is). 
+
+**Leverage MetaData Services**
+
+Whenever possible, we encourage users to leverage the metadata services, beamline-specific software strategies (e.g. adding metadata to image frame headers), piping unique signals through software or hardware signals - saving these metadata *with* the data at the time of data collection. For unique aspects of your experiment, it is important to identify useful metadata to have associated with the x-ray data *ahead* of the beamtime. If signals are required to be monitored, this may need to be arranged for two weeks in advanced (see Bring Your Own Device ([BYOD](#bring-your-own-device-byod)). 
+
+**Commenting Software**
+
+Comment any code produced at the beamtime. *If this code was used to make decisions about the experiment, it should be saved and referred to in your experimental log.*
+
+### Station Computer : Beamline Control Central
 
 Every experimental station has a **station computer** that acts as controls central. The **station computer** typically runs a number of processes and is responsible for orchestrating data collection, motor motions, synchronized triggers, metadata logging, and more. 
+
+<img src="./xs100-figures/xcite-overview-computer.png" alt="stationcomputer" width="500"/>
 
 **Station Computer** ground rules: 
 
@@ -30,9 +54,9 @@ Every experimental station has a **station computer** that acts as controls cent
 
 - The station computer has many special permissions, for instance it is able to *write* to the the CHESS DAQ (**raw** directory). When saving files such as beamtime notes, it is important to save these in the directories prescribed by your beamline scientist. (link to later section on CHESS file system and directories)
 
-*insert image of annotated "station computer" screen that has many many windows opened with difference processes for data collection*
+<img src="./xs100-figures/AnnotatedStationComputer.png" alt="annotatedstationcomputer"/> 
 
-This is an example of a station computer screen shot with many processes. There are 4 desktops on the station computer, each with windows spanning 4 screens. This image is of the first desktop and shows a main controls terminal (SPEC), controls screens (MEDM screens), a data reduction GUI (HEXRD), realtime DIC (running from Python shell on external computer), a LabVIEW log of metadata signals from the instrument in the hutch, and many more. 
+This is an example of a station computer screen shot with many processes. There are 4 desktops on the station computer, each with windows spanning 4 screens. This image is of the first desktop and shows a main controls terminal (SPEC), controls screens (MEDM screens), a data reduction GUI (HEXRD). There will typically be even more processes running than this. 
 
 Every beamline will have a unique version of this computer - some techniques even may be executed exclusively through a GUI. 
 
@@ -42,39 +66,36 @@ This section will discuss the hardware connections, motor configurations, and ov
 
 <img src="./xs100-figures/xcite-overview-controls.png" alt="controls" width="500"/>
 
-
-*insert image of "station computer" connected to "controls racks" connected to "experimental hutch" connected to DAQ and File system and Compute Farm - this time the image is highlighting the connections to the hardware pieces* 
-
 #### Controls Software 
 
-ADD: Preamble here about controls software-  Include the difference between SPEC and EPICS. You can control Epics Devices from SPEC. 
+There are many controls languages and strategies across the lab. The two most common cases are **SPEC** and **EPICS** which will briefly be introduced here. Python-based controls are also very common. 
 
 **SPEC**
 
-Introduce SPEC as the main controls for many beamlines. 
-Give examples of standard SPEC commands that will be used. Importantly, only ever use SPEC or edit Macros with the explicit permission of your staff scientist. This may vary from beamline to beamline
+SPEC is a language, loosely based on C, used for instrument control and data acquisition at many synchrotrons. 
+
+When using spec, you will interact with a SPEC terminal and run a combination of “standard” SPEC commands and/or a series of compiled programs for your technique 
+
+Importantly, only ever use SPEC or edit Macros with the explicit permission of your staff scientist. This may vary from beamline to beamline
 SPEC commands continued. 
 
-*mention spec built in functionality & spec.log files* 
+Below is a video of a SPEC command window with built-in and custom macros. 
 
-*insert gif/video screen grab of operating SPEC* 
+<video controls> <source src="./xs100-figures/XCITE_SPEC.mov" type="video/mp4"></video>
 
 **EPICS**
 
-ADD: Epics will cover drivers and PVs. 
+EPICS is a set of software tools and applications which provide a software infrastructure for use in building distributed control systems to operate devices 
 
-Introduce EPICS as the drivers for many of the detectors and instrumentation in the lab
-Show example of EPICS drivers. You may or may not be expected to interact with these drivers at your beamline
+Many of the devices at CHESS leverage EPICS drivers for operation EPICS PVs (process variables) are commonly used for signal monitoring and metadata/data logging.  
 
-Many important metadata signals can also be tracked using "EPICS PVs." While many of these PVs are used throughout data collection, they can also be an important part of data monitoring. Your beamline scientist may have you observe the monitoring page depending on your experiments sensitivity to certain signals to monitor specific station signals (link to signals.chess.cornell.edu). 
+Many important metadata signals can also be tracked using "EPICS PVs." While many of these PVs (process variables) are used throughout data collection, they can also be an important part of data monitoring. Your beamline scientist may have you observe the monitoring page depending on your experiments sensitivity to certain signals to monitor specific station signals (link to signals.chess.cornell.edu). 
 
-*insert image of an epics MEDM for detector example*
+An Epics MEDM (Motif Editor and Display Manager) Screen for a Detector is shown in the annotated station view.  
 
 **PYMCA**
 
-*insert image of pymca* A common GUI used at the beamline is the PyMCA GUI. In addition to it's original use for XRF, this GUI can be used to load in spec.log data and plot the counters at your beamline. 
-
-*gif/video of opening a spec.log, plotting counters, and fitting a function to the plot* 
+A common GUI used at the beamline is the PyMCA GUI. In addition to it's original use for XRF, this GUI can be used to load in spec.log data and plot the counters at your beamline. 
 
 **Python, MATLAB, etc.**
 
@@ -157,11 +178,7 @@ CHAP pipelines can be executed from a Linux command line or from the Galaxy scie
 
 **Technique/Beamline Specific Software**
 
-#### Beamtime Notes: 
 
-Last and potentially the most important part: It is always the responsibility of the experimenter to take DETAILED beamtime notes and a log of the data. Although work is ongoing to integrate metadata and capture requisite information in the data itself, automate workflows, visualizations, etc., it is imperative that experimenter notes are taken and ideally a copy is kept with the data on the CHESS system. 
-
-Your beamline scientist is not responsible for memorizing the history of your data collected. They see so many experiments, if you ask 2 years later if they rememeber what *you* did - good luck. 
 
 Example Problem: 
 - End Walk through a version of taking and collecting a dataset that will be done in the hands-on portion in the afternoon. 
