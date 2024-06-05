@@ -43,7 +43,10 @@ format:
 
 # Preliminaries
 
-Getting into CLASSE Linux systems
+- Who are you people?
+- <https://xcitecourse.org/theme2/sf100/>
+- Getting into CLASSE Linux systems
+
 
 ## Assumptions
 
