@@ -16,7 +16,7 @@ Most experiments start well in advance of the awarded beamtime - and so does the
 
 While CHESS provides state-of-the-art hardware, software, computing resources and trainings, **users are responsible for the integrity of their experiment** through thoughtful planning, experimental execution, and **data handling and analysis**. This includes maintaining best practices in experimental logs, metadata tracking, and recording of researcher decisions. Due to the nature of synchrotron experiments, the data integrity and intepretabilty - even within one research group - will be dependent on the practices adpoted by the research group. 
 
-### Beamtime Notes and Experimental Logbook: 
+## Beamtime Notes and Experimental Logbook: 
 
 It is always the responsibility of the experimenter to take **detailed** beamtime notes and a log of the data. Although work is ongoing to integrate metadata and capture requisite information in the data itself, automate workflows, visualizations, etc., it is imperative that experimenter notes are taken and ideally a copy is kept with the data on the CHESS system. 
 
@@ -40,7 +40,7 @@ Whenever possible, we encourage users to leverage the metadata services, beamlin
 
 Comment any code produced at the beamtime. *If this code was used to make decisions about the experiment, it should be saved and referred to in your experimental log.*
 
-### Station Computer : Beamline Control Central
+## Station Computer : Beamline Control Central
 
 Every experimental station has a **station computer** that acts as controls central. The **station computer** typically runs a number of processes and is responsible for orchestrating data collection, motor motions, synchronized triggers, metadata logging, and more. 
 
@@ -66,7 +66,7 @@ This section will discuss the hardware connections, motor configurations, and ov
 
 <img src="./xs100-figures/xcite-overview-controls.png" alt="controls" width="500"/>
 
-#### Controls Software 
+## Controls Software 
 
 There are many controls languages and strategies across the lab. The two most common cases are **SPEC** and **EPICS** which will briefly be introduced here. Python-based controls are also very common. 
 
@@ -134,7 +134,7 @@ Data Collection, Storage, and Analysis can be customized to comply with data agr
 - Securing the experimental station with an entry password
 - Disconnecting streaming video to the experimental station
 
-### Detectors and Data Handling
+## Data Handling and Analysis
 <img src="./xs100-figures/xcite-overview-expstation.png" alt="expstation" width="500"/>
 
 If you wish to move any data from the CHESS filesystem to another location, the preferred way of doing so is through Globus. Please see here (https://wiki.classe.cornell.edu/Computing/GlobusDataTransfer) for directions on ways to transfer data from the CHESS filesystem. 
