@@ -615,15 +615,15 @@ echo "Hello $USER!"   # <3>
 
 Bash supports a programming language with:
 
-- Conditionals (with `if` statements)
-- Loops (with `for` and `while` statements)
-- Et cetera
-- Take a peek at `/etc/bashrc` for a taste
+- `if` statements
+- `for`, `while`, `until` statements
+- functions
+- et cetera.
+- Take a peek at `/etc/bashrc` and `$HOME/.bashrc` for a taste
 
 BUT
 
-- This is another topic, not really in scope of this presentation
-- We're likely out of time anyway
+- This is not really in scope of this presentation.
 
 
 ## Demo maybe? {visibility="hidden"}
