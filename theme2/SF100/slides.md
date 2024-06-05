@@ -664,6 +664,13 @@ BUT
 [tupe]: https://archive.org/details/UNIXProgrammingEnvironment
 
 
+# Other resources 
+
+- The Internet is pretty great. Use it.
+- However: DO NOT trust everything you read on the Internet.
+  - Do not copy and paste commands from the Internet indiscriminately.
+  - Understand how things work, and then use it.
+
 # Fin!
 
 <https://xcitecourse.org/theme2/sf100/>
