@@ -227,6 +227,20 @@ of macOS, fish, ksh, etc.
 Unix slogan: Everything is a file!
 
 
+## Some helpful commands {.smaller .scrollable}
+
+| Command | Task                                                      | Example Syntax                  |
+|---------|-----------------------------------------------------------|---------------------------------|
+| `ls`    | list the files in a directory                             | `ls [/tmp]`                     |
+| `cd`    | move into a directory                                     | `cd [/tmp]`                     |
+| `pwd`   | show cuurent working directory                            | `pwd`                           |
+| `cp`    | copy a file to another filename or into another directory | `cp [file.txt] [/tmp/file.txt]` |
+| `mv`    | rename or move a file into another directory              | `mv [file.txt] [file1.txt]`     |
+| `rm`    | delete a file                                             | `rm [file.txt]`                 |
+| `mkdir` | create a directory                                        | `mkdir [dir]`                   |
+| `rm -r` | remove a directory                                        | `rm -r [dir]`                   |
+
+
 ## Directory navigation
 
 ```{.bash}
@@ -328,7 +342,7 @@ File/folder names are also referred to as **paths**.
 ## Some fun facts about file names
 
 - Names that begin with "." are "hidden".
-  - Omitted from directory listing when you do `ls`.
+  - They are omitted from directory listing when you do `ls`.
   - Do `ls -a` (or `ls --all`) to list them.
 
 - `.` and `..` are special directory names.
