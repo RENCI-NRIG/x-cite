@@ -237,16 +237,17 @@ Unix slogan: Everything is a file!
 
 ## Some helpful commands {.smaller .scrollable}
 
-| Command | Task                                                      | Example Syntax                  |
-|---------|-----------------------------------------------------------|---------------------------------|
-| `ls`    | list the files in a directory                             | `ls [/tmp]`                     |
-| `cd`    | move into a directory                                     | `cd [/tmp]`                     |
-| `pwd`   | show cuurent working directory                            | `pwd`                           |
-| `cp`    | copy a file to another filename or into another directory | `cp [file.txt] [/tmp/file.txt]` |
-| `mv`    | rename or move a file into another directory              | `mv [file.txt] [file1.txt]`     |
-| `rm`    | delete a file                                             | `rm [file.txt]`                 |
-| `mkdir` | create a directory                                        | `mkdir [dir]`                   |
-| `rm -r` | remove a directory                                        | `rm -r [dir]`                   |
+| Command | Task                                                                        | Example Syntax                  |
+|---------|-----------------------------------------------------------------------------|---------------------------------|
+| `ls`    | list the files in a directory                                               | `ls [/tmp]`                     |
+| `cd`    | move into a directory                                                       | `cd [/tmp]`                     |
+| `pwd`   | show curent working directory                                               | `pwd`                           |
+| `cp`    | copy a file to into another directory, or make a copy with a different name | `cp [file.txt] [/tmp/file.txt]` |
+| `cp -r` | copy a folder to into another directory                                     | `cp [file.txt] [/tmp/file.txt]` |
+| `mv`    | rename or move a file into another directory                                | `mv [file.txt] [file1.txt]`     |
+| `rm`    | delete a file                                                               | `rm [file.txt]`                 |
+| `mkdir` | create a directory                                                          | `mkdir [dir]`                   |
+| `rm -r` | remove a directory, recursively                                             | `rm -r [dir]`                   |
 
 
 ## Directory navigation
