@@ -8,6 +8,10 @@ date: ""
 This page is work in progress.
 :::
 
+## What is Data?
+
+<!-- TODO -->
+
 ## What is metadata?
 
 <!-- TODO -->
