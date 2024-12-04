@@ -65,7 +65,9 @@ about the observation or experiment.
 
 ## What is DOI?
 
-
+A DOI (Digital Object Identifier) is a unique and stable string
+assigned articles, books, and other works. DOIs make it easier to find
+and retrieve works.
 
 
 ## References
