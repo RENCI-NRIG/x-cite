@@ -35,12 +35,21 @@ What is _metadata_ then?
 Metadata is data that describes data, and what that description says
 depends on context.
 
-For example, [EXIF](or "Exchangeable image file format") is image
-metadata.  When you take a picture with cellphone, you get an image
-file.  In addition to image data, this image file contains some
-_metadata_ that describes the image: it would contain details such as
-date and time when the picture was taken, location if available, lens
-aperture and shutter speed, such things.
+For example, [EXIF] (which is an abbreviation of "Exchangeable image
+file format") is a form of image metadata.  When you take a picture
+with cellphone, you get an image file.  In addition to "pure"
+compressed on uncompressed image data, this image file also contains
+some extra data describes the image: details about the camera, lens,
+aperture, shutter speed, date and time at the time when the picture
+was taken, location if available, such things.
+
+In addition to EXIF, there is the metadata that the operating system
+itself maintains about an image file: its ownership, date and time
+when the file was created and modified (as far as the operating system
+is concerned), and so on.
+
+So when we talk about metadata, it is important to be clear about the
+context in which we talk about metadata.
 
 [EXIF]: https://en.wikipedia.org/wiki/Exif
 
@@ -56,7 +65,7 @@ about the observation or experiment.
 
 ## What is DOI?
 
-<!-- TODO -->
+
 
 
 ## References
