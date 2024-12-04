@@ -81,8 +81,15 @@ Here is an example of a DOI:
 - (etc?)
 
 
+### How can I resolve a DOI?
 
-## References
+<!-- TODO -->
+
+### How do I get myself a DOI?
+
+<!-- TODO -->
+
+## references
 
 - [Carpentries Incubator: Data and
   Metadata](https://carpentries-incubator.github.io/scientific-metadata/instructor/data-metadata.html)
