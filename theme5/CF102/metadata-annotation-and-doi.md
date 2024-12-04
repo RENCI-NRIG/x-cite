@@ -32,6 +32,22 @@ and/or sharing.
 
 What is _metadata_ then?
 
+Metadata is data that describes data, and what that description says
+depends on context.
+
+For example, [EXIF](or "Exchangeable image file format") is image
+metadata.  When you take a picture with cellphone, you get an image
+file.  In addition to image data, this image file contains some
+_metadata_ that describes the image: it would contain details such as
+date and time when the picture was taken, location if available, lens
+aperture and shutter speed, such things.
+
+[EXIF]: https://en.wikipedia.org/wiki/Exif
+
+For CHESS experimenters, metadata would be information about
+observational or experimental data that provides a "fuller picture"
+about the observation or experiment.
+
 <!-- TODO -->
 
 ## What is annotation?
