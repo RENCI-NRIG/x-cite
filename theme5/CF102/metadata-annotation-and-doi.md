@@ -8,36 +8,29 @@ date: ""
 This page is work in progress.
 :::
 
-## What is _data_?
+## What is _metadata_?
 
 <!-- TODO -->
 
-Mirriam-Webster dictionary defines [data][webster-data] as: _"factual
+Mirriam-Webster dictionary defines [data][webster-data] as: "factual
 information (such as measurements or statistics) used as a basis for
-reasoning, discussion, or calculation"_, or: _"information in digital
-form that can be transmitted or processed."_
-
-Wikipedia defines [data][wikipedia-data] as: _"a collection of
-discrete or continuous values that convey information, describing the
-quantity, quality, fact, statistics, other basic units of meaning, or
-simply sequences of symbols that may be further interpreted
-formally."_
+reasoning, discussion, or calculation", or: "information in digital
+form that can be transmitted or processed."
 
 [webster-data]: https://www.merriam-webster.com/dictionary/data
-[wikipedia-data]: https://en.wikipedia.org/wiki/Data
 
-For our purposes, let us use the simple definition: it is information
-in digital form that can be stored, transmitted, or processed.  Our
-experiments may consume data, produce data, transmit data between
-instruments and computers, and we might want to analyze data to make
-sense of it.  We store data somewhere, for eventual use and/or
-sharing.
+For our purposes, let us use the latter definition: data is
+information in digital form that can be stored, transmitted, or
+processed.  Our experiments may consume data, produce data, transmit
+data between instruments and computers, and we might want to analyze
+data to make sense of it.  We store data somewhere, for eventual use
+and/or sharing.
 
 [![](data_trap.png)][xkcd-data-trap]
 
 [xkcd-data-trap]: https://xkcd.com/2582/
 
-## What is metadata?
+What is _metadata_ then?
 
 <!-- TODO -->
 
