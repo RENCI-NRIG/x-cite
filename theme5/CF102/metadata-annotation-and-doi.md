@@ -67,7 +67,19 @@ about the observation or experiment.
 
 A DOI (Digital Object Identifier) is a unique and stable string
 assigned articles, books, and other works. DOIs make it easier to find
-and retrieve works.
+and retrieve works. DOIs are designed to be used by humans as well as
+machines.
+
+A DOI takes the form of a character string divided into two parts, a
+prefix and a suffix, separated by a slash, in `prefix/suffix` form.  A
+DOI is also resolvable as a URL using a proxy server.   
+
+Here is an example of a DOI:
+
+- `10.1177/0306312719863494`
+- `https://doi.org/10.1177/0306312719863494`
+- (etc?)
+
 
 
 ## References
