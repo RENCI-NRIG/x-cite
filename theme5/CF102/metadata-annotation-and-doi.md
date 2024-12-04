@@ -30,6 +30,10 @@ in digital form that can be stored, transmitted, or processed.  Our
 experiments may consume data, and they produce data.  We store this
 data somewhere, for eventual use and/or sharing.
 
+[![](data_trap.png)][xkcd-data-trap]
+
+[xkcd-data-trap]: https://xkcd.com/2582/
+
 ## What is metadata?
 
 <!-- TODO -->
