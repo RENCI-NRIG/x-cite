@@ -81,10 +81,9 @@ keeping the record up-to-date.
 A DOI takes the form of a character string divided into two parts, a
 prefix and a suffix, separated by a slash, in `prefix/suffix` form.
 
-Here is an example of a DOI: `10.1177/0306312719863494`.  
-
-The prefix `10.1177` identifies the registrant of the DOI, and the
-suffix `0306312719863494` identifies the article.
+Here is an example of a DOI: `10.1177/0306312719863494`.  Here the
+prefix `10.1177` identifies the registrant of the DOI, and the suffix
+`0306312719863494` identifies the article.
 
 ### How can I resolve a DOI?
 
