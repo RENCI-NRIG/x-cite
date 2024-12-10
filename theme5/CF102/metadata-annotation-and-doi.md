@@ -85,6 +85,8 @@ Here is an example of a DOI: `10.1177/0306312719863494`.  Here the
 prefix `10.1177` identifies the registrant of the DOI, and the suffix
 `0306312719863494` identifies the article.
 
+<!-- TODO: DOI screenshots -->
+
 ### How can I resolve a DOI?
 
 To resolve the article referred by `10.1177/0306312719863494`, you
