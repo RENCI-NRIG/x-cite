@@ -59,11 +59,11 @@ about the observation or experiment.
 
 <!-- TODO -->
 
-## What is annotation?
+## What is _annotation_?
 
 <!-- TODO -->
 
-## What is DOI?
+## What is _DOI_?
 
 A DOI (Digital Object Identifier) is a unique and stable string
 assigned articles, books, and other works. DOIs make it easier to find
