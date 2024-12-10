@@ -99,6 +99,15 @@ A DOI is also resolvable as a URL using a proxy server.  The URL
 actual article, currently available at
 <https://journals.sagepub.com/doi/10.1177/0306312719863494>:
 
+### How do I use DOI in citations?
+
+Here's how you would cite the above-mentioned article:
+
+> Mayernik, M. S. (2019). Metadata accounts: Achieving data and
+> evidence in scientific research. Social Studies of Science, 49(5),
+> 732-757. https://doi.org/10.1177/0306312719863494
+
+
 ### How do I get myself a DOI?
 
 <!-- TODO -->
