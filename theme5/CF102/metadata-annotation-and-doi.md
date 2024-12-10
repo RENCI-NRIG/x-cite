@@ -79,19 +79,25 @@ target.  The publisher of the document or data set is responsible for
 keeping the record up-to-date.
 
 A DOI takes the form of a character string divided into two parts, a
-prefix and a suffix, separated by a slash, in `prefix/suffix` form.  A
-DOI is also resolvable as a URL using a proxy server.   
+prefix and a suffix, separated by a slash, in `prefix/suffix` form.
 
-Here is an example of a DOI:
+Here is an example of a DOI: `10.1177/0306312719863494`.  
 
-- `10.1177/0306312719863494`
-- `https://doi.org/10.1177/0306312719863494`
-- (etc?)
-
+The prefix `10.1177` identifies the registrant of the DOI, and the
+suffix `0306312719863494` identifies the article.
 
 ### How can I resolve a DOI?
 
-<!-- TODO -->
+To resolve the article referred by `10.1177/0306312719863494`, you
+would use a _resolver_. The search box at [doi.org] is an interface to
+such a resolver.
+
+[doi.org]: https://www.doi.org/
+
+A DOI is also resolvable as a URL using a proxy server.  The URL
+<https://doi.org/10.1177/0306312719863494> will redirect you to the
+actual article, currently available at
+<https://journals.sagepub.com/doi/10.1177/0306312719863494>:
 
 ### How do I get myself a DOI?
 
