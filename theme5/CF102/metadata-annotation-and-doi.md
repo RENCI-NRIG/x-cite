@@ -106,6 +106,8 @@ Here's how you would cite the above-mentioned article:
 > evidence in scientific research. Social Studies of Science, 49(5),
 > 732-757. https://doi.org/10.1177/0306312719863494
 
+<!-- TODO: APA, MLA, Chicago styles -->
+
 
 ### How do I get myself a DOI?
 
