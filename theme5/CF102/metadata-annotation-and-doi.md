@@ -68,7 +68,15 @@ about the observation or experiment.
 A DOI (Digital Object Identifier) is a unique and stable string
 assigned articles, books, and other works. DOIs make it easier to find
 and retrieve works. DOIs are designed to be used by humans as well as
-machines.
+machines. DOIs are commonly used to identify publications and data
+sets.
+
+A DOI is meant to help us to resolve its target.  The location of an
+online document or data set may change over time, because domain names
+and links change.  However, since a DOI remains stable over time, with
+a DOI people should be able to find the current location of the
+target.  The publisher of the document or data set is responsible for
+keeping the record up-to-date.
 
 A DOI takes the form of a character string divided into two parts, a
 prefix and a suffix, separated by a slash, in `prefix/suffix` form.  A
