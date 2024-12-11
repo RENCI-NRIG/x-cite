@@ -122,7 +122,16 @@ Here's how you would cite the above-mentioned article:
 
 ### How do I get myself a DOI?
 
-<!-- TODO -->
+<!-- TODO: expand this -->
+<!-- TODO: how does this work at CHESS? -->
+
+In order to get a DOI for your paper or data set, you will need to
+work with a [registration agency][agency], such as [crossref] or
+[datacite].
+
+[agency]: https://www.doi.org/the-community/existing-registration-agencies
+[crossref]: https://www.crossref.org/
+[datacite]: https://datacite.org/
 
 ## references
 
