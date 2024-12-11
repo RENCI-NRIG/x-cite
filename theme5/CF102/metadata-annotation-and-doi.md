@@ -160,3 +160,5 @@ work with a [registration agency][agency], such as [crossref] or
 
 - [Long Term Ecological Research Network: Enriching Ecological Data
   Using Annotated Metadata](https://lternet.edu/stories/enriching-ecological-data-using-annotated-metadata/)
+
+- [Cool DOIs](https://datacite.org/blog/cool-dois/)
