@@ -95,10 +95,19 @@ such a resolver.
 
 [doi.org]: https://www.doi.org/
 
-A DOI is also resolvable as a URL using a proxy server.  The URL
-<https://doi.org/10.1177/0306312719863494> will redirect you to the
-actual article, currently available at
+A DOI is also resolvable as a URL using a proxy server. You could
+prefix the DOI with `https://doi.org/` to get the URL
+<https://doi.org/10.1177/0306312719863494>, which will redirect you to
+the actual article, currently available at
 <https://journals.sagepub.com/doi/10.1177/0306312719863494>:
+
+The <https://doi.org> resolver is operated by the DOI Foundation, a
+non-profit that governs the DOI system.  The DOI system is
+standardized by [International Organization for Standardization
+(ISO)][iso].
+
+[iso]: https://www.iso.org/
+
 
 ### How do I use DOI in citations?
 
