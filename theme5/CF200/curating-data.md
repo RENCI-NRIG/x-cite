@@ -18,6 +18,8 @@ This page is work in progress.
 
 - [FAIR (& Fair) Toolkit](https://fairisland.org/toolkit/)
 
+- [FAIR Principles](https://www.go-fair.org/fair-principles/)
+
 - [FAIR Data in
   Cyverse](https://cyverse-foundational-open-science-skills-2020.readthedocs-hosted.com/en/master/Data_management/FAIR.html)
 
